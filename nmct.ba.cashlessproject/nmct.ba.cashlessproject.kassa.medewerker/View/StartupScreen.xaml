@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="nmct.ba.cashlessproject.kassa.medewerker.View.StartupScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:nmct.ba.cashlessproject.kassa.medewerker.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1150" Loaded="UserControl_Loaded">
+    <UserControl.DataContext>
+        <vm:StartupscreenVM/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="550*"/>
+            <ColumnDefinition Width="500*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="1"></Rectangle>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle></Rectangle>
+                <TextBlock Style="{StaticResource txbStandaard}">Naam Medewerker</TextBlock>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Command="{Binding BestellenCommand}" Style="{StaticResource blokjes}">Bestellen</Button>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Style="{StaticResource afmeldKnopBeneden}" Grid.Column="1">Afmelden</Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Style="{StaticResource txbTitel }">Klant Info</TextBlock>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Style="{StaticResource progresstxb}" Grid.Column="1" Grid.Row="0">Scan Kaart</TextBlock>
+                <TextBox x:Name="txtrfid" Grid.Column="1" Grid.Row="1" Width="0" Height="0" Text="{Binding RfidNummer}" KeyDown="txtrfid_KeyDown" ></TextBox>
+                <TextBox x:Name="focus" Grid.Column="1" Grid.Row="1" Width="0" Height="0" ></TextBox>
+                <ProgressBar IsIndeterminate="True"  Grid.Column="1" Grid.Row="1" />
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="1" HorizontalAlignment="Left" Grid.Column="1" Source="{Binding Image}"></Image>
+                <StackPanel Grid.Row="2">
+                    <TextBlock  Style="{StaticResource txbStandaard}"  Text="Naam:"></TextBlock>
+                    <TextBlock  Style="{StaticResource txbStandaard}" Text="Adres:"></TextBlock>
+                    <TextBlock Style="{StaticResource groot}" Text="Bedrag:"></TextBlock>
+
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="1">
+                    <TextBlock  Style="{StaticResource txbStandaard}" FontWeight="ExtraBold"  Text="{Binding Naam}"></TextBlock>
+                    <TextBlock  Style="{StaticResource txbStandaard}" FontWeight="ExtraBold"  Text="{Binding Adres}"></TextBlock>
+                    <TextBlock Style="{StaticResource groot}" FontWeight="ExtraBold" FontSize="26" Text="{Binding Bedrag}"></TextBlock>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</UserControl>

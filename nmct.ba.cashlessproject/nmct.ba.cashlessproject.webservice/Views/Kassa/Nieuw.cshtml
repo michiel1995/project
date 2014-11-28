@@ -1,0 +1,119 @@
+﻿@model nmct.ba.cashlessproject.webservice.presentationModel.PMKassa
+
+@{
+    ViewBag.Title = "Nieuw";
+}
+
+<h2>Nieuwe Kassa</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()   
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Kassa.RegisterName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Kassa.RegisterName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Kassa.RegisterName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Kassa.Device, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Kassa.Device, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Kassa.Device, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Kassa.PurchaseDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" class="datepicker form-control" id="PurchaseDateString" />
+                @Html.EditorFor(model => model.Kassa.PurchaseDate, new { htmlAttributes = new { @class = "hidden" } })
+                @Html.ValidationMessageFor(model => model.Kassa.PurchaseDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Kassa.ExpireDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" class="datepicker form-control" id="ExpireDateString" />
+                @Html.EditorFor(model => model.Kassa.ExpireDate, new { htmlAttributes = new { @class = "hidden" } })
+                @Html.ValidationMessageFor(model => model.Kassa.ExpireDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <h2>Kassa aan vereniging koppelen</h2>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdOrganisation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select id="Organisaties" name="IdOrganisation" class="form-control">
+                    <option id="IdOrganisation" value="-1">Geen vereniging</option>
+                </select>
+                </div>
+        </div>
+        <div class="form-group ">
+            @Html.LabelFor(model => model.Fromdate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" class="datepicker form-control" id="FromdateString" />
+                @Html.EditorFor(model => model.Fromdate, new { htmlAttributes = new { @class = "hidden" } })
+                @Html.ValidationMessageFor(model => model.Fromdate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.UntilDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" class="datepicker form-control" id="UntilDateString" />
+                @Html.EditorFor(model => model.UntilDate, new { htmlAttributes = new { @class = "hidden" } })
+                @Html.ValidationMessageFor(model => model.UntilDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input id="submitclick" type="submit" value="Sla kassa op" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:61592/api/organisatie",
+        dataType: "json",
+        contentType: "application/json",
+    }).done(function (data) {
+        for (var i = 0; i < data.length; i++) {
+            $("#Organisaties").append('<option id="IdOrganisation" Value="/Kassa/' + data[i].Id + '">' + data[i].Naam + "</option>")
+        }
+    });
+    $("#submitclick").click(function () {
+        var arrPurch = $("#PurchaseDateString").val().split("/");
+        var arrExp = $("#ExpireDateString").val().split("/");
+        var arrFrom = $("#FromdateString").val().split("/");
+        var arrUntil = $("#UntilDateString").val().split("/");
+        $("#Kassa_PurchaseDate").val(toTimestamp(arrPurch[2], arrPurch[0], arrPurch[1]));
+        $("#Kassa_ExpireDate").val(toTimestamp(arrExp[2], arrExp[0], arrExp[1]));
+        $("#Fromdate").val(toTimestamp(arrFrom[2], arrFrom[0], arrFrom[1]));
+        $("#UntilDate").val(toTimestamp(arrUntil[2], arrUntil[0], arrUntil[1]));
+    })
+    function toTimestamp(year, month, day) {
+        var datum = new Date(Date.UTC(year, month - 1, day));
+        return datum.getTime() / 1000;
+    }
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

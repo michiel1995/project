@@ -1,0 +1,116 @@
+﻿@model IEnumerable<nmct.ba.cashlessproject.webservice.presentationModel.PMKassa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Kassa's</h2>
+
+<p>
+    Wil je een nieuwe kassa toevoegen @Html.ActionLink("klik hier", "nieuw")
+</p>
+<select class="form-control" id="organisaties" onchange="location = this.options[this.selectedIndex].value;">
+    <option id="option-1" value="~/Kassa/-1">Alle Kassa's</option>
+    <option id="option-2" value="~/Kassa/-2">geen organisatie</option>
+</select>
+<table class="table">
+    <tr>
+        <th>
+            <a href="" class="black">KassaNaam</a>
+        </th>
+        <th>
+            <a href="" class="black">Kassa</a>
+        </th>
+        <th>
+            <a href="" class="black">Organisatie</a>
+        </th>
+        <th>
+            <a href="" class="black">Bij klant tot:</a>
+        </th>
+        <th>
+            <a href="" class="black">VervalDatum</a>
+        </th>
+            meer Info
+        <th>
+            meer acties 
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kassa.RegisterName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kassa.Device)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrganisationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UntilDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kassa.ExpireDate)
+        </td>
+        <td>
+            <a onclick="geklikt(@item.Kassa.Id)">Klik hier voor meer info</a>
+        </td>
+        <td>
+            <a href="#" class="wijzigen"></a>
+            <a href="#" class="trashbin"></a>
+        </td>
+    </tr>
+}
+
+</table>
+
+<div class="background" id="backgroundWeg"></div>
+@foreach (var item in Model)
+{
+    <div class="hiddenBox" id="@item.Kassa.Id">
+        
+        <h3>Kassa</h3>
+        <label class="col-md-4">Kassa naam</label><p class="col-md-8">@item.Kassa.RegisterName</p>
+        <label class="col-md-4">Toestel</label><p class="col-md-8">@item.Kassa.Device</p>
+        <label class="col-md-4">Aankoop datum</label><p class="col-md-8">@item.Kassa.PurchaseDate</p>
+        <label class="col-md-4">Verval datum</label><p class="col-md-8">@item.Kassa.ExpireDate</p>
+
+        <h3>Organisatie</h3>
+        <label class="col-md-4">Organisatie naam</label><p class="col-md-8">@item.OrganisationName</p>
+        <label class="col-md-4">Bij organisatie van</label><p class="col-md-8">@item.Fromdate</p>
+        <label class="col-md-4">bij organisatie tot</label><p class="col-md-8">@item.UntilDate</p>
+    </div>
+}
+
+<script>
+    $( document ).ready(function() {    
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:61592/api/organisatie",
+            dataType: "json",
+            contentType: "application/json",
+        }).done(function (data) {
+            for (var i = 0; i < data.length; i++) {
+                $("#organisaties").append('<option id="option'+ data[i].Id + '" Value="/Kassa/' + data[i].Id + '">' + data[i].Naam + "</option>")
+            }
+            var pathname = window.location.pathname;
+            var array = pathname.split('/');
+            var selectedItem = array[array.length -1];
+            $("#option" + selectedItem).attr('selected', 'selected');
+        });        
+    });
+    function geklikt(Id){
+        $("#" + Id).attr("class", "toonBox");
+        $("#" + Id).css({
+            "top": ((window.innerHeight - $("#" + Id).height()) / 2) -27  ,
+            "left": ($("#container").width() - $("#" + Id).width())/2
+        });
+        window.scrollTo(0,0);
+        $(".background").attr("id" ,"backgroundToon");
+        $("#backgroundToon").click(function(){
+            $(".background").attr("id" ,"backgroundWeg");
+            $("#" + Id).attr("class" ,"hiddenBox");
+        })
+    }
+</script>

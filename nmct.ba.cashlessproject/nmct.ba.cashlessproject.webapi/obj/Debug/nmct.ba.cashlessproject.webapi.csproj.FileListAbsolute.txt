@@ -1,0 +1,132 @@
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.webapi.dll.config
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.webapi.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.webapi.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Antlr3.Runtime.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\EntityFramework.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\EntityFramework.SqlServer.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Newtonsoft.Json.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Owin.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Net.Http.Formatting.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Helpers.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.Owin.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.WebHost.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Mvc.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Optimization.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Razor.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.Razor.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\WebGrease.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Newtonsoft.Json.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Net.Http.Formatting.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Helpers.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.WebHost.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Mvc.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Optimization.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Razor.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.Razor.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Antlr3.Runtime.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\EntityFramework.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\EntityFramework.SqlServer.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.Owin.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\obj\Debug\nmct.ba.cashlessproject.webapi.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\obj\Debug\nmct.ba.cashlessproject.webapi.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.models.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.models.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\obj\Debug\nmct.ba.cashlessproject.webapi.csprojResolveAssemblyReference.cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.webapi.dll.config
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.webapi.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.webapi.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Antlr3.Runtime.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\EntityFramework.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\EntityFramework.SqlServer.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Newtonsoft.Json.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.helper.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.models.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Owin.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Net.Http.Formatting.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Helpers.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.Owin.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.WebHost.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Mvc.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Optimization.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Razor.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.Razor.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\WebGrease.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.helper.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\nmct.ba.cashlessproject.models.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Newtonsoft.Json.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Net.Http.Formatting.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Helpers.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.WebHost.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Mvc.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Optimization.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Razor.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.WebPages.Razor.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Antlr3.Runtime.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\EntityFramework.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\EntityFramework.SqlServer.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\bin\System.Web.Http.Owin.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\obj\Debug\nmct.ba.cashlessproject.webapi.csprojResolveAssemblyReference.cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\obj\Debug\nmct.ba.cashlessproject.webapi.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.webapi\obj\Debug\nmct.ba.cashlessproject.webapi.pdb

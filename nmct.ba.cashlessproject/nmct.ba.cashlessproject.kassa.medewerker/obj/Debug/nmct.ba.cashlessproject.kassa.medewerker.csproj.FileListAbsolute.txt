@@ -1,0 +1,90 @@
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.kassa.medewerker.exe.config
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.kassa.medewerker.exe
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.kassa.medewerker.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.csproj.App.config
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\MainWindow.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker_MarkupCompile.cache
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker_MarkupCompile.lref
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\MainWindow.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.g.resources
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.Properties.Resources.resources
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.csproj.GenerateResource.Cache
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.exe
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\Bestellen.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\Bestellen.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\Login.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\StartupScreen.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\Login.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\StartupScreen.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.csprojResolveAssemblyReference.cache
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.models.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.models.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\AlgemeneCode.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\App.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\App.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.kassa.medewerker.exe.config
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.kassa.medewerker.exe
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.kassa.medewerker.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.models.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.models.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.csproj.App.config
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.csprojResolveAssemblyReference.cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\AlgemeneCode.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\App.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\Login.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\MainWindow.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\Bestellen.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\StartupScreen.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\App.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker_MarkupCompile.cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker_MarkupCompile.lref
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\Login.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\MainWindow.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\Bestellen.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\StartupScreen.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.g.resources
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.Properties.Resources.resources
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.csproj.GenerateResource.Cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.exe
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.pdb

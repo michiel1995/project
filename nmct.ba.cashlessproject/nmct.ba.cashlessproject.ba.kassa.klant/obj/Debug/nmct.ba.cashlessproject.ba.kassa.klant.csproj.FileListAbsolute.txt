@@ -1,0 +1,106 @@
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.ba.kassa.klant.exe.config
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.ba.kassa.klant.exe
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.ba.kassa.klant.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.csproj.App.config
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\MainWindow.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant_MarkupCompile.cache
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant_MarkupCompile.lref
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\MainWindow.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.g.resources
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.Properties.Resources.resources
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.csproj.GenerateResource.Cache
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.exe
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\Portaal.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\Portaal.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpKaart.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpladen.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpladenScan.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\Registreren.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpKaart.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpladen.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpladenScan.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\Registreren.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.csprojResolveAssemblyReference.cache
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\OnBarcode.Barcode.BarcodeScanner.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\WebCam_Capture.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\zxing.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\beid35libCS.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.models.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.models.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\AlgemeneCode.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\App.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\App.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.ba.kassa.klant.exe.config
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.ba.kassa.klant.exe
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.ba.kassa.klant.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\beid35libCS.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.models.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\OnBarcode.Barcode.BarcodeScanner.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\WebCam_Capture.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\zxing.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.models.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.csproj.App.config
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.csprojResolveAssemblyReference.cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\AlgemeneCode.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\App.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpKaart.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpladen.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpladenScan.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\MainWindow.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\Portaal.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\Registreren.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\App.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant_MarkupCompile.cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant_MarkupCompile.lref
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpKaart.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpladen.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpladenScan.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\MainWindow.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\Portaal.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\Registreren.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.g.resources
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.Properties.Resources.resources
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.csproj.GenerateResource.Cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.exe
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\nmct.ba.cashlessproject.ba.kassa.klant.pdb

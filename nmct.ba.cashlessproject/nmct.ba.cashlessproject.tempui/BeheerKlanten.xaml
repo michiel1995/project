@@ -1,0 +1,83 @@
+﻿<Window x:Class="nmct.ba.cashlessproject.tempui.BeheerKlanten"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BeheerKlanten" Height="700" Width="1050">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{StaticResource txbTitel}">Beheer Klanten</TextBlock>
+            <Button Grid.Column="2">Terug</Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="70"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Style="{StaticResource Zoeken}" ></TextBox>
+                <Button Style="{StaticResource Zoekbtn}" Grid.Column="1">Zoek</Button>
+            </Grid>
+            <ListBox Grid.Row="1"></ListBox>
+            <Grid Grid.Row="1" Grid.Column="1" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.ColumnSpan="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Style="{StaticResource BlauweKnop}">Gegevens wijzigen</Button>
+                    
+                </Grid>
+                <Image Style="{StaticResource klantRegistreren}" Grid.Row="1" Grid.Column="1" Width="100" Height="150"></Image>
+                <TextBlock Grid.Row="2" Style="{StaticResource txbStandaard}"> Voornaam:</TextBlock>
+                <TextBlock Grid.Row="3" Style="{StaticResource txbStandaard}"> Achternaam:</TextBlock>
+                <TextBlock Grid.Row="4" Style="{StaticResource txbStandaard}"> Balans:</TextBlock>
+                <TextBlock Grid.Row="5" Style="{StaticResource txbStandaard}"> Adres:</TextBlock>
+                <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource txtstand}"></TextBox>
+                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource txtstand}"></TextBox>
+                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource txtstand}"></TextBox>
+                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource txtstand}"></TextBox>
+                <Grid Grid.Column="1" Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="1">Opslaan</Button>
+                    <Button>Anuleren</Button>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="nmct.ba.cashlessproject.managment.View.BeheerMedewerkers"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:nmct.ba.cashlessproject.managment.ViewModel"
+             xmlns:co="clr-namespace:nmct.ba.cashlessproject.managment.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1050">
+    <UserControl.Resources>
+        <co:IsEnabledConverter x:Key="EnableConvert"/>
+        <co:IsEnabledConverterList x:Key="EnableConvertList"/>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <vm:BeheerMedewerkersVM/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{StaticResource txbTitel}">Beheer Medewerkers</TextBlock>
+            <Button Grid.Column="2">Terug</Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="70"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Style="{StaticResource Zoeken}"></TextBox>
+                <Button Style="{StaticResource Zoekbtn}" Grid.Column="1">Zoek</Button>
+            </Grid>
+            <ListBox Grid.Row="1" ItemsSource="{Binding Employee}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedEmployee}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvertList}}"></ListBox>
+            <Grid Grid.Row="1" Grid.Column="1" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.ColumnSpan="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Style="{StaticResource BlauweKnop}" Command="{Binding Toevoegen}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}">Toevoegen</Button>
+                    <Button Style="{StaticResource BlauweKnop}" Grid.Column="1" Command="{Binding Verwijderen}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}">Verwijderen</Button>
+                    <Button Style="{StaticResource BlauweKnop}" Grid.Column="2" Command="{Binding Aanpassen}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}">Aanpassen</Button>
+                </Grid>
+                <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource txbStandaard}" Foreground="Red" Text="{Binding Foutmelding}"></TextBlock>
+                <TextBlock Grid.Row="3" Style="{StaticResource txbStandaard}">Naam:</TextBlock>
+                <TextBlock Grid.Row="4" Style="{StaticResource txbStandaard}">Email:</TextBlock>
+                <TextBlock Grid.Row="5" Style="{StaticResource txbStandaard}">Telefoon:</TextBlock>
+                <TextBlock Grid.Row="6" Style="{StaticResource txbStandaard}">Adres:</TextBlock>            
+                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Name}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Email}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Phone}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="6" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Address}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <Button Style="{StaticResource BlauweKnop}" Grid.Row="7" Grid.Column="0" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}" >Scan Badge</Button>
+                <Grid Grid.Column="1" Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="1" Command="{Binding Opslaan}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}">Opslaan</Button>
+                    <Button Grid.Column="0" Command="{Binding Anuleren}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}">Anuleren</Button>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

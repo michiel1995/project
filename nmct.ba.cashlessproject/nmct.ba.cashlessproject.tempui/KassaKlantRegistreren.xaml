@@ -1,0 +1,51 @@
+﻿<Window x:Class="nmct.ba.cashlessproject.tempui.KassaKlantRegistreren"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="KassaKlantRegistreren" Height="700" Width="1050">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{StaticResource txbTitel}">Registreren</TextBlock>
+            <Button Grid.Column="2">Terug</Button>
+
+        </Grid>
+        <Grid Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource txbStandaard}">Naam:</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource txbStandaard}">Adres:</TextBlock>
+            <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource txtstand}" IsEnabled="False" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource txtstand}" IsEnabled="False" ></TextBox>
+            <TextBlock Grid.Row="3" Grid.Column="2" Style="{StaticResource txbStandaard}" TextAlignment="Center">Stop identiteitskaart in lezer!</TextBlock>
+            <Button Style="{StaticResource BlauweKnop}" Grid.Row="4" Grid.Column="2">Lees identiteitskaart</Button>
+            <Image Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" Height="250" Grid.RowSpan="5"></Image>
+            <Button Style="{StaticResource BlauweKnop}" Grid.Row="6" Grid.Column="1">Lees kaart</Button>
+            <Button Grid.Row="8" Grid.Column="2">Registreer</Button>
+        </Grid>
+    </Grid>
+</Window>

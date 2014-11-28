@@ -1,0 +1,50 @@
+﻿<Window x:Class="nmct.ba.cashlessproject.tempui.BeheerKassa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BeheerKassa" Height="700" Width="1050">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{StaticResource txbTitel}">Beheer Kassa</TextBlock>
+            <Button Grid.Column="2">Terug</Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1">
+                <TextBlock Style="{StaticResource txbStandaard}">Sorteer op</TextBlock>
+                <ComboBox></ComboBox>
+            </StackPanel>
+            <ListBox Grid.Column="1" Grid.Row="1"></ListBox>
+            <ListView Grid.Column="3" Grid.Row="1">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="150" Header="Van" 
+              DisplayMemberBinding="{Binding }"  />
+                        <GridViewColumn Width="150" Header="tot"  
+              DisplayMemberBinding="{Binding }" />
+                        <GridViewColumn Width="180" Header="Naam/Kassa" 
+              DisplayMemberBinding="{Binding }" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>

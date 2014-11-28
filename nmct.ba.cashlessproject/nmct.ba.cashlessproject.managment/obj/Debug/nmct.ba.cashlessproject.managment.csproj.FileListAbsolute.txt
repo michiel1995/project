@@ -1,0 +1,108 @@
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.managment.exe.config
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.managment.exe
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.managment.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.csproj.App.config
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\MainWindow.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment_MarkupCompile.cache
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment_MarkupCompile.lref
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\MainWindow.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.g.resources
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.Properties.Resources.resources
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.csproj.GenerateResource.Cache
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.exe
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerKassa.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerKassa.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerKlanten.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerMedewerkers.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerProducten.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\Login.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\statistieken.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerKlanten.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerMedewerkers.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerProducten.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\Login.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\statistieken.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.csprojResolveAssemblyReference.cache
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.models.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.models.pdb
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\AlgemeneCode.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\App.baml
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\App.g.cs
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Thinktecture.IdentityModel.Client.dll
+C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Thinktecture.IdentityModel.Client.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.managment.exe.config
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.managment.exe
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.managment.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.helper.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.models.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Thinktecture.IdentityModel.Client.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.helper.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\nmct.ba.cashlessproject.models.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\bin\Debug\Thinktecture.IdentityModel.Client.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.csproj.App.config
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.csprojResolveAssemblyReference.cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\AlgemeneCode.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\App.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerKlanten.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerMedewerkers.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerProducten.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\Login.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\MainWindow.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerKassa.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\statistieken.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\App.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment_MarkupCompile.cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment_MarkupCompile.lref
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerKlanten.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerMedewerkers.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerProducten.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\Login.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\MainWindow.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\BeheerKassa.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\statistieken.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.g.resources
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.Properties.Resources.resources
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.csproj.GenerateResource.Cache
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.exe
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.pdb

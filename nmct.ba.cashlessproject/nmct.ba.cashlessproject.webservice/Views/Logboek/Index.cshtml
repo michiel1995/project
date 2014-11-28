@@ -1,0 +1,96 @@
+﻿@model IEnumerable<nmct.ba.cashlessproject.webservice.presentationModel.PMLogboek>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Logboek</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            <a href="" class="black">Wanneer</a>
+        </th>
+        <th>
+            <a href="" class="black">Organisatie naam</a>
+        </th>
+
+        <th>
+            <a href="" class="black">Kassa naam</a>
+        </th>
+        <th>
+            <a href="" class="black">bericht</a>
+        </th>
+        <th>
+            <a href="" class="black">Foutmelding</a>
+        </th>
+        <th>
+            meer Info
+        </th>
+        <th>
+            acties
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Error.Timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrganisationName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegisterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Error.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Error.Stacktrace)
+            </td>
+            <td>
+                <a onclick="geklikt(@item.Error.RegisterId)">Klik hier voor meer info</a>
+            </td>
+            <td>
+                <a href="#" class="trashbin"></a>
+            </td>
+        </tr>
+    }
+</table>
+<div class="background" id="backgroundWeg"></div>
+@foreach (var item in Model)
+{
+    <div class="hiddenBox" id="@item.Error.RegisterId">
+        <h3>Organisatie</h3>
+        <label class="col-md-4">Organisatie naam</label><p class="col-md-8">@item.OrganisationName</p>
+        <label class="col-md-4">Adres</label><p class="col-md-8">@item.Address</p>
+        <label class="col-md-4">Email</label><p class="col-md-8">@item.Email</p>
+        <label class="col-md-4">Telefoon</label><p class="col-md-8">@item.Phone</p>
+        <label class="col-md-4">Database Naam organisatie</label><p class="col-md-8">@item.DatabaseName</p>
+        <h3>Kassa</h3>
+        <label class="col-md-4">Kassa naam</label><p class="col-md-8">@item.RegisterName</p>
+        <label class="col-md-4">Toestel</label><p class="col-md-8">@item.Device</p>
+        <label class="col-md-4">Verval datum</label><p class="col-md-8">@item.ExpiresDate</p>
+        <h3>Foutmelding</h3>
+        <label class="col-md-4">Tijd</label><p class="col-md-8">@item.Error.Timestamp</p>
+        <label class="col-md-4">Bericht</label><p class="col-md-8">@item.Error.Message</p>
+        <label class="col-md-4">Stacktrace</label><p class="col-md-8">@item.Error.Stacktrace</p>
+    </div>
+}
+
+<script>
+    function geklikt(Time){
+        $("#" + Time).attr("class", "toonBox");
+        $("#" + Time).css({
+            "top": ((window.innerHeight - $("#" + Time).height()) / 2) -27  ,
+            "left": ($("#container").width() - $("#" + Time).width())/2
+        });
+        window.scrollTo(0,0);
+        $(".background").attr("id" ,"backgroundToon");
+        $("#backgroundToon").click(function(){
+            $(".background").attr("id" ,"backgroundWeg");
+            $("#" + Time).attr("class" ,"hiddenBox");
+        })
+    }
+</script>

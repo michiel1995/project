@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="nmct.ba.cashlessproject.ba.kassa.klant.View.Registreren"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:nmct.ba.cashlessproject.ba.kassa.klant.ViewModel"
+             xmlns:c="clr-namespace:nmct.ba.cashlessproject.ba.kassa.klant.converter"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1050">
+    <UserControl.Resources>
+        <c:ChangeForeground x:Key="ChangeForeground"/>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+      
+        <vm:RegistrerenVM/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{StaticResource txbTitel}">Registreren</TextBlock>
+            <Button Grid.Column="2">Terug</Button>
+
+        </Grid>
+        <Grid Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Foreground="red" Grid.Column="2" Grid.ColumnSpan="3" FontSize="15" Text="{Binding FoutmeldingIdentiteit}"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource txbStandaard}">Naam:</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource txbStandaard}">Adres:</TextBlock>
+            <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource txtstand}" IsEnabled="False" Text="{Binding Naam}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource txtstand}" IsEnabled="False" Text="{Binding Address}"></TextBox>
+            <TextBlock Grid.Row="3" Grid.Column="2" Style="{StaticResource txbStandaard}" TextAlignment="Center">Stop identiteitskaart in lezer!</TextBlock>
+            <Button Style="{StaticResource BlauweKnop}" Grid.Row="4" Grid.Column="2" Command="{Binding LeesIdentiteitskaart}">Lees identiteitskaart</Button>
+            <Image Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" Height="250" Grid.RowSpan="5" Source="{Binding Image}"></Image>
+            <Button Style="{StaticResource BlauweKnop}" Grid.Row="6" Grid.Column="1" Click="Button_Click">Lees kaart</Button>
+            
+            <TextBlock x:Name="txtkaart" Grid.Column="2" Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" Style="{StaticResource txbStandaard}" Visibility="Hidden">Hou kaart op scanner</TextBlock>
+            <TextBox x:Name="txtrfid" Grid.Column="2" Grid.Row="6" Width="0" Height="0" Text="{Binding Id}" KeyDown="txtrfid_KeyDown" ></TextBox>
+            <TextBox x:Name="focus" Grid.Column="2" Grid.Row="6" Width="0" Height="0" ></TextBox>
+            <ProgressBar x:Name="progress" IsIndeterminate="True" Grid.Column="2" Grid.Row="6"  Margin="15"  Visibility="Hidden"/>
+            <TextBlock x:Name="txtFoutmelding" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Center" FontSize="20" Text="{Binding Foutmelding}" Foreground="{Binding Foutmelding, Converter={StaticResource ChangeForeground}}" ></TextBlock>
+            <Button Grid.Row="8" Grid.Column="2" Command="{Binding Registreer}">Registreer</Button>
+        </Grid>
+    </Grid>
+</UserControl>

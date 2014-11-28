@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="nmct.ba.cashlessproject.ba.kassa.klant.View.GeldOpKaart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:nmct.ba.cashlessproject.ba.kassa.klant.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1050" Loaded="UserControl_Loaded">
+    <UserControl.DataContext>
+        <vm:GeldOpKaartVM/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Style="{StaticResource progresstxb}" Grid.Column="1" Grid.Row="2">Leg je kaart op de lezer</TextBlock>
+        <TextBlock Style="{StaticResource txbStandaard}" Grid.Column="1" Grid.Row="5" Text="{Binding Hoeveel}"></TextBlock>
+        <TextBox x:Name="txtrfid" Grid.Column="1" Grid.Row="3" Width="0" Height="0" Text="{Binding RfidNummer}" KeyDown="txtrfid_KeyDown" ></TextBox>
+        <TextBox x:Name="focus" Grid.Column="1" Grid.Row="3" Width="0" Height="0" ></TextBox>
+        <ProgressBar IsIndeterminate="True"  Grid.Column="1" Grid.Row="3" />
+        <Grid Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1">Terug</Button>
+        </Grid>
+    </Grid>
+</UserControl>

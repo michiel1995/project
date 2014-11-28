@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <header class="navbar navbar-inverse navbar-fixed-top ">
+        <h1>Cashless payment - Administration</h1>
+         @Html.Partial("_LoginPartial")
+    </header>
+    <div id="container">
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("Verenigingen", "index", "vereniging")</li>
+                <li>@Html.ActionLink("Kassa's", "index", "kassa")</li>
+                <li>@Html.ActionLink("Logboek", "index", "logboek")</li>
+                <li>@Html.ActionLink("Instellingen", "index", "Instellingen")</li>
+            </ul>
+        </nav>
+        <main id="content">
+            @RenderBody()
+        </main>
+
+    </div>
+</body>
+</html>

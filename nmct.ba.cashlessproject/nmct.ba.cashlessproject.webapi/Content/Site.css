@@ -1,0 +1,118 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+h1 {
+    font-size: 25px;
+    color:white;
+    padding-left:20px;
+}
+html,body {
+    height:100%;
+}
+#container{
+    margin-top:8px;
+    display:block;
+    position: relative;
+    height:101%
+}
+
+nav{
+    position: fixed;
+    height:100%;
+    background: #eee;
+    width:  200px;
+}
+nav > ul {
+
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+ ul >li {
+    display:block;
+    width: 100%;
+ }
+ ul >li > a {
+    display:block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #666;
+    padding: 10px 20px ;
+    width: 100%;
+    font-size: 16px;
+}
+  ul >li > a:hover {
+    background-color: #aaa;
+    text-decoration: none;
+    color: black;
+}
+#content {
+    display: block;
+    margin-left: 220px;
+}
+.loginbox{
+    margin:0;
+    display: inline;
+}
+#login{
+   height:100%
+}
+a.trashbin{
+    background: url(../Images/Trash_Bin.png) no-repeat top left;
+     display: block;
+     width: 51px;
+     height: 51px;
+}
+.hiddenBox, .backgroundWeg{
+    display: none;
+}
+#backgroundToon {
+   position: fixed;
+    opacity: 0.8;
+    left: 0;
+    top: 0;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.toonBox{
+    border-radius: 10px;
+    border: 3px solid #666;
+    width: 800px;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-bottom:20px;
+    color: #000000;
+}
+h2{
+    margin-top:0;
+    padding-top:10px;
+}
+h3{
+    color: #333;
+    padding-top:20px;
+}
+a{
+    cursor: pointer;
+}
+.black{
+    color: #333;
+}
