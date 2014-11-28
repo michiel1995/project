@@ -45,7 +45,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.View
                 _timer.Stop();              
                 web.Stop();
                 geld += i;
-                txtGeld.Text = "Totaal bedrag: €" + geld;
+                txtGeld.Text =""+ geld;
                 btnContinue.IsEnabled = true;
             }
         }
@@ -63,5 +63,6 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.View
             _timer.Start();
             web.Continue();
         }
+
     }
 }

@@ -51,6 +51,7 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
@@ -72,6 +73,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Thinktecture.IdentityModel.Client">
+      <HintPath>..\packages\Thinktecture.IdentityModel.Client.3.0.0\lib\portable-net45+wp80+win8+wpa81\Thinktecture.IdentityModel.Client.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -81,9 +85,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converter\MoneyConverter.cs" />
     <Compile Include="helper.cs" />
     <Compile Include="Servicelayer.cs" />
     <Compile Include="ViewModel\LoginVM.cs" />
+    <Compile Include="ViewModel\ObservableCollection.cs" />
     <Compile Include="ViewModel\StartupscreenVM.cs" />
     <Compile Include="View\Bestellen.xaml.cs">
       <DependentUpon>Bestellen.xaml</DependentUpon>
@@ -156,6 +162,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\nmct.ba.cashlessproject.helper\nmct.ba.cashlessproject.helper.csproj">
+      <Project>{5f173e45-2d85-4718-9734-39e87e4955d5}</Project>
+      <Name>nmct.ba.cashlessproject.helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\nmct.ba.cashlessproject.models\nmct.ba.cashlessproject.models.csproj">
       <Project>{ae19d456-a833-4e5d-af9f-dc9b1a3b1b5a}</Project>
       <Name>nmct.ba.cashlessproject.models</Name>

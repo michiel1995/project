@@ -13,6 +13,13 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
 {
     class StartupscreenVM : ObservableObject, IPage
     {
+        public StartupscreenVM()
+        {
+            if(ApplicationVM.ingelogdeMedewerker !=null)
+            {
+                Employee = ApplicationVM.ingelogdeMedewerker;
+            }
+        }
         public string Name
         {
             get { return "StartupScreen"; }
@@ -24,33 +31,22 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             get { return _rfidNummer; }
             set { _rfidNummer = value; OnPropertyChanged("RfidNummer"); ControleerRfid(); }
         }
-        private string _naam ;
 
-        public string Naam 
-        {
-            get { return _naam; }
-            set { _naam = value; OnPropertyChanged("Naam"); }
-        }
-        private double _bedrag ;
 
-        public double Bedrag
+        private Employee _employee;
+
+        public Employee Employee
         {
-            get { return _bedrag; }
-            set { _bedrag = value; OnPropertyChanged("Bedrag"); }
+            get { return _employee; }
+            set { _employee = value; }
         }
+        
         private Customer _cust;
 
         public Customer Cust
         {
             get { return _cust; }
-            set { _cust = value; }
-        }
-        private string _adres;
-
-        public string Adres
-        {
-            get { return _adres; }
-            set { _adres = value; OnPropertyChanged("Adres"); }
+            set { _cust = value; OnPropertyChanged("Cust"); }
         }
         private BitmapImage _image;
 
@@ -71,9 +67,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
                     if (Customer != null)
                     {
                         Cust = Customer;
-                        Naam =  Customer.Name;
-                        Adres =  Customer.Address;
-                        Bedrag =  Customer.Balance;
+                        ApplicationVM.ingelogdeCustomer = Customer;
                         if (Customer.Image != null)
                             Image = helper.byteArrayToImage(Customer.Image);
                     }
@@ -93,6 +87,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
 
         private void Bestellen()
         {
+            ApplicationVM.ingelogdeCustomer = Cust;
             (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new BestellenVM());
         }
 

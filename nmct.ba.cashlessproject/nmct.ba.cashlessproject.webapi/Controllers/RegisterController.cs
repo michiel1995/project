@@ -8,6 +8,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Formatting;
 using System.Security.Claims;
 using System.Web;
 using System.Web.Http;
@@ -20,6 +21,24 @@ namespace nmct.ba.cashlessproject.webapi.Controllers
         {
             ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
             return RegisterDA.GetListRegister(p.Claims);
+        }
+
+        public HttpResponseMessage Get(string id)
+        {
+
+            if (string.IsNullOrEmpty(id))
+                return new HttpResponseMessage() { StatusCode = HttpStatusCode.BadRequest };
+
+            ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
+            Register register = RegisterDA.GetRegister(Convert.ToInt32(id), p.Claims);
+            if (register == null)
+                return new HttpResponseMessage() { StatusCode = HttpStatusCode.NotFound };
+
+            HttpResponseMessage response = new HttpResponseMessage();
+            HttpContent content = new ObjectContent(typeof(Register), register, new JsonMediaTypeFormatter());
+            response.Content = content;
+            response.StatusCode = HttpStatusCode.OK;
+            return response;
         }
 
         public HttpResponseMessage Post(Register newRegister)

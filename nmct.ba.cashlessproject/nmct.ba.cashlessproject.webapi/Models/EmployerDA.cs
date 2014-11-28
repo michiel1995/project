@@ -17,11 +17,11 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "Update Employee Set EmployeeName = @Employee, Address = @Address,Email = @Email, Phone = @Phone where Id = @Id";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", newEmployee.Id);
-            DbParameter par2 = Database.AddParameter("Test", "@Employee", newEmployee.Name);
-            DbParameter par3 = Database.AddParameter("Test", "@Address", newEmployee.Address);
-            DbParameter par4 = Database.AddParameter("Test", "@Email", newEmployee.Email);
-            DbParameter par5 = Database.AddParameter("Test", "@Phone", newEmployee.Phone);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", newEmployee.Id);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Employee", newEmployee.Name);
+            DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Address", newEmployee.Address);
+            DbParameter par4 = Database.AddParameter("System.Data.SqlClient", "@Email", newEmployee.Email);
+            DbParameter par5 = Database.AddParameter("System.Data.SqlClient", "@Phone", newEmployee.Phone);
             return Database.ModifyData(con, sql, par1, par2, par3, par4, par5);
         }
         public static int DeleteEmployee(int id, IEnumerable<Claim> claims)
@@ -36,17 +36,17 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "INSERT INTO Employee VALUES (@Id,@Employee,@Address, @Email, @Phone)";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", newEmployee.Id);
-            DbParameter par2 = Database.AddParameter("Test", "@Employee", newEmployee.Name);
-            DbParameter par3 = Database.AddParameter("Test", "@Address", newEmployee.Address);
-            DbParameter par4 = Database.AddParameter("Test", "@Email", newEmployee.Email);
-            DbParameter par5 = Database.AddParameter("Test", "@Phone", newEmployee.Phone);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", newEmployee.Id);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Employee", newEmployee.Name);
+            DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Address", newEmployee.Address);
+            DbParameter par4 = Database.AddParameter("System.Data.SqlClient", "@Email", newEmployee.Email);
+            DbParameter par5 = Database.AddParameter("System.Data.SqlClient", "@Phone", newEmployee.Phone);
             return Database.InsertData(con, sql, par1, par2, par3, par4, par5);
         }
         public static Employee GetEmployee(int id, IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
-            DbParameter par1 = Database.AddParameter("Test", "@Id", id);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", id);
             DbDataReader reader = Database.GetData(con, "SELECT Id,EmployeeName,Address,Email,Phone FROM dbo.Employee where Id = @Id",par1);
             reader.Read();
             return CreateEmployee(reader);

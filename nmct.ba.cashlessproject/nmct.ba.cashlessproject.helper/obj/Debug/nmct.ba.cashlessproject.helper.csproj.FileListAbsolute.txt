@@ -5,6 +5,6 @@ C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.b
 C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.ba.cashlessproject.helper\obj\Debug\nmct.ba.cashlessproject.helper.csprojResolveAssemblyReference.cache
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.helper\bin\Debug\nmct.ba.cashlessproject.helper.dll
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.helper\bin\Debug\nmct.ba.cashlessproject.helper.pdb
-C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.helper\obj\Debug\nmct.ba.cashlessproject.helper.csprojResolveAssemblyReference.cache
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.helper\obj\Debug\nmct.ba.cashlessproject.helper.dll
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.helper\obj\Debug\nmct.ba.cashlessproject.helper.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.helper\obj\Debug\nmct.ba.cashlessproject.helper.csprojResolveAssemblyReference.cache

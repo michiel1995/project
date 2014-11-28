@@ -14,6 +14,14 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             get { return "Login"; }
         }
 
+        public LoginVM()
+        {
+            if(ApplicationVM.token ==null)
+            {
+                ApplicationVM.getToken();
+            }
+        }
+
         private string _rfidNummer;
 
         public string RfidNummer
@@ -27,9 +35,10 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             int i;
             if (int.TryParse(RfidNummer, out i) && RfidNummer.Length == 10)
             {
-                Customer cust = await Servicelayer.GetCustomer(i);
-                if (cust != null)
-                {                  
+                Employee employee = await Servicelayer.GetMedewerker(i);
+                if (employee != null)
+                {
+                    ApplicationVM.ingelogdeMedewerker = employee;
                     (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new StartupscreenVM());
                 }
             }

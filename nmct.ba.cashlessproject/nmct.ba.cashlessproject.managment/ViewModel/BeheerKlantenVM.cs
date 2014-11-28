@@ -15,7 +15,11 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
     {
         public BeheerKlantenVM()
         {
-            VulCustomersIn();
+            if (ApplicationVM.token != null)
+            {
+                VulCustomersIn();
+            }
+           
         }
         private string _status;
         public string Status

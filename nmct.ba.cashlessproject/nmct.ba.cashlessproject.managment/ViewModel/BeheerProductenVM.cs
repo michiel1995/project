@@ -14,8 +14,10 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
     {
         public BeheerProductenVM()
         {
-            VulProductsIn();
-            
+            if (ApplicationVM.token != null)
+            {
+                VulProductsIn();
+            }
         }
 
         private string _status;

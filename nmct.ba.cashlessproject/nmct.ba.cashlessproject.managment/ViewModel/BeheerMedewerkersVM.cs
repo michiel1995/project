@@ -14,7 +14,10 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
     {
         public BeheerMedewerkersVM()
         {
-            VulMedewerkersIn();
+            if (ApplicationVM.token != null)
+            {
+                VulMedewerkersIn();
+            }
         }
         private string _status;
 

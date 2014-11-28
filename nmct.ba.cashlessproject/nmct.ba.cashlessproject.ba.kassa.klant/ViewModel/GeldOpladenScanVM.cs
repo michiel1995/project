@@ -25,6 +25,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
                 Customer cust =  await servicelayer.GetCustomer(i);
                 if(cust != null)
                 {
+                    ApplicationVM.ingelogdeCustomer = cust;
                     (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new GeldOpladenVM());
                 }
             }

@@ -14,6 +14,7 @@ namespace nmct.ba.cashlessproject.webapi.helperClass
         {
             ConnectionStringSettings settings = new ConnectionStringSettings();
             settings.ProviderName = provider;
+            settings.Name = database;
             settings.ConnectionString = "Data Source=" + server + ";Initial Catalog=" + database + ";User ID=" + username + ";Password=" + password;
             return settings;
         }
@@ -125,10 +126,19 @@ namespace nmct.ba.cashlessproject.webapi.helperClass
             }
         }
 
-        public static DbParameter AddParameter(string ConnectionString, string name, object value)
+        //public static DbParameter AddParameter(string ConnectionString, string name, object value)
+        //{
+        //    ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[ConnectionString];
+        //    DbParameter par = DbProviderFactories.GetFactory(settings.ProviderName).CreateParameter();
+        //    par.ParameterName = name;
+        //    par.Value = value;
+
+        //    return par;
+        //}
+
+        public static DbParameter AddParameter(string provider, string name, object value)
         {
-            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[ConnectionString];
-            DbParameter par = DbProviderFactories.GetFactory(settings.ProviderName).CreateParameter();
+            DbParameter par = DbProviderFactories.GetFactory(provider).CreateParameter();
             par.ParameterName = name;
             par.Value = value;
 

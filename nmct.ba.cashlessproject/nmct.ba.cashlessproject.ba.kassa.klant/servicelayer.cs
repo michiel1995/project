@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using nmct.ba.cashlessproject.ba.kassa.klant.ViewModel;
 using nmct.ba.cashlessproject.models;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 string json = JsonConvert.SerializeObject(cust);
                 HttpResponseMessage response = await client.PostAsync(baseUrl, new StringContent(json, Encoding.UTF8, "application/json"));
                 if (response.IsSuccessStatusCode)
@@ -29,7 +31,8 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant
         {
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("http://localhost:4730/api/customer/123");
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                HttpResponseMessage response = await client.GetAsync("http://localhost:4730/api/customer/" + i);
                 if (response.IsSuccessStatusCode)
                 {
                     string custjson = await response.Content.ReadAsStringAsync();
@@ -37,6 +40,20 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant
                     return cust;
                 }
                 return null;
+            }
+        }
+        public static async Task<Boolean> UpdateCustomer(Customer cust)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                string json = JsonConvert.SerializeObject(cust);
+                HttpResponseMessage response = await client.PutAsync(baseUrl, new StringContent(json, Encoding.UTF8, "application/json"));
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                return false;
             }
         }
     }

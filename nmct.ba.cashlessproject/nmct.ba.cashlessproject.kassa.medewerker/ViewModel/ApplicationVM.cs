@@ -6,24 +6,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Thinktecture.IdentityModel.Client;
+using nmct.ba.cashlessproject.helper;
+using System.Configuration;
 
 namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
 {
     class ApplicationVM : ObservableObject
     {
+        public static TokenResponse token = null;
         public static Customer ingelogdeCustomer = null;
         public static Employee ingelogdeMedewerker = null;
+        public static Register register = null;
 
         public ApplicationVM()
         {
             Pages.Add(new LoginVM());
             Pages.Add(new StartupscreenVM());
             Pages.Add(new BestellenVM());
-            // Add other pages
-
-            CurrentPage = Pages[2];
+            
+            getToken();
+            GetRegister();
+            CurrentPage = Pages[0];
         }
 
+        private async void GetRegister()
+        {
+            register = await Servicelayer.GetRegister(Convert.ToInt32(ConfigurationManager.AppSettings["idRegister"]));
+        }
+
+   
         private object currentPage;
         public object CurrentPage
         {
@@ -50,6 +62,14 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
         public void ChangePage(IPage page)
         {
             CurrentPage = page;
+        }
+
+        public static void getToken()
+        {
+            OAuth2Client client = new OAuth2Client(new Uri("http://localhost:4730/token"));
+            string Password = ConfigurationManager.AppSettings["Password"];
+            string Username = ConfigurationManager.AppSettings["Username"];
+            token = client.RequestResourceOwnerPasswordAsync(Cryptography.Encrypt(Username), Cryptography.Encrypt(Password)).Result;
         }
     }
 }

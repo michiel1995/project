@@ -24,6 +24,7 @@ namespace nmct.ba.cashlessproject.managment
                 HttpResponseMessage resp = await client.GetAsync(baseurl + "/product");
                 if(resp.IsSuccessStatusCode)
                 {
+                    client.SetBearerToken(ApplicationVM.token.AccessToken);
                     string json = await resp.Content.ReadAsStringAsync();
                     return JsonConvert.DeserializeObject<ObservableCollection<Product>>(json);
                 }
@@ -35,6 +36,7 @@ namespace nmct.ba.cashlessproject.managment
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 string json = JsonConvert.SerializeObject(pro);
                 HttpResponseMessage resp = await client.PostAsync(baseurl + "/product",new StringContent(json, Encoding.UTF8, "application/json"));
                 return resp.IsSuccessStatusCode;
@@ -44,6 +46,7 @@ namespace nmct.ba.cashlessproject.managment
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 string json = JsonConvert.SerializeObject(pro);
                 HttpResponseMessage resp = await client.PutAsync(baseurl + "/product", new StringContent(json, Encoding.UTF8, "application/json"));
                 return resp.IsSuccessStatusCode;
@@ -53,6 +56,7 @@ namespace nmct.ba.cashlessproject.managment
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 HttpResponseMessage resp = await client.DeleteAsync(baseurl + "/product/" + pro);
                 return resp.IsSuccessStatusCode;
             }
@@ -64,6 +68,7 @@ namespace nmct.ba.cashlessproject.managment
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 HttpResponseMessage resp = await client.GetAsync(baseurl + "/employer");
                 if (resp.IsSuccessStatusCode)
                 {
@@ -78,6 +83,7 @@ namespace nmct.ba.cashlessproject.managment
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 string json = JsonConvert.SerializeObject(emp);
                 HttpResponseMessage resp = await client.PostAsync(baseurl + "/employer", new StringContent(json, Encoding.UTF8, "application/json"));
                 return resp.IsSuccessStatusCode;
@@ -87,6 +93,7 @@ namespace nmct.ba.cashlessproject.managment
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 string json = JsonConvert.SerializeObject(emp);
                 HttpResponseMessage resp = await client.PutAsync(baseurl + "/employer", new StringContent(json, Encoding.UTF8, "application/json"));
                 return resp.IsSuccessStatusCode;
@@ -96,6 +103,7 @@ namespace nmct.ba.cashlessproject.managment
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 HttpResponseMessage resp = await client.DeleteAsync(baseurl + "/employer/" + emp);
                 return resp.IsSuccessStatusCode;
             }
@@ -123,6 +131,7 @@ namespace nmct.ba.cashlessproject.managment
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 string json = JsonConvert.SerializeObject(cust);
                 HttpResponseMessage resp = await client.PutAsync(baseurl + "/customer", new StringContent(json, Encoding.UTF8, "application/json"));
                 return resp.IsSuccessStatusCode;

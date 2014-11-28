@@ -16,28 +16,14 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
 {
     class RegistrerenVM : ObservableObject, IPage
     {
-        private string  _naam;
-        public string Naam
+        private Customer _customer;
+
+        public Customer Customer
         {
-            get { return _naam; }
-            set { _naam = value; OnPropertyChanged("Naam"); }
+            get { return _customer; }
+            set { _customer = value; OnPropertyChanged("Customer"); }
         }
-
-        private string _address;
-
-        public string Address
-        {
-            get { return _address; }
-            set { _address = value; OnPropertyChanged("Address"); }
-        }
-        private Byte[] _bytes;
-
-        public Byte[] Bytes
-        {
-            get { return _bytes; }
-            set { _bytes = value; OnPropertyChanged("Bytes"); }
-        }
-
+        
         private string _id;
 
         public string Id
@@ -92,6 +78,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
             }
             else{
                 //IdFoutmelding = 2;
+                Customer.Id = i;
                 Foutmelding = "Kaart is Ingelezen";
             }
             
@@ -105,10 +92,15 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
             }
             else
             {
+                Customer = new Customer()
+                {
+                    Name = info.Name,
+                    Address = info.Adres,
+                    Image = info.Bytes,
+                    Balance = 0
+                };
                 FoutmeldingIdentiteit ="";
-                Naam = info.Name;
-                Address = info.Adres;
-                Bytes = info.Bytes;
+                
                 Image = helper.byteArrayToImage(info.Bytes);
             }
         }
@@ -121,17 +113,10 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
             get { return new RelayCommand(SlaCustomerOp); }
         }
         private async void SlaCustomerOp() {
-            if (Naam != null && Address != null && Bytes != null && Id != null)
+            if (Customer !=null)
             {
-                Customer cust = new Customer()
-                {
-                    Address = Address,
-                    Balance = 0,
-                    Id = Convert.ToInt32(Id),
-                    Image = Bytes,
-                    Name = Naam                 
-                };
-                Boolean b = await servicelayer.AddCustomer(cust);
+                
+                Boolean b = await servicelayer.AddCustomer(Customer);
                 if(b==true)
                 {
                    throw new Exception();
@@ -150,8 +135,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
         private void ErisEenFoutGebeurd()
         {
             FoutmeldingIdentiteit = "Er is een fout gebeurd bij het inlezen van de identititeitskaart probeer opnieuw!";
-            Naam = "";
-            Address = "";
+            Customer = null;
             Image = null;
             Id = "";
         }

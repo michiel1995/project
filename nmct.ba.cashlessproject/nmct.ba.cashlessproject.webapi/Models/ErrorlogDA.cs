@@ -16,10 +16,10 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "INSERT INTO Error  VALUES (@Regist,@Time, @Mes, @Sta)";
-            DbParameter par1 = Database.AddParameter("Test", "@Regist", error.Register.Id);
-            DbParameter par2 = Database.AddParameter("Test", "@Time", error.Timestamp);
-            DbParameter par3 = Database.AddParameter("Test", "@Mes", error.Message);
-            DbParameter par4 = Database.AddParameter("Test", "@Sta", error.Stacktrace);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Regist", error.Register.Id);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Time", error.Timestamp);
+            DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Mes", error.Message);
+            DbParameter par4 = Database.AddParameter("System.Data.SqlClient", "@Sta", error.Stacktrace);
             return Database.InsertData(con, sql, par1, par2, par3, par4);
         }
         private static DbConnection GetConnection(IEnumerable<Claim> claims)

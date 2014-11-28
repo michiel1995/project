@@ -52,8 +52,8 @@
             <TextBlock Foreground="red" Grid.Column="2" Grid.ColumnSpan="3" FontSize="15" Text="{Binding FoutmeldingIdentiteit}"></TextBlock>
             <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource txbStandaard}">Naam:</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource txbStandaard}">Adres:</TextBlock>
-            <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource txtstand}" IsEnabled="False" Text="{Binding Naam}" ></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource txtstand}" IsEnabled="False" Text="{Binding Address}"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource txtstand}" IsEnabled="False" Text="{Binding Customer.Name}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource txtstand}" IsEnabled="False" Text="{Binding Customer.Address}"></TextBox>
             <TextBlock Grid.Row="3" Grid.Column="2" Style="{StaticResource txbStandaard}" TextAlignment="Center">Stop identiteitskaart in lezer!</TextBlock>
             <Button Style="{StaticResource BlauweKnop}" Grid.Row="4" Grid.Column="2" Command="{Binding LeesIdentiteitskaart}">Lees identiteitskaart</Button>
             <Image Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" Height="250" Grid.RowSpan="5" Source="{Binding Image}"></Image>

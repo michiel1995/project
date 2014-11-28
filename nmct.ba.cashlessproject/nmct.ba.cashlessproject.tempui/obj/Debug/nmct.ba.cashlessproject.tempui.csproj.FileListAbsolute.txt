@@ -135,7 +135,6 @@ C:\Users\Michiel\Documents\NMCT S3\project ssa-ba\nmct.ba.cashlessproject\nmct.b
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\bin\Debug\nmct.ba.cashlessproject.tempui.exe.config
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\bin\Debug\nmct.ba.cashlessproject.tempui.exe
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\bin\Debug\nmct.ba.cashlessproject.tempui.pdb
-C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\obj\Debug\nmct.ba.cashlessproject.tempui.csprojResolveAssemblyReference.cache
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\obj\Debug\AlgemeneCode.baml
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\obj\Debug\BeheerKassa.baml
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\obj\Debug\BeheerKlanten.baml
@@ -177,3 +176,4 @@ C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashle
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\obj\Debug\nmct.ba.cashlessproject.tempui.csproj.GenerateResource.Cache
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\obj\Debug\nmct.ba.cashlessproject.tempui.exe
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\obj\Debug\nmct.ba.cashlessproject.tempui.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.tempui\obj\Debug\nmct.ba.cashlessproject.tempui.csprojResolveAssemblyReference.cache

@@ -17,9 +17,9 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "Update Products Set ProductName = @ProductName, Price = @Price where Id = @Id";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", product.Id);
-            DbParameter par2 = Database.AddParameter("Test", "@ProductName", product.ProductName);
-            DbParameter par3 = Database.AddParameter("Test", "@Price", product.Price);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", product.Id);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@ProductName", product.ProductName);
+            DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Price", product.Price);
             return Database.ModifyData(con, sql, par1, par2, par3);
         }
         public static int DeleteEmployee(int id, IEnumerable<Claim> claims)
@@ -34,8 +34,8 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "INSERT INTO Products (ProductName,Price) VALUES (@Name,@Price)";
-            DbParameter par1 = Database.AddParameter("Test", "@Name", product.ProductName);
-            DbParameter par2 = Database.AddParameter("Test", "@Price", product.Price);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Name", product.ProductName);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Price", product.Price);
             return Database.InsertData(con, sql, par1, par2);
         }
 

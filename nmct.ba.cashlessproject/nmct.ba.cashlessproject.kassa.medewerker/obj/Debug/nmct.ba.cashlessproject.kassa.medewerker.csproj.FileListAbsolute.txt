@@ -88,3 +88,7 @@ C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashle
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.csproj.GenerateResource.Cache
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.exe
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\nmct.ba.cashlessproject.kassa.medewerker.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.helper.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Thinktecture.IdentityModel.Client.dll
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.helper.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Thinktecture.IdentityModel.Client.pdb

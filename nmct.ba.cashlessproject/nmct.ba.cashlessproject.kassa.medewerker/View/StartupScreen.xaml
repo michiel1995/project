@@ -29,7 +29,7 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <Rectangle></Rectangle>
-                <TextBlock Style="{StaticResource txbStandaard}">Naam Medewerker</TextBlock>
+                <TextBlock Style="{StaticResource txbStandaard}" Text="{Binding Employee.Name}"></TextBlock>
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
@@ -90,9 +90,9 @@
 
                 </StackPanel>
                 <StackPanel Grid.Row="2" Grid.Column="1">
-                    <TextBlock  Style="{StaticResource txbStandaard}" FontWeight="ExtraBold"  Text="{Binding Naam}"></TextBlock>
-                    <TextBlock  Style="{StaticResource txbStandaard}" FontWeight="ExtraBold"  Text="{Binding Adres}"></TextBlock>
-                    <TextBlock Style="{StaticResource groot}" FontWeight="ExtraBold" FontSize="26" Text="{Binding Bedrag}"></TextBlock>
+                    <TextBlock  Style="{StaticResource txbStandaard}" FontWeight="ExtraBold"  Text="{Binding Cust.Name}"></TextBlock>
+                    <TextBlock  Style="{StaticResource txbStandaard}" FontWeight="ExtraBold"  Text="{Binding Cust.Address}"></TextBlock>
+                    <TextBlock Style="{StaticResource groot}" FontWeight="ExtraBold" FontSize="26" Text="{Binding Cust.Balance}"></TextBlock>
 
                 </StackPanel>
             </Grid>

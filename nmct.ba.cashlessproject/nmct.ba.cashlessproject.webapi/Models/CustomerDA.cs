@@ -19,12 +19,13 @@ namespace nmct.ba.cashlessproject.webapi.Models
         public static int ModifyCustomer(Customer cust, IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
+            
             string sql = "Update Customers Set CustomerName = @CustomerName, Address = @Address, Balance = @Balance where Id = @Id";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", cust.Id);
-            DbParameter par2 = Database.AddParameter("Test", "@CustomerName", cust.Name);
-            DbParameter par3 = Database.AddParameter("Test", "@Address", cust.Address);
-            DbParameter par4 = Database.AddParameter("Test", "@Picture", cust.Image);
-            DbParameter par5 = Database.AddParameter("Test", "@Balance", cust.Balance);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", cust.Id);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@CustomerName", cust.Name);
+            DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Address", cust.Address);
+            DbParameter par4 = Database.AddParameter("System.Data.SqlClient", "@Picture", cust.Image);
+            DbParameter par5 = Database.AddParameter("System.Data.SqlClient", "@Balance", cust.Balance);
             return Database.ModifyData(con, sql, par1, par2, par3, par4, par5);
         }
 
@@ -39,7 +40,7 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "Delete from Customer  where Id = @Id";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", id);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", id);
             return Database.ModifyData(con, sql, par1);
         }
 
@@ -47,11 +48,11 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "INSERT INTO Customers VALUES (@Id,@CustomerName,@Address, @Picture, @Balance)";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", newCustomer.Id);
-            DbParameter par2 = Database.AddParameter("Test", "@CustomerName", newCustomer.Name);
-            DbParameter par3 = Database.AddParameter("Test", "@Address", newCustomer.Address);
-            DbParameter par4 = Database.AddParameter("Test", "@Picture", Convert.ToBase64String(newCustomer.Image));
-            DbParameter par5 = Database.AddParameter("Test", "@Balance", newCustomer.Balance);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", newCustomer.Id);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@CustomerName", newCustomer.Name);
+            DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Address", newCustomer.Address);
+            DbParameter par4 = Database.AddParameter("System.Data.SqlClient", "@Picture", Convert.ToBase64String(newCustomer.Image));
+            DbParameter par5 = Database.AddParameter("System.Data.SqlClient", "@Balance", newCustomer.Balance);
             return Database.InsertData(con, sql, par1, par2, par3, par4, par5);
         }
 
@@ -59,7 +60,7 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             Customer cust = new Customer();
-            DbParameter par1 = Database.AddParameter("Test", "@id", id);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@id", id);
             DbDataReader reader = Database.GetData(con, "SELECT Id,CustomerName,Address,Picture,Balance FROM dbo.Customers where Id = @id ",par1);
             reader.Read();
             cust = CreateCustomer(reader);

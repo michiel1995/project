@@ -16,8 +16,8 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection();
             string sql = "SELECT * FROM Organisations WHERE Login=@Login AND Password=@Password";
-            DbParameter par1 = Database.AddParameter("AdminConnection", "@Login", username);
-            DbParameter par2 = Database.AddParameter("AdminConnection", "@Password", password);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Login", username);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Password", password);
 
             try
             {
@@ -46,7 +46,7 @@ namespace nmct.ba.cashlessproject.webapi.Models
         }
         private static DbConnection GetConnection()
         {
-            return Database.GetConnection(Database.CreateConnectionString("System.Data.SqlClient", @"MICHIEL\PROJECT", "Admin", "admin", "123456789"));
+            return Database.GetConnection(Database.CreateConnectionString("System.Data.SqlClient", @"MICHIEL\PROJECT", "Admin", "AdminConnection", "P@ssw0rd"));
         }
     }
 }

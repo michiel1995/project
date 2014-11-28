@@ -17,16 +17,16 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "Update Registers Set RegisterName = @Register, Device = @Device where Id = @Id";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", register.Id);
-            DbParameter par2 = Database.AddParameter("Test", "@Register", register.Registername);
-            DbParameter par3 = Database.AddParameter("Test", "@Device", register.Device);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", register.Id);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Register", register.Registername);
+            DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Device", register.Device);
             return Database.ModifyData(con, sql, par1, par2, par3);
         }
         public static int DeleteRegister(int id, IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
             string sql = "Delete from Registers  where Id = @Id";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", id);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", id);
             return Database.ModifyData(con, sql, par1);
         }
 
@@ -34,8 +34,8 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "INSERT INTO Registers (RegisterName, Device) VALUES (@Register,@Device)";
-            DbParameter par1 = Database.AddParameter("Test", "@Register", register.Registername);
-            DbParameter par2 = Database.AddParameter("Test", "@Device", register.Device);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Register", register.Registername);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Device", register.Device);
             return Database.InsertData(con, sql, par1, par2);
         }
 
@@ -44,13 +44,23 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             List<Register> lijst = new List<Register>();
-            DbDataReader reader = Database.GetData(con, "SELECT * FROM dbo.Registers");
+            DbDataReader reader = Database.GetData(con, "SELECT Id,Registername,Device FROM dbo.Registers");
             while (reader.Read())
             {
                 Register re = CreateRegister(reader);
                 lijst.Add(re);
             }
             return lijst;
+        }
+        public static Register GetRegister(int id, IEnumerable<Claim> claims)
+        {
+            DbConnection con = GetConnection(claims);
+            Register reg = new Register();
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@id", id);
+            DbDataReader reader = Database.GetData(con, "SELECT Id,Registername,Device FROM dbo.Registers where Id = @id ", par1);
+            reader.Read();
+            reg = CreateRegister(reader);
+            return reg;
         }
 
         private static Register CreateRegister(IDataRecord reader)
