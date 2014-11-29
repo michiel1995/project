@@ -86,7 +86,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="250"/>
                     <RowDefinition Height="50"/>
-                    <RowDefinition Height="250*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
@@ -120,7 +121,7 @@
 
                 </Grid>
                 <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-                    <TextBlock  Style="{StaticResource txbStandaard}"> Geld nog op kaart:</TextBlock>
+                    <TextBlock  Style="{StaticResource txbStandaard}"> Geld nog op kaart: €</TextBlock>
                     <TextBlock  Style="{StaticResource txbStandaard}" Foreground="{Binding Klant.Balance, Converter={StaticResource MoneyConverter}}" Text="{Binding Klant.Balance}"></TextBlock>
                 </StackPanel>
                 
@@ -136,19 +137,19 @@
                         </GridView>
                     </ListView.View>
                 </ListView>
-
-                <Grid Grid.Column="1" Grid.Row="3">
+                <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource txbStandaard}" Text="{Binding Foutmelding}" Foreground="red"></TextBlock>
+                <Grid Grid.Column="1" Grid.Row="4">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150"/>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="150"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Style="{StaticResource txbStandaard}" >Totaal:</TextBlock>
+                        <TextBlock Style="{StaticResource txbStandaard}" >Totaal: €</TextBlock>
                         <TextBlock Style="{StaticResource txbStandaard}" Text="{Binding Totaal}"></TextBlock>
                     </StackPanel>
-                    
-                    <Button Grid.Column="2">Afrekenen</Button>
+
+                    <Button Grid.Column="2" Command="{Binding Opslaan}">Afrekenen</Button>
                 </Grid>
             </Grid>
         </Grid>

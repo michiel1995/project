@@ -12,8 +12,8 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.Converter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            double bedrag = double.Parse(value as string);
-            if(bedrag <10)
+            double d = (double)value;
+            if(d <10)
             {
                 return new SolidColorBrush(Colors.Red);
             }

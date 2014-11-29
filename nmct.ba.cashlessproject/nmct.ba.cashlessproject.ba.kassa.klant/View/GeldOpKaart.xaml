@@ -34,7 +34,7 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="180"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="1">Terug</Button>
+            <Button Grid.Column="1" Command="{Binding Terug}">Terug</Button>
         </Grid>
     </Grid>
 </UserControl>

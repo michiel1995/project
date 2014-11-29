@@ -29,7 +29,7 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="180"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="1">Terug</Button>
+                <Button Grid.Column="1" Command="{Binding Terug}">Terug</Button>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -63,7 +63,7 @@
                 <TextBlock Grid.Row="1" Style="{StaticResource txbScanGeld }">scan je geld voor de webcam</TextBlock>
                 <StackPanel Grid.Row="2" Orientation="Horizontal">
                     <TextBlock  Style="{StaticResource txbScanGeld }">Totaal bedrag:</TextBlock>
-                    <TextBlock x:Name="txtGeld" Style="{StaticResource txbScanGeld }" Text="{Binding Bedrag}"></TextBlock>
+                    <TextBlock x:Name="txtGeld" Style="{StaticResource txbScanGeld }" Text="{Binding Bedrag, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
                 </StackPanel>
                 
                 <Grid Grid.Row="3">
@@ -81,7 +81,7 @@
                     <RowDefinition Height="70"/>
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
-                <Image x:Name="webcam"/>
+                <Image x:Name="webcam" />
                 <Button x:Name="btnContinue" IsEnabled="False" Style="{StaticResource BlauweKnop}" Grid.Row="1" Margin="50,5" Click="btnContinue_Click" >Nog een biljet inscannen</Button>
             </Grid>
         </Grid>

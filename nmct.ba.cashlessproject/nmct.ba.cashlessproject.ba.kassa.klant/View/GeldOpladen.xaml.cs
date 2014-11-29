@@ -45,7 +45,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.View
                 _timer.Stop();              
                 web.Stop();
                 geld += i;
-                txtGeld.Text =""+ geld;
+                txtGeld.Text = "" + geld;
                 btnContinue.IsEnabled = true;
             }
         }

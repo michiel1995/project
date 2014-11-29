@@ -102,10 +102,15 @@
     <Compile Include="helper.cs" />
     <Compile Include="idreader\ReadId.cs" />
     <Compile Include="servicelayer.cs" />
+    <Compile Include="ViewModel\GeldOpgeladenGedaanVM.cs" />
     <Compile Include="ViewModel\GeldOpKaartVM.cs" />
     <Compile Include="ViewModel\GeldOpladenScanVM.cs" />
     <Compile Include="ViewModel\GeldOpladenVM.cs" />
+    <Compile Include="ViewModel\RegistrerenGedaanVM.cs" />
     <Compile Include="ViewModel\RegistrerenVM.cs" />
+    <Compile Include="View\GeldOpgeladenGedaan.xaml.cs">
+      <DependentUpon>GeldOpgeladenGedaan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\GeldOpKaart.xaml.cs">
       <DependentUpon>GeldOpKaart.xaml</DependentUpon>
     </Compile>
@@ -121,11 +126,18 @@
     <Compile Include="View\Registreren.xaml.cs">
       <DependentUpon>Registreren.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\RegistrerenGedaan.xaml.cs">
+      <DependentUpon>RegistrerenGedaan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="webcam\Helper.cs" />
     <Compile Include="webcam\WebCam.cs" />
     <Page Include="View\AlgemeneCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\GeldOpgeladenGedaan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\GeldOpKaart.xaml">
       <SubType>Designer</SubType>
@@ -160,6 +172,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Registreren.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RegistrerenGedaan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

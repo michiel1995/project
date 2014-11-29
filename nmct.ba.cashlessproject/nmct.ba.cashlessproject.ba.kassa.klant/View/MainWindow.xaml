@@ -23,6 +23,12 @@
         <DataTemplate DataType="{x:Type vm:RegistrerenVM}">
             <v:Registreren/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:RegistrerenGedaanVM}">
+            <v:RegistrerenGedaan/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:GeldOpgeladenGedaanVM}">
+            <v:GeldOpgeladenGedaan/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <!-- 

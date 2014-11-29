@@ -23,6 +23,8 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
             Pages.Add(new GeldOpladenScanVM());
             Pages.Add(new GeldOpladenVM());
             Pages.Add(new RegistrerenVM());
+            Pages.Add(new RegistrerenGedaanVM());
+            Pages.Add(new GeldOpgeladenGedaanVM());
             // Add other pages
             getToken();
             CurrentPage = Pages[0];

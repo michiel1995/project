@@ -88,11 +88,15 @@
     <Compile Include="Converter\MoneyConverter.cs" />
     <Compile Include="helper.cs" />
     <Compile Include="Servicelayer.cs" />
+    <Compile Include="ViewModel\BestellingAfgerondVM.cs" />
     <Compile Include="ViewModel\LoginVM.cs" />
     <Compile Include="ViewModel\ObservableCollection.cs" />
     <Compile Include="ViewModel\StartupscreenVM.cs" />
     <Compile Include="View\Bestellen.xaml.cs">
       <DependentUpon>Bestellen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BestellingAfgerond.xaml.cs">
+      <DependentUpon>BestellingAfgerond.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\StartupScreen.xaml.cs">
       <DependentUpon>StartupScreen.xaml</DependentUpon>
@@ -100,6 +104,10 @@
     <Page Include="View\AlgemeneCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\BestellingAfgerond.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Login.xaml">
       <SubType>Designer</SubType>

@@ -108,3 +108,7 @@ C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashle
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Thinktecture.IdentityModel.Client.dll
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\nmct.ba.cashlessproject.helper.pdb
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\bin\Debug\Thinktecture.IdentityModel.Client.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpgeladenGedaan.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\RegistrerenGedaan.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\GeldOpgeladenGedaan.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ba.kassa.klant\obj\Debug\View\RegistrerenGedaan.baml

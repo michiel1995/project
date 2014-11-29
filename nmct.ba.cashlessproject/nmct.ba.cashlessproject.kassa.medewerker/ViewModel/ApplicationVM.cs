@@ -24,7 +24,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             Pages.Add(new LoginVM());
             Pages.Add(new StartupscreenVM());
             Pages.Add(new BestellenVM());
-            
+            Pages.Add(new BestellingAfgerondVM());
             getToken();
             GetRegister();
             CurrentPage = Pages[0];

@@ -1,9 +1,11 @@
-﻿using nmct.ba.cashlessproject.models;
+﻿using GalaSoft.MvvmLight.Command;
+using nmct.ba.cashlessproject.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
 {
@@ -39,6 +41,19 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
                 RfidNummer = "";
             }
         }
+
+
+        public ICommand Terug
+        {
+            get { return new RelayCommand(GaTerug); }
+        }
+
+        private void GaTerug()
+        {
+            (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new PortaalVM());
+        }
+
+
         public string Name
         {
             get { return "GeldOpKaart"; }

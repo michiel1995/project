@@ -92,3 +92,5 @@ C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashle
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Thinktecture.IdentityModel.Client.dll
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\nmct.ba.cashlessproject.helper.pdb
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\bin\Debug\Thinktecture.IdentityModel.Client.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\BestellingAfgerond.g.cs
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.kassa.medewerker\obj\Debug\View\BestellingAfgerond.baml

@@ -77,5 +77,25 @@ namespace nmct.ba.cashlessproject.kassa.medewerker
                 return null;
             }
         }
+        public static async Task<Boolean> PutCustomer(Customer cust)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                string json = JsonConvert.SerializeObject(cust);
+                HttpResponseMessage resp = await client.PutAsync(baseUrl + "/customer", new StringContent(json, Encoding.UTF8, "application/json"));
+                return resp.IsSuccessStatusCode;
+            }
+        }
+        public static async Task<Boolean> SaveSales (ObservableCollection<Sale> sales)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                string json = JsonConvert.SerializeObject(sales);
+                HttpResponseMessage resp = await client.PostAsync(baseUrl + "/sale", new StringContent(json, Encoding.UTF8, "application/json"));
+                return resp.IsSuccessStatusCode;
+            }
+        }
     }
 }

@@ -21,17 +21,22 @@ namespace nmct.ba.cashlessproject.webapi.Models
             return Database.ModifyData(con, sql, par1);
         }
 
-        public static int AddSale(Sale sale, IEnumerable<Claim> claims)
+        public static int AddSales(List<Sale> sales, IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
-            string sql = "INSERT INTO sales (Timestamp, CustomerId,RegisterId,ProductId,Amount,TotalPrice) VALUES (@Time,@Cust, @Register, @Product, @Amount,@Total)";
-            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Time", sale.Timestamp);
-            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Cust", sale.Customer.Id);
-            DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Register", sale.Register.Id);
-            DbParameter par4 = Database.AddParameter("System.Data.SqlClient", "@Product", sale.Product.Id);
-            DbParameter par5 = Database.AddParameter("System.Data.SqlClient", "@Amount", sale.Amount);
-            DbParameter par6 = Database.AddParameter("System.Data.SqlClient", "@Total", sale.Price);
-            return Database.InsertData(con, sql, par1, par2, par3, par4, par5, par6);
+            int i = 0;
+            foreach (Sale sale in sales)
+            {
+                string sql = "INSERT INTO sales (Timestamp, CustomerId,RegisterId,ProductId,Amount,TotalPrice) VALUES (@Time,@Cust, @Register, @Product, @Amount,@Total)";
+                DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Time", sale.Timestamp);
+                DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Cust", sale.Customer.Id);
+                DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Register", sale.Register.Id);
+                DbParameter par4 = Database.AddParameter("System.Data.SqlClient", "@Product", sale.Product.Id);
+                DbParameter par5 = Database.AddParameter("System.Data.SqlClient", "@Amount", sale.Amount);
+                DbParameter par6 = Database.AddParameter("System.Data.SqlClient", "@Total", sale.Price);
+                i += Database.InsertData(con, sql, par1, par2, par3, par4, par5, par6);
+            }
+            return i;
         }
 
 

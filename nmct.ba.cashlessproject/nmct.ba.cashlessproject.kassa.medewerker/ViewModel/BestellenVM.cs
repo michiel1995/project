@@ -20,6 +20,14 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
                 LijstenOphalen();
             }
         }
+        private string _foutmelding;
+
+        public string Foutmelding
+        {
+            get { return _foutmelding; }
+            set { _foutmelding = value;OnPropertyChanged("Foutmelding");  }
+        }
+        
 
         private async void LijstenOphalen()
         {
@@ -33,7 +41,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
         public Customer Klant
         {
             get { return _klant; }
-            set { _klant = value; OnPropertyChanged("Klant");  }
+            set{ _klant = value; OnPropertyChanged("Klant");  }
         }
         private Double _totaal;
 
@@ -100,17 +108,44 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
         {
             if(SelectedProduct != null)
             {
-                Sale sale = new Sale()
+                if ( Klant.Balance <=0)
                 {
-                    Customer = Klant,
-                    Product = SelectedProduct,
-                    Amount = Convert.ToUInt32(aantal),
-                    Price = Convert.ToUInt32(aantal) * SelectedProduct.Price,
-                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now),
-                    Register = ApplicationVM.register
-                };
-               // Klant.Balance -= sale.Price;
-                Verkoop.Add(sale);
+                    Foutmelding = "Er staat te weinig geld op kaart";
+                }
+                else
+                {
+                    Sale sale = new Sale()
+                    {
+                        Customer = Klant,
+                        Product = SelectedProduct,
+                        Amount = Convert.ToUInt32(aantal),
+                        Price = Convert.ToUInt32(aantal) * SelectedProduct.Price,
+                        Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now),
+                        Register = ApplicationVM.register
+                    };
+                    // Klant.Balance -= sale.Price;
+                    Verkoop.Add(sale);
+                    Customer cust = Klant;
+                    cust.Balance -= sale.Price;
+                    Klant = cust;
+                    Totaal += sale.Price;
+                }
+            }
+        }
+
+        public ICommand Opslaan
+        {
+            get { return new RelayCommand(OpslaanSale); }
+        }
+
+        private async void OpslaanSale()
+        {
+            Boolean b = await Servicelayer.PutCustomer(Klant);
+            Boolean b2 = await Servicelayer.SaveSales(Verkoop);
+            if(b == true && b2 ==true)
+            {
+                ApplicationVM.ingelogdeCustomer = null;
+                (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new BestellingAfgerondVM());
             }
         }
 

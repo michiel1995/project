@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using WebCam_Capture;
@@ -38,7 +39,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
         public BitmapImage Image
         {
             get { return _image; }
-            set { _image = value; OnPropertyChanged("Customer"); }
+            set { _image = value; OnPropertyChanged("Image"); }
         }
         private Double _bedrag;
 
@@ -59,14 +60,26 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
             bool b = await servicelayer.UpdateCustomer(Customer);
             if(b==true)
             {
-                throw new Exception();
+              (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new GeldOpgeladenGedaanVM());            
             }
         }
-        
+
+        public ICommand Terug
+        {
+            get { return new RelayCommand(GaTerug); }
+        }
+
+        private void GaTerug()
+        {
+            (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new PortaalVM());
+        }
+
+
         public string Name
         {
             get { return "GeldOpladen"; }
         }
+
 
     }
 }

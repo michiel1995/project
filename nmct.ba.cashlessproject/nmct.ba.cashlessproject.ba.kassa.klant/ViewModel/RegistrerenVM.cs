@@ -119,7 +119,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
                 Boolean b = await servicelayer.AddCustomer(Customer);
                 if(b==true)
                 {
-                   throw new Exception();
+                    (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new RegistrerenGedaanVM());
                 }
                 else
                 {
@@ -138,6 +138,16 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
             Customer = null;
             Image = null;
             Id = "";
+        }
+
+        public ICommand Terug
+        {
+            get { return new RelayCommand(GaTerug); }
+        }
+
+        private void GaTerug()
+        {
+            (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new PortaalVM());
         }
 
     }

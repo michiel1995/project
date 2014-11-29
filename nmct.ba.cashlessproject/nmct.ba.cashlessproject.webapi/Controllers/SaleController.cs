@@ -23,19 +23,17 @@ namespace nmct.ba.cashlessproject.webapi.Controllers
             return SaleDA.GetListSale(p.Claims);
         }
 
-        public HttpResponseMessage Post(Sale newSale)
+        public HttpResponseMessage Post(List<Sale> Sales)
         {
             try
             {
-                if (newSale == null)
+                if (Sales == null)
                     throw new HttpResponseException(AddRequest(HttpStatusCode.BadRequest, "parameter is empty"));
 
                 ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
-                int id = SaleDA.AddSale(newSale,p.Claims);
+                int id = SaleDA.AddSales(Sales,p.Claims);
 
                 HttpResponseMessage response = new HttpResponseMessage();
-                string url = string.Format("{0}{1}", HttpContext.Current.Request.Url.ToString(), id);
-                response.Headers.Location = new Uri(url);
                 response.StatusCode = HttpStatusCode.Created;
                 return response;
 
