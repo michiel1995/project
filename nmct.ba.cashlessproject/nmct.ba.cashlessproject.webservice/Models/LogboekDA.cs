@@ -16,7 +16,7 @@ namespace nmct.ba.cashlessproject.webservice.Models
         {
             DbParameter par1 = Database.addParameter("AdminConnection", "@time", timestamp);
             DbParameter par2 = Database.addParameter("AdminConnection", "@id", registerid);
-            return Database.ModifyData("AdminConnection", "Delete From Errorlog where Timestamp = @time AND RegisterId= @id");
+            return Database.ModifyData("AdminConnection", "Delete From Errorlog where Timestamp = @time AND RegisterId= @id",par1,par2);
         }
         public static List<PMLogboek> getLogs()
         {

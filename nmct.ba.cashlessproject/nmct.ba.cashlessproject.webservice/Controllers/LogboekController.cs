@@ -22,7 +22,7 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
             return View(lijst);
         }
 
-         [Route("logboek/Delete/{id1}/{id2}")]
+         [Route("logboek/Delete/{registerid}/{timestamp}")]
         public ActionResult Delete(int? registerid, int? timestamp)
         {
              if(!timestamp.HasValue && ! registerid.HasValue)
@@ -31,8 +31,7 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
              }
             int aantal = LogboekDA.DeleteLog(registerid.Value, timestamp.Value);
             //lijst.RemoveAll(m => m.Time == tekst && m.RegisterId == hallo);
-            lijst = LogboekDA.getLogs();
-            return View("index", lijst);
+            return RedirectToAction("index");
         }
 
         [Route("logboek/sorteer/{waarde}")]

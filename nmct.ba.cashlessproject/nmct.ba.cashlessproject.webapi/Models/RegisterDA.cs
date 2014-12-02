@@ -40,14 +40,14 @@ namespace nmct.ba.cashlessproject.webapi.Models
         }
 
 
-        public static List<Register> GetListRegister(IEnumerable<Claim> claims)
+        public static List<Register_Employee> GetListRegisters(IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
-            List<Register> lijst = new List<Register>();
-            DbDataReader reader = Database.GetData(con, "SELECT Id,Registername,Device FROM dbo.Registers");
+            List<Register_Employee> lijst = new List<Register_Employee>();
+            DbDataReader reader = Database.GetData(con, "Select reem.UntilTime, reem.FromTime,emp.Address, emp.Email, emp.EmployeeName,emp.Id,emp.Phone, reg.Device,reg.Id as 'regId',reg.Registername from dbo.Register_Employee reem left outer join dbo.Employee emp on reem.EmployeeId = emp.Id left outer join dbo.Registers reg on reem.RegisterId = reg.Id");
             while (reader.Read())
             {
-                Register re = CreateRegister(reader);
+                Register_Employee re = CreateRegister_Employee(reader);
                 lijst.Add(re);
             }
             return lijst;
@@ -72,6 +72,31 @@ namespace nmct.ba.cashlessproject.webapi.Models
                 Device = reader["Device"].ToString(),
             };
         }
+
+        private static Register_Employee CreateRegister_Employee(IDataRecord reader)
+        {
+            Register re = new Register()
+            {
+                Id = Convert.ToInt32(reader["regId"].ToString()),
+                Registername = reader["Registername"].ToString(),
+                Device = reader["Device"].ToString(),
+            };
+            Employee emp = new Employee(){
+                Email =  reader["Email"].ToString(),
+                Address =  reader["Address"].ToString(),
+                Id = Convert.ToInt32( reader["Id"].ToString()),
+                Name =  reader["EmployeeName"].ToString(),
+                Phone =  reader["Phone"].ToString(),
+            };
+            return new Register_Employee()
+            {
+                Kassa = re,
+                Medewerker = emp,
+                From = Convert.ToInt32(reader["FromTime"].ToString()),
+                Until = Convert.ToInt32(reader["UntilTime"].ToString())
+            };
+        }
+
         private static DbConnection GetConnection(IEnumerable<Claim> claims)
         {
             string dblogin = claims.FirstOrDefault(c => c.Type == "dblogin").Value;

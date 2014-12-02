@@ -9,6 +9,10 @@ namespace nmct.ba.cashlessproject.webservice.presentationModel
 {
     public class PMKassa
     {
+        public PMKassa()
+        {
+            Kassa = new ItRegister();
+        }
         public ItRegister Kassa { get; set; }
 
         [DisplayName("Kies vereniging")]

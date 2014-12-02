@@ -17,10 +17,10 @@ namespace nmct.ba.cashlessproject.webapi.Controllers
 {
     public class RegisterController : ApiController
     {
-        public List<Register> Get()
+        public List<Register_Employee> Get()
         {
             ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
-            return RegisterDA.GetListRegister(p.Claims);
+            return RegisterDA.GetListRegisters(p.Claims);
         }
 
         public HttpResponseMessage Get(string id)

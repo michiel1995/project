@@ -95,7 +95,7 @@
         contentType: "application/json",
     }).done(function (data) {
         for (var i = 0; i < data.length; i++) {
-            $("#Organisaties").append('<option id="IdOrganisation" Value="/Kassa/' + data[i].Id + '">' + data[i].Naam + "</option>")
+            $("#Organisaties").append('<option id="IdOrganisation" Value="' + data[i].Id + '">' + data[i].Naam + "</option>")
         }
     });
     $("#submitclick").click(function () {
@@ -109,8 +109,11 @@
         $("#UntilDate").val(toTimestamp(arrUntil[2], arrUntil[0], arrUntil[1]));
     })
     function toTimestamp(year, month, day) {
+        if (typeof year === "undefined")
+            return -10;
         var datum = new Date(Date.UTC(year, month - 1, day));
-        return datum.getTime() / 1000;
+        var timestamp = datum.getTime() / 1000;     
+        return timestamp;
     }
 </script>
 

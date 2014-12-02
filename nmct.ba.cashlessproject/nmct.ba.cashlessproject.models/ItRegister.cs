@@ -38,8 +38,8 @@ namespace nmct.ba.cashlessproject.models
         } 
         private int _purchaseDate;
 
-        [Required(ErrorMessage="Vul een Aankoopdatum in") ]
-        [MinLength(4)]
+        [Range(1, int.MaxValue, ErrorMessage = "Vul een Aankoopdatum in")]
+        //[MinLength(4)]
         [DisplayName("AankoopDatum")]
         public int PurchaseDate
         {
@@ -48,8 +48,8 @@ namespace nmct.ba.cashlessproject.models
         }
 
         private int _expireDate;
-        [Required(ErrorMessage = "Vul een VervalDatum in")]
-        [MinLength(4)]
+        [Range(1, int.MaxValue, ErrorMessage = "Vul een VervalDatum in")]
+        //[MinLength(4)]
         [DisplayName("VervalDatum")]
         public int ExpireDate
         {

@@ -42,19 +42,87 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
         public ActionResult Nieuw()
         {
             PMKassa kassa = new PMKassa();
-            kassa.Kassa = new ItRegister();
+            //kassa.Kassa = new ItRegister();
             return View(kassa);
         }
         [Route("Kassa/nieuw")]
         [HttpPost]
-        public ActionResult Nieuw(PMKassa kassa)
+        public ActionResult Nieuw(PMKassa pm)
         { 
             if(!ModelState.IsValid)
             {
-                return View("Nieuw", kassa);
+                return View("Nieuw", pm);
             }
-            return View("Index", lijst);
+            int i = KassaDA.CreateKassa(pm.Kassa);
+            if(pm.IdOrganisation != -1)
+            {
+                if (pm.UntilDate != -10 || pm.Fromdate != -10)
+                {
+                    KassaDA.KoppelKassaAanOrganisatie(pm, i);
+                    //kassa aan klant database toevoegen
+                }
+            }
+            return RedirectToAction("index");
         }
 
+        private static PMKassa geselecteerde;
+        [Route("kassa/aanpassen/{id}")]
+        [HttpGet]
+        public ActionResult Aanpassen(int? id)
+        {
+            PMKassa kassa;
+            if (!id.HasValue)
+            {
+                return RedirectToAction("Index");
+            }
+                kassa = lijst.Find(o => o.Kassa.Id == id.Value) as PMKassa;
+                geselecteerde = kassa;
+            return View("Nieuw", kassa);
+        }
+
+        [Route("kassa/aanpassen/{id}")]
+        [HttpPost]
+        public ActionResult Aanpassen(PMKassa pm)
+        {
+            pm.Kassa.Id = geselecteerde.Kassa.Id;
+            if (!ModelState.IsValid)
+            {
+                return View("Aanpassen", pm);
+            }
+            int i = KassaDA.ChangeKassa(pm.Kassa);
+            if (pm.IdOrganisation != -1)
+            {
+                if (pm.UntilDate != -10 || pm.Fromdate != -10)
+                {
+                    int nmr = KassaDA.DeleteKoppelAanOrg(pm.Kassa.Id);
+                    KassaDA.KoppelKassaAanOrganisatie(pm,pm.Kassa.Id);
+                    //kassa aan klant database toevoegen
+                }
+            }
+            else
+            {
+                int nmr = KassaDA.DeleteKoppelAanOrg(pm.Kassa.Id);
+            }
+            return RedirectToAction("index"); ;
+        }
+
+
+        [Route("kassa/delete/{id}")]
+        public ActionResult Delete(int? id)
+        {
+            if (!id.HasValue)
+            {
+                return RedirectToAction("Index");
+            }
+           
+            PMKassa kassa= lijst.Find(o => o.Kassa.Id == id.Value ) as PMKassa;
+            if (kassa != null)
+            {
+                KassaDA.DeleteKassa(id.Value);
+                KassaDA.DeleteKoppelAanOrg(id.Value);
+            }
+
+            return RedirectToAction("index");
+        }
     }
 }

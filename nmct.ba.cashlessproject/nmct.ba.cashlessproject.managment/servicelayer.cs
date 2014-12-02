@@ -21,10 +21,10 @@ namespace nmct.ba.cashlessproject.managment
         {
             using (HttpClient client = new HttpClient())
             {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
                 HttpResponseMessage resp = await client.GetAsync(baseurl + "/product");
                 if(resp.IsSuccessStatusCode)
-                {
-                    client.SetBearerToken(ApplicationVM.token.AccessToken);
+                {                 
                     string json = await resp.Content.ReadAsStringAsync();
                     return JsonConvert.DeserializeObject<ObservableCollection<Product>>(json);
                 }
@@ -137,6 +137,25 @@ namespace nmct.ba.cashlessproject.managment
                 return resp.IsSuccessStatusCode;
             }
         }
+        #endregion
+
+        #region Kassa
+        public static async Task<ObservableCollection<Register_Employee>> getKassas()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                HttpResponseMessage resp = await client.GetAsync(baseurl + "/register");
+                if (resp.IsSuccessStatusCode)
+                {
+                    string json = await resp.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<ObservableCollection<Register_Employee>>(json);
+                }
+                return null;
+            }
+
+        }
+
         #endregion
     }
 }

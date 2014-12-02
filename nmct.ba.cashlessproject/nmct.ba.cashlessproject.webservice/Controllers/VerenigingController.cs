@@ -49,8 +49,7 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
             int id = VerenigingDA.NieuweVerenigingToevoegen(org);
             ItOrganisation organisat = VerenigingDA.getVereniging(id);
             OrganisatieCreateDatabase.CreateDatabase(organisat);
-            organisatie = VerenigingDA.getVerenigingen();
-            return View("Index",organisatie);
+            return RedirectToAction("index");
         }
 
 
@@ -76,8 +75,7 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
                 return View("Aanpassen", org);
             }
             int getal = VerenigingDA.UpdateVereniging(org);
-            organisatie = VerenigingDA.getVerenigingen();
-            return View("index", organisatie);
+            return RedirectToAction("index");
          }
 
 
@@ -89,9 +87,9 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
                 return RedirectToAction("Index");
             }
             ItOrganisation org = organisatie.Find(o => o.Id == id.Value) as ItOrganisation;
-            VerenigingDA.DeleteOrganisation(org.Id);
-            organisatie = VerenigingDA.getVerenigingen();
-            return View("index", organisatie);
+            if (org != null) 
+                VerenigingDA.DeleteOrganisation(org.Id);
+            return RedirectToAction("index");
         }
     }
 }

@@ -57,8 +57,8 @@
             <a onclick="geklikt(@item.Kassa.Id)">Klik hier voor meer info</a>
         </td>
         <td>
-            <a href="#" class="wijzigen"></a>
-            <a href="#" class="trashbin"></a>
+            <a href="~/kassa/aanpassen/@item.Kassa.Id/" class="wijzigen"></a>
+            <a href="~/kassa/delete/@item.Kassa.Id" class="trashbin" onclick="return confirm('ben je zeker dat je dit wilt verwijderen dit kan zware gevolgen voor de database hebben');"></a>       
         </td>
     </tr>
 }
