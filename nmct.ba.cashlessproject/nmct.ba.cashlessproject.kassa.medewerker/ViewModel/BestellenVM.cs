@@ -108,12 +108,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
         {
             if(SelectedProduct != null)
             {
-                if ( Klant.Balance <=0)
-                {
-                    Foutmelding = "Er staat te weinig geld op kaart";
-                }
-                else
-                {
+             
                     Sale sale = new Sale()
                     {
                         Customer = Klant,
@@ -124,12 +119,18 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
                         Register = ApplicationVM.register
                     };
                     // Klant.Balance -= sale.Price;
-                    Verkoop.Add(sale);
+                    if (Klant.Balance - sale.Price <= 0)
+                    {
+                        Foutmelding = "Er staat te weinig geld op kaart";
+                    }
+                    else
+                    {
                     Customer cust = Klant;
                     cust.Balance -= sale.Price;
                     Klant = cust;
                     Totaal += sale.Price;
-                }
+                    Verkoop.Add(sale);
+                    }
             }
         }
 

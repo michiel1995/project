@@ -10,6 +10,7 @@
     <UserControl.Resources>
         <co:IsEnabledConverter x:Key="EnableConvert"/>
         <co:IsEnabledConverterList x:Key="EnableConvertList"/>
+        <co:ButtonEnableConverter x:Key="ButtonConv"/>
     </UserControl.Resources>
     <UserControl.DataContext>
         <vm:BeheerKlantenVM/>
@@ -69,7 +70,7 @@
                         <ColumnDefinition Width="190"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Style="{StaticResource BlauweKnop}" Command="{Binding Aanpassen}">Gegevens wijzigen</Button>
+                    <Button Style="{StaticResource BlauweKnop}" Command="{Binding Aanpassen}" IsEnabled="{Binding Status, Converter={StaticResource ButtonConv }}">Gegevens wijzigen</Button>
 
                 </Grid>
                 <Image Style="{StaticResource klantRegistreren}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="150" Source="{Binding Image}"></Image>

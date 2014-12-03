@@ -30,13 +30,15 @@ namespace nmct.ba.cashlessproject.webapi.Models
             return Database.ModifyData(con, sql, par1);
         }
 
-        public static int AddRegister(Register register, IEnumerable<Claim> claims)
+        public static int AddRegister(Register_Employee register, IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
-            string sql = "INSERT INTO Registers (RegisterName, Device) VALUES (@Register,@Device)";
-            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Register", register.Registername);
-            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Device", register.Device);
-            return Database.InsertData(con, sql, par1, par2);
+            string sql = "INSERT INTO Register_employee (RegisterId, EMployeeId, FromTime, UntilTime) VALUES (@Register,@Employe, @from, @until)";
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Register", register.Kassa.Id);
+            DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Employe", register.Medewerker.Id);
+            DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@from", DateTimeToTimestamp(register.From));
+            DbParameter par4 = Database.AddParameter("System.Data.SqlClient", "@until", DateTimeToTimestamp(register.Until));
+            return Database.InsertData(con, sql, par1, par2,par3,par4);
         }
 
 
@@ -92,9 +94,21 @@ namespace nmct.ba.cashlessproject.webapi.Models
             {
                 Kassa = re,
                 Medewerker = emp,
-                From = Convert.ToInt32(reader["FromTime"].ToString()),
-                Until = Convert.ToInt32(reader["UntilTime"].ToString())
+                From = TimestampToDateTime(Convert.ToInt32(reader["FromTime"].ToString())),
+                Until = TimestampToDateTime(Convert.ToInt32(reader["UntilTime"].ToString()))
             };
+        }
+
+        private static DateTime TimestampToDateTime(int unixTimeStamp)
+        {
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();          
+            String.Format("{0:d/M/yyyy HH:mm:ss}", dtDateTime);
+            return dtDateTime;
+        }
+        private static int DateTimeToTimestamp(DateTime dateTime)
+        {
+            return Convert.ToInt32((dateTime - new DateTime(1970, 1, 1).ToLocalTime()).TotalSeconds);
         }
 
         private static DbConnection GetConnection(IEnumerable<Claim> claims)

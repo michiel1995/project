@@ -7,19 +7,15 @@ using System.Windows.Data;
 
 namespace nmct.ba.cashlessproject.managment.Converters
 {
-    class IsEnabledConverterList : IValueConverter
+    class ButtonEnableConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            string Status = (string)value;
-            if (Status == "PasAan" || Status == "VoegToe")
-            {
-                return false;
-            }
-            else
-            {
+            string s = (string)value;
+            if (s == "Selected")
                 return true;
-            }
+            else
+                return false;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

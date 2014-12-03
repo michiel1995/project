@@ -3,11 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:v="clr-namespace:nmct.ba.cashlessproject.managment.View"
         xmlns:vm="clr-namespace:nmct.ba.cashlessproject.managment.ViewModel"
-        Title="MainWindow" Height="900" Width="1050">
+        xmlns:co="clr-namespace:nmct.ba.cashlessproject.managment.Converters"
+        Title="MainWindow" Height="700" Width="1250">
+
     <Window.DataContext>
         <vm:ApplicationVM/>
     </Window.DataContext>
     <Window.Resources>
+        <co:NavConverter x:Key="nav"/>
         <DataTemplate DataType="{x:Type vm:BeheerKassaVM}">
             <v:PageOne/>
         </DataTemplate>
@@ -28,22 +31,25 @@
         </DataTemplate>
     </Window.Resources>
     <Grid>
-        
+        <!--
         <Grid.RowDefinitions>
             <RowDefinition Height="200"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        
+        </Grid.RowDefinitions>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
         
-        <ItemsControl ItemsSource="{Binding Pages}" ItemsPanel="{StaticResource ItemsPanelTemplate}"  >
+        <ItemsControl ItemsSource="{Binding Pages}" ItemsPanel="{StaticResource ItemsPanelTemplate}" Background="#eee" Visibility="{Binding Login, Converter={StaticResource nav}}">
             <ItemsControl.ItemTemplate >
                 <DataTemplate>
-                    <Button Content="{Binding Name}" Command="{Binding DataContext.ChangePageCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" CommandParameter="{Binding}"/>
+                    <Button Style="{StaticResource Menu}" Content="{Binding Name}" Command="{Binding DataContext.ChangePageCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" CommandParameter="{Binding}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
          
-        <ContentControl Grid.Row="1" Content="{Binding CurrentPage}"/>
+        <ContentControl Grid.Column="1" Content="{Binding CurrentPage}"/>
     </Grid>
 </Window>

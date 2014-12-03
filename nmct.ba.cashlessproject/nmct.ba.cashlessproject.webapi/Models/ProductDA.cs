@@ -13,7 +13,7 @@ namespace nmct.ba.cashlessproject.webapi.Models
 {
     public class ProductDA
     {
-        public static int ModifyEmployee(Product product, IEnumerable<Claim> claims)
+        public static int ModifyProduct(Product product, IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
             string sql = "Update Products Set ProductName = @ProductName, Price = @Price where Id = @Id";
@@ -22,18 +22,18 @@ namespace nmct.ba.cashlessproject.webapi.Models
             DbParameter par3 = Database.AddParameter("System.Data.SqlClient", "@Price", product.Price);
             return Database.ModifyData(con, sql, par1, par2, par3);
         }
-        public static int DeleteEmployee(int id, IEnumerable<Claim> claims)
+        public static int DeleteProduct(int id, IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
-            string sql = "Delete from Products  where Id = @Id";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", id);
+            string sql = "Update Products set available = 0 where  Id = @Id ";
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", id);
             return Database.ModifyData(con, sql, par1);
         }
 
         public static int AddProduct(Product product, IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
-            string sql = "INSERT INTO Products (ProductName,Price) VALUES (@Name,@Price)";
+            string sql = "INSERT INTO Products (ProductName,Price,availabe) VALUES (@Name,@Price,1)";
             DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Name", product.ProductName);
             DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Price", product.Price);
             return Database.InsertData(con, sql, par1, par2);
@@ -44,7 +44,7 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             List<Product> lijst = new List<Product>();
-            DbDataReader reader = Database.GetData(con, "SELECT * FROM dbo.Products");
+            DbDataReader reader = Database.GetData(con, "SELECT * FROM dbo.Products where available = 1");
             while (reader.Read())
             {
                 Product pr = CreateProduct(reader);

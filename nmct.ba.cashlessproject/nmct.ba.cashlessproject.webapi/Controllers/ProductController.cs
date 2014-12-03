@@ -54,7 +54,7 @@ namespace nmct.ba.cashlessproject.webapi.Controllers
                     throw new HttpResponseException(AddRequest(HttpStatusCode.BadRequest, "parameter is empty"));
 
                 ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
-                int id = ProductDA.ModifyEmployee(updateProduct,p.Claims);
+                int id = ProductDA.ModifyProduct(updateProduct,p.Claims);
 
                 HttpResponseMessage response = new HttpResponseMessage();
                 string url = string.Format("{0}{1}", HttpContext.Current.Request.Url.ToString(), id);
@@ -77,7 +77,7 @@ namespace nmct.ba.cashlessproject.webapi.Controllers
             try
             {
                 ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
-                ProductDA.DeleteEmployee(id,p.Claims);
+                ProductDA.DeleteProduct(id,p.Claims);
                 return new HttpResponseMessage(HttpStatusCode.OK);
             }
             catch

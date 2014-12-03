@@ -54,7 +54,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         public Product SelectedProduct
         {
             get { return _selectedProduct; }
-            set { _selectedProduct = value; OnPropertyChanged("SelectedProduct"); }
+            set { _selectedProduct = value; OnPropertyChanged("SelectedProduct"); if (SelectedProduct != null) Status = "Selected"; }
         }
 
         public ICommand Aanpassen
@@ -149,7 +149,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 
         public string Name
         {
-            get { return "BeheerProducten"; }
+            get { return "Producten"; }
         }
 
 

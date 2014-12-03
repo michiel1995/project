@@ -41,7 +41,7 @@ namespace nmct.ba.cashlessproject.webapi.Controllers
             return response;
         }
 
-        public HttpResponseMessage Post(Register newRegister)
+        public HttpResponseMessage Post(Register_Employee newRegister)
         {
             try
             {

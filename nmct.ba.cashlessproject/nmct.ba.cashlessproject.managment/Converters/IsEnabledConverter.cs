@@ -12,13 +12,13 @@ namespace nmct.ba.cashlessproject.managment.Converters
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             string Status = (string)value;
-            if(Status == null)
+            if (Status == "PasAan" || Status == "VoegToe")
             {
-                return false;
+                return true;
             }
             else
             {
-                return true;
+                return false;
             }
         }
 

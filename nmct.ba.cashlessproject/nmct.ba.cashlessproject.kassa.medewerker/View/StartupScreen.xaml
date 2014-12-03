@@ -45,7 +45,7 @@
                     <ColumnDefinition Width="200"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <Button Style="{StaticResource afmeldKnopBeneden}" Grid.Column="1">Afmelden</Button>
+                <Button Style="{StaticResource afmeldKnopBeneden}" Grid.Column="1" Command="{Binding Afmelden}">Afmelden</Button>
             </Grid>
         </Grid>
         <Grid Grid.Column="1">

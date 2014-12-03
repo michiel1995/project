@@ -22,16 +22,16 @@ namespace nmct.ba.cashlessproject.models
             get { return _medewerker; }
             set { _medewerker = value; }
         }
-        private int _from;
+        private DateTime _from;
 
-        public int From
+        public DateTime From
         {
             get { return _from; }
             set { _from = value; }
         }
-        private int _until;
+        private DateTime _until;
 
-        public int Until
+        public DateTime Until
         {
             get { return _until; }
             set { _until = value; }

@@ -84,8 +84,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\ButtonEnableConverter.cs" />
     <Compile Include="Converters\IsEnabledConverter.cs" />
     <Compile Include="Converters\IsEnabledConverterList.cs" />
+    <Compile Include="Converters\NavConverter.cs" />
     <Compile Include="helper.cs" />
     <Compile Include="servicelayer.cs" />
     <Compile Include="ViewModel\BeheerKlantenVM.cs" />

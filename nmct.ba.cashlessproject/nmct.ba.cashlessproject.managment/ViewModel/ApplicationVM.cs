@@ -18,11 +18,20 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
             Pages.Add(new BeheerKlantenVM());
             Pages.Add(new BeheerMedewerkersVM());
             Pages.Add(new BeheerProductenVM());
-            Pages.Add(new LoginVM());
+            //Pages.Add(new LoginVM());
             Pages.Add(new statistiekenVM());
-
-            CurrentPage = Pages[4];
+            CurrentPage = new LoginVM();
+            Login = true;
         }
+
+        private Boolean _login;
+
+        public Boolean Login
+        {
+            get { return _login; }
+            set { _login = value; OnPropertyChanged("Login"); }
+        }
+        
 
         private object currentPage;
         public object CurrentPage
@@ -49,6 +58,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 
         public void ChangePage(IPage page)
         {
+            Login = false;
             CurrentPage = page;
         }
     }

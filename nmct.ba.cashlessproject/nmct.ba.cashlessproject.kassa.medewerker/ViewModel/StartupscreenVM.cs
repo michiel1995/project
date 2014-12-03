@@ -18,6 +18,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             if(ApplicationVM.ingelogdeMedewerker !=null)
             {
                 Employee = ApplicationVM.ingelogdeMedewerker;
+                ApplicationVM.Register_EmployerInvullen();
             }
         }
         public string Name
@@ -89,6 +90,22 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
         {
             ApplicationVM.ingelogdeCustomer = Cust;
             (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new BestellenVM());
+        }
+
+        public ICommand Afmelden
+        {
+            get { return new RelayCommand(MeldAf); }
+        }
+
+        private async void MeldAf()
+        {
+            ApplicationVM.reg_emp.Until = DateTime.Now;
+            bool b = await Servicelayer.SaveReg_Emp(ApplicationVM.reg_emp);
+            if(b==true)
+            {
+                (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new LoginVM());
+            }
+           
         }
 
     }

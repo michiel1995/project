@@ -10,6 +10,7 @@
     <UserControl.Resources>
         <co:IsEnabledConverter x:Key="EnableConvert"/>
         <co:IsEnabledConverterList x:Key="EnableConvertList"/>
+        <co:ButtonEnableConverter x:Key="ButtonConv"/>
     </UserControl.Resources>
     <UserControl.DataContext>
         <vm:BeheerMedewerkersVM/>
@@ -71,9 +72,9 @@
                         <ColumnDefinition Width="190"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Style="{StaticResource BlauweKnop}" Command="{Binding Toevoegen}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}">Toevoegen</Button>
-                    <Button Style="{StaticResource BlauweKnop}" Grid.Column="1" Command="{Binding Verwijderen}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}">Verwijderen</Button>
-                    <Button Style="{StaticResource BlauweKnop}" Grid.Column="2" Command="{Binding Aanpassen}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}">Aanpassen</Button>
+                    <Button Style="{StaticResource BlauweKnop}" Command="{Binding Toevoegen}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvertList }}">Toevoegen</Button>
+                    <Button Style="{StaticResource BlauweKnop}" Grid.Column="1" Command="{Binding Verwijderen}" IsEnabled="{Binding Status, Converter={StaticResource ButtonConv }}">Verwijderen</Button>
+                    <Button Style="{StaticResource BlauweKnop}" Grid.Column="2" Command="{Binding Aanpassen}" IsEnabled="{Binding Status, Converter={StaticResource ButtonConv }}">Aanpassen</Button>
                 </Grid>
                 <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource txbStandaard}" Foreground="Red" Text="{Binding Foutmelding}"></TextBlock>
                 <TextBlock Grid.Row="3" Style="{StaticResource txbStandaard}">Naam:</TextBlock>

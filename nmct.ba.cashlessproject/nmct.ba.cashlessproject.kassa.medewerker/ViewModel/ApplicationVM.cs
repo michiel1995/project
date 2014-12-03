@@ -18,6 +18,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
         public static Customer ingelogdeCustomer = null;
         public static Employee ingelogdeMedewerker = null;
         public static Register register = null;
+        public static Register_Employee reg_emp = null;
 
         public ApplicationVM()
         {
@@ -26,8 +27,17 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             Pages.Add(new BestellenVM());
             Pages.Add(new BestellingAfgerondVM());
             getToken();
-            GetRegister();
+            GetRegister();      
             CurrentPage = Pages[0];
+        }
+
+        public static void Register_EmployerInvullen()
+        {
+            reg_emp = new Register_Employee();
+            reg_emp.Kassa = register;
+            reg_emp.Medewerker = ingelogdeMedewerker;
+            reg_emp.From = DateTime.Now;
+            
         }
 
         private async void GetRegister()

@@ -39,7 +39,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         {
             Foutmelding = "";
             Customer = await servicelayer.getCustomer();
-            
+            Image = null;
         }
         private ObservableCollection<Customer> _customer;
 
@@ -54,7 +54,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         public Customer SelectedCustomer
         {
             get { return _selectedCustomer; }
-            set { _selectedCustomer = value; OnPropertyChanged("SelectedCustomer"); if(SelectedCustomer != null) Image = helper.byteArrayToImage(SelectedCustomer.Image); }
+            set { _selectedCustomer = value; OnPropertyChanged("SelectedCustomer"); if (SelectedCustomer != null) { Image = helper.byteArrayToImage(SelectedCustomer.Image); Status = "Selected"; } }
         }
 
         private BitmapImage _image;
@@ -116,12 +116,13 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         {
             Status = null;
             VulCustomersIn();
+            
         }
 
 
         public string Name
         {
-            get{return "BeheerKlanten"; }
+            get{return "Klanten"; }
         }
     }
 }

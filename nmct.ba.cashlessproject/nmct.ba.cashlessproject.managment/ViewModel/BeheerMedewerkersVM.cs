@@ -50,7 +50,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         public Employee SelectedEmployee
         {
             get { return _selectedemployee; }
-            set { _selectedemployee = value; OnPropertyChanged("SelectedEmployee"); }
+            set { _selectedemployee = value; OnPropertyChanged("SelectedEmployee"); if (SelectedEmployee != null) Status = "Selected"; }
         }
 
         public ICommand Aanpassen
@@ -147,7 +147,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 
         public string Name
         {
-            get { return "BeheerMedewerkers"; }
+            get { return "Medewerkers"; }
         }
     }
 }

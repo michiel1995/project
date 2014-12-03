@@ -97,5 +97,16 @@ namespace nmct.ba.cashlessproject.kassa.medewerker
                 return resp.IsSuccessStatusCode;
             }
         }
+
+        public static async Task<Boolean> SaveReg_Emp(Register_Employee reg_emp)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                string json = JsonConvert.SerializeObject(reg_emp);
+                HttpResponseMessage resp = await client.PostAsync(baseUrl + "/register", new StringContent(json, Encoding.UTF8, "application/json"));
+                return resp.IsSuccessStatusCode;
+            }
+        }
     }
 }

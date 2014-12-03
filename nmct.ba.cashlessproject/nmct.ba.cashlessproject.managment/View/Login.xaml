@@ -13,11 +13,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="300"/>
+            
             <RowDefinition Height="1*"/>
+            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Rectangle Grid.Column="1" Grid.Row="1"/>

@@ -87,17 +87,42 @@
 <script>
     $(function () {
         $(".datepicker").datepicker();
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:61592/api/organisatie",
+            dataType: "json",
+            contentType: "application/json",
+        }).done(function (data) {
+            for (var i = 0; i < data.length; i++) {
+                $("#Organisaties").append('<option id="IdOrganisation" Value="' + data[i].Id + '">' + data[i].Naam + "</option>")
+            }
+            toonSelectedOrganisatie();
+        });
+        toonDate();
+        
     });
-    $.ajax({
-        type: "GET",
-        url: "http://localhost:61592/api/organisatie",
-        dataType: "json",
-        contentType: "application/json",
-    }).done(function (data) {
-        for (var i = 0; i < data.length; i++) {
-            $("#Organisaties").append('<option id="IdOrganisation" Value="' + data[i].Id + '">' + data[i].Naam + "</option>")
+    function toonSelectedOrganisatie()
+    {
+        var pathname = window.location.pathname;
+        var array = pathname.split('/');
+        var selectedItem = array[array.length - 1];
+        if (parseInt(selectedItem, 10));
+        {
+            $('option[value="' + selectedItem + '"]').attr("selected", "selected")
         }
-    });
+    }
+    function toonDate() {
+        if ($("#Kassa_PurchaseDate").val() > 0)
+            $("#PurchaseDateString").val(ToDate($("#Kassa_PurchaseDate").val()));
+        if ($("#Kassa_ExpireDate").val() > 0)
+            $("#ExpireDateString").val(ToDate($("#Kassa_ExpireDate").val()));
+        if ($("#Fromdate").val() > 0)
+            $("#FromdateString").val(ToDate($("#Fromdate").val()));
+        if ($("#UntilDate").val() > 0)
+            $("#UntilDateString").val(ToDate($("#UntilDate").val()));
+
+    }
+
     $("#submitclick").click(function () {
         var arrPurch = $("#PurchaseDateString").val().split("/");
         var arrExp = $("#ExpireDateString").val().split("/");
@@ -114,6 +139,15 @@
         var datum = new Date(Date.UTC(year, month - 1, day));
         var timestamp = datum.getTime() / 1000;     
         return timestamp;
+    }
+    function ToDate(timestamp) {
+        var a = new Date(timestamp * 1000);
+        var months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+        var year = a.getFullYear();
+        var month = months[a.getMonth()];
+        var date = a.getDate();
+        var time = month + '/' + date  + '/' + year 
+        return time;
     }
 </script>
 

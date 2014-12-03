@@ -9,12 +9,12 @@ namespace nmct.ba.cashlessproject.models
     public class ItErrorlog
     {
         #region property's
-        private int _registerId;
+        private Register _register;
 
-        public int RegisterId
+        public Register Register
         {
-            get { return _registerId; }
-            set { _registerId = value; }
+            get { return _register; }
+            set { _register = value; }
         }
         private int _timestamp;
 
