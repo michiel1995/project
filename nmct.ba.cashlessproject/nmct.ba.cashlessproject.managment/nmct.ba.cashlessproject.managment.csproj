@@ -93,10 +93,14 @@
     <Compile Include="ViewModel\BeheerKlantenVM.cs" />
     <Compile Include="ViewModel\BeheerMedewerkersVM.cs" />
     <Compile Include="ViewModel\BeheerProductenVM.cs" />
+    <Compile Include="ViewModel\ChangePassVM.cs" />
     <Compile Include="ViewModel\LoginVM.cs" />
     <Compile Include="ViewModel\statistiekenVM.cs" />
     <Compile Include="View\BeheerKassa.xaml.cs">
       <DependentUpon>BeheerKassa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChangePass.xaml.cs">
+      <DependentUpon>ChangePass.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\statistieken.xaml.cs">
       <DependentUpon>statistieken.xaml</DependentUpon>
@@ -114,6 +118,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\BeheerProducten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ChangePass.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -41,7 +41,7 @@
                 @Html.DisplayFor(modelItem => item.OrganisationName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RegisterName)
+                @Html.DisplayFor(modelItem => item.Error.Register.Registername)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Error.Message)
@@ -50,10 +50,10 @@
                 @Html.DisplayFor(modelItem => item.Error.Stacktrace)
             </td>
             <td>
-                <a onclick="geklikt(@item.Error.RegisterId)">Klik hier voor meer info</a>
+                <a onclick="geklikt(@item.Error.Register.Id)">Klik hier voor meer info</a>
             </td>
             <td>
-                <a href="~/logboek/delete/@item.Error.RegisterId/@item.Error.Timestamp" class="trashbin"></a>
+                <a href="~/logboek/delete/@item.Error.Register.Id/@item.Error.Timestamp" class="trashbin"></a>
             </td>
         </tr>
     }
@@ -61,7 +61,7 @@
 <div class="background" id="backgroundWeg"></div>
 @foreach (var item in Model)
 {
-    <div class="hiddenBox" id="@item.Error.RegisterId">
+    <div class="hiddenBox" id="@item.Error.Register.Id">
         <h3>Organisatie</h3>
         <label class="col-md-4">Organisatie naam</label><p class="col-md-8">@item.OrganisationName</p>
         <label class="col-md-4">Adres</label><p class="col-md-8">@item.Address</p>
@@ -69,8 +69,8 @@
         <label class="col-md-4">Telefoon</label><p class="col-md-8">@item.Phone</p>
         <label class="col-md-4">Database Naam organisatie</label><p class="col-md-8">@item.DatabaseName</p>
         <h3>Kassa</h3>
-        <label class="col-md-4">Kassa naam</label><p class="col-md-8">@item.RegisterName</p>
-        <label class="col-md-4">Toestel</label><p class="col-md-8">@item.Device</p>
+        <label class="col-md-4">Kassa naam</label><p class="col-md-8">@item.Error.Register.Registername</p>
+        <label class="col-md-4">Toestel</label><p class="col-md-8">@item.Error.Register.Device</p>
         <label class="col-md-4">Verval datum</label><p class="col-md-8">@item.ExpiresDate</p>
         <h3>Foutmelding</h3>
         <label class="col-md-4">Tijd</label><p class="col-md-8">@item.Error.Timestamp</p>

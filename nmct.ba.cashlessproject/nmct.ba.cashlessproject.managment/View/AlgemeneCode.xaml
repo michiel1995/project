@@ -111,7 +111,14 @@
             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
     </ControlTemplate>
-    
+
+    <ControlTemplate x:Key="TemplateMenu" TargetType="{x:Type Button}">
+        <Grid>
+            <Rectangle></Rectangle>
+            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Grid>
+    </ControlTemplate>
+
     <Style x:Key="blokjes" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="{StaticResource blue}"/>
         <Setter Property="Margin" Value="0"/>

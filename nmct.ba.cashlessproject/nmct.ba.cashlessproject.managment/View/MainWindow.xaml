@@ -29,6 +29,9 @@
         <DataTemplate DataType="{x:Type vm:statistiekenVM}">
             <v:statistieken/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:ChangePassVM}">
+            <v:ChangePass/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <!--
@@ -40,16 +43,22 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <Grid Background="#eee">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+       
 
-        
-        <ItemsControl ItemsSource="{Binding Pages}" ItemsPanel="{StaticResource ItemsPanelTemplate}" Background="#eee" Visibility="{Binding Login, Converter={StaticResource nav}}">
+        <ItemsControl ItemsSource="{Binding Pages}" ItemsPanel="{StaticResource ItemsPanelTemplate}"  Visibility="{Binding Login, Converter={StaticResource nav}}">
             <ItemsControl.ItemTemplate >
                 <DataTemplate>
-                    <Button Style="{StaticResource Menu}" Content="{Binding Name}" Command="{Binding DataContext.ChangePageCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" CommandParameter="{Binding}"/>
+                        <Button Style="{StaticResource Menu}" Content="{Binding Name}" Command="{Binding DataContext.ChangePageCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" CommandParameter="{Binding}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-         
+            <Button Grid.Row="1" Style="{StaticResource Link}" Command="{Binding Changepass}">verander paswoord</Button>
+        </Grid>
         <ContentControl Grid.Column="1" Content="{Binding CurrentPage}"/>
     </Grid>
 </Window>

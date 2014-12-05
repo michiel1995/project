@@ -1,4 +1,5 @@
-﻿using nmct.ba.cashlessproject.models;
+﻿using nmct.ba.cashlessproject.helper;
+using nmct.ba.cashlessproject.models;
 using nmct.ba.cashlessproject.webservice.helper;
 using nmct.ba.cashlessproject.webservice.presentationModel;
 using System;
@@ -36,17 +37,21 @@ namespace nmct.ba.cashlessproject.webservice.Models
             ItErrorlog nieuw = new ItErrorlog()
             {
                 Message = reader["Message"].ToString(),
-                RegisterId = Convert.ToInt32(reader["RegisterId"].ToString()),
+                Register = new Register() {
+                    Id= Convert.ToInt32(reader["RegisterId"].ToString()),
+                    Registername = reader["RegisterName"].ToString(),
+                    Device = reader["Device"].ToString()
+                },
                 Stacktrace = reader["Stacktrace"].ToString(),
                 Timestamp = Convert.ToInt32(reader["Timestamp"].ToString())
             };
             return new PMLogboek()
             {
-                RegisterName = reader["RegisterName"].ToString(),
+                //RegisterName = reader["RegisterName"].ToString(),
                 Address = reader["Address"].ToString(),
                 Error = nieuw,
-                DatabaseName = reader["DbName"].ToString(),
-                Device = reader["Device"].ToString(),
+                DatabaseName = Cryptography.Decrypt(reader["DbName"].ToString()),
+                //Device = reader["Device"].ToString(),
                 ExpiresDate = reader["ExpiresDate"].ToString(),
                 Email = reader["Email"].ToString(),
                 OrganisationName = reader["OrganisationName"].ToString(),

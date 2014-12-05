@@ -61,5 +61,15 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
             Login = false;
             CurrentPage = page;
         }
+        public ICommand Changepass
+        {
+            get { return new RelayCommand(Veranderpaswoord); }
+        }
+
+        public void Veranderpaswoord()
+        {
+            (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new ChangePassVM());
+        }
+        
     }
 }

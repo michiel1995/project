@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 
 namespace nmct.ba.cashlessproject.ba.kassa.klant.idreader
 {
-    class ReadId
+    public class ReadId
     {
         public string Name { get; set; }
         public string Adres { get; set; }

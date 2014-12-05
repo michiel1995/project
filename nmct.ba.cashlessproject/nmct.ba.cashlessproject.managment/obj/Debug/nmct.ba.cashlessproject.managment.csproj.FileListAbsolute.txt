@@ -106,3 +106,5 @@ C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashle
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.csproj.GenerateResource.Cache
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.exe
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\nmct.ba.cashlessproject.managment.pdb
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\ChangePass.baml
+C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.managment\obj\Debug\View\ChangePass.g.cs

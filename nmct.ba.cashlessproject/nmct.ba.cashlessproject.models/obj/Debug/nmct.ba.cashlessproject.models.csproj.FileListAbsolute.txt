@@ -6,4 +6,3 @@ C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashle
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.models\bin\Debug\nmct.ba.cashlessproject.models.pdb
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.models\obj\Debug\nmct.ba.cashlessproject.models.dll
 C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.models\obj\Debug\nmct.ba.cashlessproject.models.pdb
-C:\Users\Michiel\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.models\obj\Debug\nmct.ba.cashlessproject.models.csprojResolveAssemblyReference.cache

@@ -44,7 +44,7 @@
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <Button  Grid.Column="1" Content="Log in" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=txtPassword}"/>
+                <Button  Grid.Column="1" Content="Log in" Command="{Binding LoginCommand}" ></Button>
             </Grid>
 
         </Grid>
