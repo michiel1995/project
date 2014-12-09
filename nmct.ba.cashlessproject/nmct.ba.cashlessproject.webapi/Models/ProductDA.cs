@@ -33,7 +33,7 @@ namespace nmct.ba.cashlessproject.webapi.Models
         public static int AddProduct(Product product, IEnumerable<Claim> claims)
         {
             DbConnection con = GetConnection(claims);
-            string sql = "INSERT INTO Products (ProductName,Price,availabe) VALUES (@Name,@Price,1)";
+            string sql = "INSERT INTO Products (ProductName,Price,available) VALUES (@Name,@Price,1)";
             DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Name", product.ProductName);
             DbParameter par2 = Database.AddParameter("System.Data.SqlClient", "@Price", product.Price);
             return Database.InsertData(con, sql, par1, par2);

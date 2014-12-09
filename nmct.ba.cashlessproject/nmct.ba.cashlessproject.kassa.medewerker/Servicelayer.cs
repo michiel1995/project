@@ -108,5 +108,14 @@ namespace nmct.ba.cashlessproject.kassa.medewerker
                 return resp.IsSuccessStatusCode;
             }
         }
+        public static async void PostLog(Errorlog error)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                string json = JsonConvert.SerializeObject(error);
+                HttpResponseMessage response = await client.PostAsync("http://localhost:4730/api/errorlog", new StringContent(json, Encoding.UTF8, "application/json"));
+            }
+        }
     }
 }

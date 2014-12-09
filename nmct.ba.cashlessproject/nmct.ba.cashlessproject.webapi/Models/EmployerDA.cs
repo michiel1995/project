@@ -28,7 +28,7 @@ namespace nmct.ba.cashlessproject.webapi.Models
         {
             DbConnection con = GetConnection(claims);
             string sql = "Delete from Employee  where Id = @Id";
-            DbParameter par1 = Database.AddParameter("Test", "@Id", id);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@Id", id);
             return Database.ModifyData(con, sql, par1);
         }
 

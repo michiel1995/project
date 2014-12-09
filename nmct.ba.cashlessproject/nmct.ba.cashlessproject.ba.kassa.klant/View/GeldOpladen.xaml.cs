@@ -1,4 +1,5 @@
-﻿using nmct.ba.cashlessproject.ba.kassa.klant.webcam;
+﻿using nmct.ba.cashlessproject.ba.kassa.klant.ViewModel;
+using nmct.ba.cashlessproject.ba.kassa.klant.webcam;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +46,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.View
                 _timer.Stop();              
                 web.Stop();
                 geld += i;
-                txtGeld.Text = "" + geld;
+                (this.DataContext as GeldOpladenVM).Bedrag = geld;
                 btnContinue.IsEnabled = true;
             }
         }
@@ -62,6 +63,11 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.View
         {
             _timer.Start();
             web.Continue();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            web.Stop();
         }
 
     }

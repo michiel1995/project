@@ -16,6 +16,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
     {
         public static Customer ingelogdeCustomer = null;
         public static TokenResponse token = null;
+        public static Register register = null;
         public ApplicationVM()
         {
             Pages.Add(new PortaalVM());
@@ -27,7 +28,12 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
             Pages.Add(new GeldOpgeladenGedaanVM());
             // Add other pages
             getToken();
+            GetRegister();
             CurrentPage = Pages[0];
+        }
+        private async void GetRegister()
+        {
+            register = await servicelayer.GetRegister(Convert.ToInt32(ConfigurationManager.AppSettings["idRegister"]));
         }
 
         private object currentPage;

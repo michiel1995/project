@@ -157,5 +157,16 @@ namespace nmct.ba.cashlessproject.managment
         }
 
         #endregion
+
+        public static async Task<Boolean> ChangePass(ChangePassword pass)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                string json = JsonConvert.SerializeObject(pass);
+                HttpResponseMessage resp = await client.PutAsync(baseurl + "/changepass", new StringContent(json, Encoding.UTF8, "application/json"));
+                return resp.IsSuccessStatusCode;
+            }
+        }
     }
 }

@@ -54,7 +54,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         public Product SelectedProduct
         {
             get { return _selectedProduct; }
-            set { _selectedProduct = value; OnPropertyChanged("SelectedProduct"); if (SelectedProduct != null) Status = "Selected"; }
+            set { _selectedProduct = value; OnPropertyChanged("SelectedProduct"); if (SelectedProduct != null) { if (SelectedProduct.ProductName != null) Status = "Selected"; } }
         }
 
         public ICommand Aanpassen
@@ -73,7 +73,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 
         private async void Verwijder()
         {
-            if (SelectedProduct != null && Status ==null)
+            if (SelectedProduct != null )
             {
                 bool b = await servicelayer.DeleteProduct(SelectedProduct.Id);
                 if (b == true)
@@ -87,7 +87,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
                 }
             }
             else{
-                Foutmelding = "Zijn alle waarden correct ingevuld?";
+                Foutmelding = "Selecteer een product";
             }
         }
         public ICommand Toevoegen
@@ -124,6 +124,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
                 {
                     Status = null;
                     VulProductsIn();
+                    SelectedProduct = null;
                 }
                 else
                 {

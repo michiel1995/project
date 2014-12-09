@@ -70,6 +70,15 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         {
             (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new ChangePassVM());
         }
-        
+        public ICommand Afmelden
+        {
+            get { return new RelayCommand(MeldAf); }
+        }
+
+        public void MeldAf()
+        {
+            Login = true;
+            CurrentPage = new LoginVM();
+        }
     }
 }

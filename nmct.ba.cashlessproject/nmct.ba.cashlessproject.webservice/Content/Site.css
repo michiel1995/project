@@ -46,11 +46,11 @@ nav > ul {
     padding: 0;
     width: 100%;
 }
- ul >li {
+ nav>ul >li {
     display:block;
     width: 100%;
  }
- ul >li > a {
+nav> ul >li > a {
     display:block;
     text-decoration: none;
     color: black;
@@ -59,7 +59,7 @@ nav > ul {
     width: 100%;
     font-size: 16px;
 }
-  ul >li > a:hover {
+ nav> ul >li > a:hover {
     background-color: #aaa;
     text-decoration: none;
     color: black;
@@ -111,6 +111,7 @@ a.wijzigen {
     padding-left: 20px;
     padding-bottom:20px;
     color: #000000;
+    word-wrap:break-word;
 }
 h2{
     margin-top:0;
@@ -133,4 +134,7 @@ ul{
 -webkit-margin-start: 0px;
 -webkit-margin-end: 0px;
 -webkit-padding-start: 0px;
+}
+.panel{
+    margin-right:50px;
 }

@@ -1,7 +1,9 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using nmct.ba.cashlessproject.helper;
 using nmct.ba.cashlessproject.models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,21 +27,36 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
         public string RfidNummer
         {
             get { return _rfidNummer; }
-            set { _rfidNummer = value; OnPropertyChanged("RfidNummer"); ControleerRfid(); }
+            set { _rfidNummer = value; OnPropertyChanged("RfidNummer"); if(RfidNummer !="") ControleerRfid(); }
         }
 
         private async void ControleerRfid()
         {
             int i;
-            if (int.TryParse(RfidNummer, out i) )
-            {
-                Customer cust =  await servicelayer.GetCustomer(i);
-                Hoeveel = "Het bedrag op je kaart bedraagt: €" +cust.Balance;   
+            try
+            {              
+                if (int.TryParse(RfidNummer, out i))
+                {
+                    Customer cust = await servicelayer.GetCustomer(i);
+                    Hoeveel = "Het bedrag op je kaart bedraagt: €" + cust.Balance;
+                }
+                else
+                {
+                    RfidNummer = "";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                RfidNummer = "";
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                servicelayer.PostLog(err);
             }
+            
         }
 
 

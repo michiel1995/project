@@ -47,7 +47,12 @@ namespace nmct.ba.cashlessproject.webservice.Models
             };
             PMKassa kassa =  new PMKassa();
             kassa.Kassa = nieuw;
-            kassa.OrganisationName = reader["OrganisationName"].ToString();
+            string org;
+            if (reader["OrganisationName"].ToString() == "")
+                 org = "/";
+            else org = reader["OrganisationName"].ToString();
+
+            kassa.OrganisationName = org ;
             if(reader["FromDate"].ToString() != "")
                 kassa.Fromdate = Convert.ToInt32(reader["FromDate"].ToString());
             if (reader["UntilDate"].ToString() != "")

@@ -11,6 +11,15 @@
         <co:IsEnabledConverter x:Key="EnableConvert"/>
         <co:IsEnabledConverterList x:Key="EnableConvertList"/>
         <co:ButtonEnableConverter x:Key="ButtonConv"/>
+
+        <ControlTemplate x:Key="ErrorTemplate">
+            <StackPanel>
+                <Border BorderBrush="Red" BorderThickness="2">
+                    <AdornedElementPlaceholder/>
+                </Border>
+            </StackPanel>
+        </ControlTemplate>
+
     </UserControl.Resources>
     <UserControl.DataContext>
         <vm:BeheerProductenVM/>
@@ -77,8 +86,8 @@
                 <TextBlock Grid.Row="3" Style="{StaticResource txbStandaard}">Product:</TextBlock>
                 <TextBlock Grid.Row="4" Style="{StaticResource txbStandaard}"> Prijs:</TextBlock>
 
-                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedProduct.ProductName}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
-                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedProduct.Price}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedProduct.ProductName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedProduct.Price, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
 
 
                 <Grid Grid.Column="1" Grid.Row="5">

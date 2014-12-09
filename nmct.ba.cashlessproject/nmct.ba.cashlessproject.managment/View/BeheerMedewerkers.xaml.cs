@@ -24,5 +24,23 @@ namespace nmct.ba.cashlessproject.managment.View
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            txtkaart.Text = "Hou kaart op scanner";
+            txtkaart.Visibility = Visibility.Visible;
+            progress.Visibility = Visibility.Visible;
+
+            txtrfid.Focus();
+        }
+        private void txtrfid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                focus.Focus();
+                progress.Visibility = Visibility.Hidden;
+                txtkaart.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }

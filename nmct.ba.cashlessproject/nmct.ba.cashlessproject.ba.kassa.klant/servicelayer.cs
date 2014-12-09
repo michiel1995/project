@@ -56,5 +56,31 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant
                 return false;
             }
         }
+        public static async void PostLog(Errorlog error)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                string json = JsonConvert.SerializeObject(error);
+                HttpResponseMessage response = await client.PostAsync("http://localhost:4730/api/errorlog", new StringContent(json, Encoding.UTF8, "application/json"));             
+            }
+        }
+
+
+        public static async Task<Register> GetRegister(int id)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                HttpResponseMessage resp = await client.GetAsync("http://localhost:4730/api/register/" + id);
+                if (resp.IsSuccessStatusCode)
+                {
+                    string json = await resp.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<Register>(json);
+                }
+                return null;
+            }
+        }
+
     }
 }

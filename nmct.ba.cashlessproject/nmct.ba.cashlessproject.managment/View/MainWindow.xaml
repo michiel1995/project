@@ -4,7 +4,7 @@
         xmlns:v="clr-namespace:nmct.ba.cashlessproject.managment.View"
         xmlns:vm="clr-namespace:nmct.ba.cashlessproject.managment.ViewModel"
         xmlns:co="clr-namespace:nmct.ba.cashlessproject.managment.Converters"
-        Title="MainWindow" Height="700" Width="1250">
+        Title="Management" Height="700" Width="1250">
 
     <Window.DataContext>
         <vm:ApplicationVM/>
@@ -33,7 +33,7 @@
             <v:ChangePass/>
         </DataTemplate>
     </Window.Resources>
-    <Grid>
+    <Grid >
         <!--
         <Grid.RowDefinitions>
             <RowDefinition Height="200"/>
@@ -43,21 +43,23 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid Background="#eee">
+        <Grid Background="#eee" Visibility="{Binding Login, Converter={StaticResource nav}}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
        
 
-        <ItemsControl ItemsSource="{Binding Pages}" ItemsPanel="{StaticResource ItemsPanelTemplate}"  Visibility="{Binding Login, Converter={StaticResource nav}}">
+        <ItemsControl ItemsSource="{Binding Pages}" ItemsPanel="{StaticResource ItemsPanelTemplate}"  >
             <ItemsControl.ItemTemplate >
                 <DataTemplate>
                         <Button Style="{StaticResource Menu}" Content="{Binding Name}" Command="{Binding DataContext.ChangePageCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" CommandParameter="{Binding}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-            <Button Grid.Row="1" Style="{StaticResource Link}" Command="{Binding Changepass}">verander paswoord</Button>
+            <Button Grid.Row="1"  Command="{Binding Afmelden}">Afmelden</Button>
+            <Button Grid.Row="2" Style="{StaticResource Link}" Command="{Binding Changepass}">verander paswoord</Button>
         </Grid>
         <ContentControl Grid.Column="1" Content="{Binding CurrentPage}"/>
     </Grid>

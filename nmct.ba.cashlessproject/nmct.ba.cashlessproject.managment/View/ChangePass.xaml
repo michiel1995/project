@@ -17,11 +17,12 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="550"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -33,20 +34,22 @@
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.ColumnSpan="2" Style="{StaticResource txbTitel}">Verander paswoord</TextBlock>
-            <TextBlock Style="{StaticResource txbStandaard}" Grid.Row="1"> Oud paswoord:</TextBlock>
-            <TextBlock Style="{StaticResource txbStandaard}" Grid.Row="2"> Nieuw paswoord:</TextBlock>
-            <TextBlock Style="{StaticResource txbStandaard}" Grid.Row="3"> Herhaal paswoord:</TextBlock>
-            <PasswordBox x:Name="OldPass" Style="{StaticResource passstand}"  Grid.Row="1" Grid.Column="1"></PasswordBox>
-            <PasswordBox x:Name="NewPass" Style="{StaticResource passstand}"  Grid.Row="2" Grid.Column="1"></PasswordBox>
-            <PasswordBox x:Name="ReplayPass" Style="{StaticResource passstand}"  Grid.Row="3" Grid.Column="1"></PasswordBox>
-            <Grid Grid.Row="4" Grid.Column="1">
+            <TextBlock Grid.ColumnSpan="2" Text="{Binding Foutmelding}" Style="{StaticResource txbStandaard}" Foreground="Red"/>
+            <TextBlock Grid.ColumnSpan="2" Text="{Binding GoedGekeurd}" Style="{StaticResource txbStandaard}" Foreground="Green"/>
+            <TextBlock  Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource txbTitel}">Verander paswoord</TextBlock>
+            <TextBlock Style="{StaticResource txbStandaard}" Grid.Row="2"> Oud paswoord:</TextBlock>
+            <TextBlock Style="{StaticResource txbStandaard}" Grid.Row="3"> Nieuw paswoord:</TextBlock>
+            <TextBlock Style="{StaticResource txbStandaard}" Grid.Row="4"> Herhaal paswoord:</TextBlock>
+            <PasswordBox x:Name="OldPass" Style="{StaticResource passstand}"  Grid.Row="2" Grid.Column="1"></PasswordBox>
+            <PasswordBox x:Name="NewPass" Style="{StaticResource passstand}"  Grid.Row="3" Grid.Column="1"></PasswordBox>
+            <PasswordBox x:Name="ReplayPass" Style="{StaticResource passstand}"  Grid.Row="4" Grid.Column="1"></PasswordBox>
+            <Grid Grid.Row="5" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <Button>Anuleren</Button>
-                <Button Grid.Column="1" Command="{Binding OpslaanCommand}" CommandParameter="{Binding ElementName=OldPass}">Opslaan</Button>
+                
+                <Button Grid.Column="1" Command="{Binding OpslaanCommand}" CommandParameter="{Binding ElementName=OldPass}" Click="Button_Click">Opslaan</Button>
             </Grid>
         </Grid>
     </Grid>

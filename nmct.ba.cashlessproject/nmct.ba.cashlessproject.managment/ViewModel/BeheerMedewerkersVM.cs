@@ -50,7 +50,13 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         public Employee SelectedEmployee
         {
             get { return _selectedemployee; }
-            set { _selectedemployee = value; OnPropertyChanged("SelectedEmployee"); if (SelectedEmployee != null) Status = "Selected"; }
+            set { _selectedemployee = value; OnPropertyChanged("SelectedEmployee"); if (SelectedEmployee != null) { if (SelectedEmployee.Name != null) Status = "Selected"; } }
+        }
+        private string _id;
+        public string Id
+        {
+            get { return _id; }
+            set { _id = value; OnPropertyChanged("Id"); if (Id != "") ControleerId(); }
         }
 
         public ICommand Aanpassen
@@ -69,7 +75,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 
         private async void Verwijder()
         {
-            if (SelectedEmployee != null && Status == null)
+            if (SelectedEmployee != null )
             {
                 bool b = await servicelayer.DeleteEmployee(SelectedEmployee.Id);
                 if (b == true)
@@ -106,7 +112,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         private async void SlaOp()
         {
 
-            if (SelectedEmployee.Address != null && SelectedEmployee.Email != null && SelectedEmployee.Name != null && SelectedEmployee.Phone != null && SelectedEmployee.Id != null)
+            if (SelectedEmployee.Address != null && SelectedEmployee.Email != null && SelectedEmployee.Name != null && SelectedEmployee.Phone != null && SelectedEmployee.Id != 0)
             {
                 Boolean b = false;
                 if (Status == "VoegToe")
@@ -145,6 +151,30 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
             VulMedewerkersIn();
         }
 
+
+        private void ControleerId()
+        {
+            try
+            {
+                int i;
+                if (!int.TryParse(Id, out i) && Id.Length != 10)
+                {
+                    Foutmelding = "er is een fout gebeurd probeer opnieuw";
+                    Id = "";
+                }
+                else
+                {
+                    SelectedEmployee.Id = i;
+                    Foutmelding = "Kaart is Ingelezen";
+                }
+            }
+            catch (Exception ex)
+            {
+              
+            }
+
+
+        }
         public string Name
         {
             get { return "Medewerkers"; }

@@ -77,7 +77,7 @@
         <label class="col-md-4">Verval datum</label><p class="col-md-8">@item.Kassa.ExpireDate</p>
 
         <h3>Organisatie</h3>
-        <label class="col-md-4">Organisatie naam</label><p class="col-md-8">@item.OrganisationName</p>
+        <label class="col-md-4">Organisatie naam</label><p class="col-md-8"> @item.OrganisationName</p>
         <label class="col-md-4">Bij organisatie van</label><p class="col-md-8">@item.Fromdate</p>
         <label class="col-md-4">bij organisatie tot</label><p class="col-md-8">@item.UntilDate</p>
     </div>
@@ -98,7 +98,12 @@
             var array = pathname.split('/');
             var selectedItem = array[array.length -1];
             $("#option" + selectedItem).attr('selected', 'selected');
-        });        
+        }); 
+        
+        var arr = $("td:nth-child(4),td:nth-child(5),div> :nth-child(7),div> :nth-child(9),div> :nth-child(14),div> :nth-child(16)")
+        for(var i =0;i<arr.length; i++){ 
+            arr[i].innerText = timeConverter(arr[i].innerText)
+        }
     });
     function geklikt(Id){
         $("#" + Id).attr("class", "toonBox");
@@ -112,5 +117,21 @@
             $(".background").attr("id" ,"backgroundWeg");
             $("#" + Id).attr("class" ,"hiddenBox");
         })
+    }
+
+    function timeConverter(UNIX_timestamp){
+        if(UNIX_timestamp == 0)
+        {
+            return "/";
+        }
+        var a = new Date(UNIX_timestamp*1000);
+        var year = a.getFullYear();
+        var month = a.getMonth() +1;
+        var date = a.getDate();
+        var hour = a.getHours();
+        var min = a.getMinutes();
+        var sec = a.getSeconds();
+        var time = date + '/' + month + '/' + year + ' ' + hour + ':' + min + ':' + sec ;
+        return time;
     }
 </script>

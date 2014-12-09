@@ -63,7 +63,7 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
                 return RedirectToAction("Index");
             }
             ItOrganisation org = organisatie.Find(o=> o.Id == id.Value) as ItOrganisation;
-            return View("Nieuw",org);
+            return View("Aanpassen",org);
         }
 
         [Route("Vereniging/aanpassen/{id}")]

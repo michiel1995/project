@@ -28,6 +28,10 @@ namespace nmct.ba.cashlessproject.models
         }
         private string _pass;
        [Required(ErrorMessage = "Gelieve een paswoord in te geven")]
+        [StringLength(50, ErrorMessage = "Het paswoord moet minum 6tekens lang zijn", MinimumLength = 6)]
+        [RegularExpression(@"((?=.*[a-z])(?=.*[A-Z])(?=.*\d)).+$", ErrorMessage = "Het wachtwoord moet een kleine letter,hoofletter en een numeriek teken bevatten")]
+     
+        
         public string Pass
         {
             get { return _pass; }
@@ -48,7 +52,10 @@ namespace nmct.ba.cashlessproject.models
             set { _dbLogin = value; }
         }
         private string _dbPass;
-       [Required(ErrorMessage = "Gelieve een Database Paswoord in te geven")]
+        [Required(ErrorMessage = "Gelieve een Database Paswoord in te geven")]
+        [StringLength(50, ErrorMessage = "Het paswoord moet minum 6tekens lang zijn", MinimumLength = 6)]
+        [RegularExpression(@"((?=.*[a-z])(?=.*[A-Z])(?=.*\d)).+$", ErrorMessage="Het wachtwoord moet een kleine letter,hoofletter en een numeriek teken bevatten")]
+     
         public string DBpass
         {
             get { return _dbPass; }
@@ -63,6 +70,7 @@ namespace nmct.ba.cashlessproject.models
         }
         private string _email;
        [Required(ErrorMessage = "Gelieve een email-adres in te geven")]
+       [EmailAddress]
         public string Email
         {
             get { return _email; }
@@ -77,6 +85,7 @@ namespace nmct.ba.cashlessproject.models
         }
         private string _phone;
        [Required(ErrorMessage = "Gelieve een Telefoonnummer in te geven")]
+       [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3,4})$", ErrorMessage = "geef een geldig telefoonnummer")]
         public string Phone
         {
             get { return _phone; }

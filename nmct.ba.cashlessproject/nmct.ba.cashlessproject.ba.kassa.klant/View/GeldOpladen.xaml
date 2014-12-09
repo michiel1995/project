@@ -29,7 +29,7 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="180"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="1" Command="{Binding Terug}">Terug</Button>
+                <Button Grid.Column="1" Command="{Binding Terug}" Click="Button_Click">Terug</Button>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>

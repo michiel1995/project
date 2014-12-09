@@ -82,9 +82,6 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 
         private async void SlaOp()
         {
-
-            if (true)
-            {
                 Boolean b = false;
                 if (Status == "PasAan")
                 {
@@ -100,11 +97,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
                 {
                     Foutmelding = "Er is een fout gebeurd probeer het nog eens opnieuw";
                 }
-            }
-            else
-            {
-                Foutmelding = "Zijn alle waarden correct ingevuld?";
-            }
+       
 
         }
         public ICommand Anuleren

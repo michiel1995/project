@@ -34,6 +34,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.View
             if (e.Key == Key.Return)
             {
                 focus.Focus();
+                txtrfid.Focus();
             }
         }
     }

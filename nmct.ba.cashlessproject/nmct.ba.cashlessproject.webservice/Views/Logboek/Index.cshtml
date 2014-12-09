@@ -35,7 +35,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Error.Timestamp)
+                @Html.DisplayFor(modelItem => (item.Error.Timestamp))
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OrganisationName)
@@ -92,5 +92,46 @@
             $(".background").attr("id" ,"backgroundWeg");
             $("#" + Time).attr("class" ,"hiddenBox");
         })
+    }
+    $(function(){
+        var arr =  $("td:first-child")
+        for(var i =0;i<arr.length; i++){
+            var time = timeConverter(arr[i].innerText);
+            arr[i].innerText = time;
+        }
+        var arrstack = $("td:nth-child(5)")
+        for(var i =0;i<arrstack.length; i++){ 
+            arrstack[i].innerText = arrstack[i].innerText.substring(0,100) +"..."
+        }
+        var expire =  $("div> :nth-child(18)");
+        for(var i =0;i<expire.length; i++){ 
+            expire[i].innerText = dateConverter(expire[i].innerText)
+        }
+
+        var tijd =  $("div> :nth-child(21)");
+        for(var i =0;i<tijd.length; i++){ 
+            tijd[i].innerText = timeConverter(tijd[i].innerText)
+        }
+        
+        
+    })
+    function timeConverter(UNIX_timestamp){
+        var a = new Date(UNIX_timestamp*1000);
+        var year = a.getFullYear();
+        var month = a.getMonth() +1;
+        var date = a.getDate();
+        var hour = a.getHours();
+        var min = a.getMinutes();
+        var sec = a.getSeconds();
+        var time = date + '/' + month + '/' + year + ' ' + hour + ':' + min + ':' + sec ;
+        return time;
+    }
+    function dateConverter(UNIX_timestamp){
+        var a = new Date(UNIX_timestamp*1000);
+        var year = a.getFullYear();
+        var month = a.getMonth() +1;
+        var date = a.getDate();
+        var time = date + '/' + month + '/' + year ;
+        return time;
     }
 </script>

@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight.Command;
 using nmct.ba.cashlessproject.ba.kassa.klant.idreader;
 using nmct.ba.cashlessproject.ba.kassa.klant.webcam;
+using nmct.ba.cashlessproject.helper;
 using nmct.ba.cashlessproject.models;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
         public string Id
         {
             get { return _id; }
-            set { _id = value; OnPropertyChanged("Id"); ControleerId(); }
+            set { _id = value; OnPropertyChanged("Id"); if(Id != "") ControleerId(); }
         }
         private string _Foutmelding;
 
@@ -69,40 +70,71 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
 
         private void ControleerId()
         {
-            int i;
-            if (!int.TryParse(Id, out i) && Id.Length != 10)
+            try
             {
-                //IdFoutmelding = 1;
-                Foutmelding = "er is een fout gebeurd probeer opnieuw";
-                Id = "";
+                int i;
+                if (!int.TryParse(Id, out i) && Id.Length != 10)
+                {
+                    //IdFoutmelding = 1;
+                    Foutmelding = "er is een fout gebeurd probeer opnieuw";
+                    Id = "";
+                }
+                else
+                {
+                    //IdFoutmelding = 2;
+                    Customer.Id = i;
+                    Foutmelding = "Kaart is Ingelezen";
+                }
             }
-            else{
-                //IdFoutmelding = 2;
-                Customer.Id = i;
-                Foutmelding = "Kaart is Ingelezen";
+            catch (Exception ex)
+            {
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                servicelayer.PostLog(err);
             }
+            
             
         }
         private void LeesKaart()
         {
-            ReadId info = ReadId.Lees();
-            if (info == null)
+            try
             {
-                FoutmeldingIdentiteit = "Er is een fout gebeurd bij het inlezen van de identititeitskaart probeer opnieuw!";
-            }
-            else
-            {
-                Customer = new Customer()
+                ReadId info = ReadId.Lees();
+                if (info == null)
                 {
-                    Name = info.Name,
-                    Address = info.Adres,
-                    Image = info.Bytes,
-                    Balance = 0
-                };
-                FoutmeldingIdentiteit ="";
-                
-                Image = helper.byteArrayToImage(info.Bytes);
+                    FoutmeldingIdentiteit = "Er is een fout gebeurd bij het inlezen van de identititeitskaart probeer opnieuw!";
+                }
+                else
+                {
+                    Customer = new Customer()
+                    {
+                        Name = info.Name,
+                        Address = info.Adres,
+                        Image = info.Bytes,
+                        Balance = 0
+                    };
+                    FoutmeldingIdentiteit = "";
+
+                    Image = helper.byteArrayToImage(info.Bytes);
+                }
             }
+            catch (Exception ex )
+            {
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                servicelayer.PostLog(err);
+            }
+            
         }
         public string Name
         {
@@ -113,23 +145,39 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
             get { return new RelayCommand(SlaCustomerOp); }
         }
         private async void SlaCustomerOp() {
-            if (Customer !=null)
+
+            try
             {
-                
-                Boolean b = await servicelayer.AddCustomer(Customer);
-                if(b==true)
+                if (Customer != null)
                 {
-                    (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new RegistrerenGedaanVM());
+
+                    Boolean b = await servicelayer.AddCustomer(Customer);
+                    if (b == true)
+                    {
+                        (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new RegistrerenGedaanVM());
+                    }
+                    else
+                    {
+                        ErisEenFoutGebeurd();
+                    }
                 }
                 else
                 {
                     ErisEenFoutGebeurd();
                 }
             }
-            else
+            catch (Exception ex )
             {
-                ErisEenFoutGebeurd();
+                 Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                servicelayer.PostLog(err);
             }
+            
         }
 
         private void ErisEenFoutGebeurd()

@@ -1,4 +1,5 @@
-﻿using nmct.ba.cashlessproject.models;
+﻿using nmct.ba.cashlessproject.helper;
+using nmct.ba.cashlessproject.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,20 +33,35 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
 
         private async void ControleerRfid()
         {
-            int i;
-            if (int.TryParse(RfidNummer, out i) && RfidNummer.Length == 10)
+            try
             {
-                Employee employee = await Servicelayer.GetMedewerker(i);
-                if (employee != null)
+                int i;
+                if (int.TryParse(RfidNummer, out i) && RfidNummer.Length == 10)
                 {
-                    ApplicationVM.ingelogdeMedewerker = employee;
-                    (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new StartupscreenVM());
+                    Employee employee = await Servicelayer.GetMedewerker(i);
+                    if (employee != null)
+                    {
+                        ApplicationVM.ingelogdeMedewerker = employee;
+                        (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new StartupscreenVM());
+                    }
+                }
+                else
+                {
+                    RfidNummer = "";
                 }
             }
-            else
+            catch (Exception ex)
             {
-                RfidNummer = "";
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                Servicelayer.PostLog(err);
             }
+           
         }
     }
 }

@@ -11,6 +11,17 @@
         <co:IsEnabledConverter x:Key="EnableConvert"/>
         <co:IsEnabledConverterList x:Key="EnableConvertList"/>
         <co:ButtonEnableConverter x:Key="ButtonConv"/>
+        <co:ChangeForeground x:Key="ChangeForeground"/>
+        <co:ScanConvert x:Key="ScanConvert"/>
+
+        <ControlTemplate x:Key="ErrorTemplate">
+            <StackPanel>
+                <Border BorderBrush="Red" BorderThickness="2">
+                    <AdornedElementPlaceholder/>
+                </Border>
+            </StackPanel>
+        </ControlTemplate>
+        
     </UserControl.Resources>
     <UserControl.DataContext>
         <vm:BeheerMedewerkersVM/>
@@ -62,6 +73,7 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
@@ -80,13 +92,20 @@
                 <TextBlock Grid.Row="3" Style="{StaticResource txbStandaard}">Naam:</TextBlock>
                 <TextBlock Grid.Row="4" Style="{StaticResource txbStandaard}">Email:</TextBlock>
                 <TextBlock Grid.Row="5" Style="{StaticResource txbStandaard}">Telefoon:</TextBlock>
-                <TextBlock Grid.Row="6" Style="{StaticResource txbStandaard}">Adres:</TextBlock>            
-                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Name}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
-                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Email}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
-                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Phone}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
-                <TextBox Grid.Row="6" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Address}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
-                <Button Style="{StaticResource BlauweKnop}" Grid.Row="7" Grid.Column="0" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}" >Scan Badge</Button>
-                <Grid Grid.Column="1" Grid.Row="8">
+                <TextBlock Grid.Row="6" Style="{StaticResource txbStandaard}">Adres:</TextBlock>
+                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Phone, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="6" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedEmployee.Address, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+
+                <Button Style="{StaticResource BlauweKnop}" Grid.Row="8" Grid.Column="0" IsEnabled="{Binding Status, Converter={StaticResource ScanConvert}}"  Click="Button_Click">Scan Badge</Button>
+                <TextBlock x:Name="txtkaart" Grid.Column="1" Grid.Row="7" VerticalAlignment="Bottom" HorizontalAlignment="Center" Style="{StaticResource txbStandaard}" Visibility="Hidden">Hou kaart op scanner</TextBlock>
+                <TextBox x:Name="txtrfid" Grid.Column="1" Grid.Row="8" Width="0" Height="0" Text="{Binding Id}" KeyDown="txtrfid_KeyDown" ></TextBox>
+                <TextBox x:Name="focus" Grid.Column="1" Grid.Row="8" Width="0" Height="0" ></TextBox>
+                <ProgressBar x:Name="progress" IsIndeterminate="True" Grid.Column="1" Grid.Row="8"  Margin="15"  Visibility="Hidden"/>
+                <TextBlock x:Name="txtFoutmelding" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" FontSize="20" Text="{Binding Foutmelding}" Foreground="{Binding Foutmelding, Converter={StaticResource ChangeForeground}}" ></TextBlock>
+                
+                <Grid Grid.Column="1" Grid.Row="9">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="1*"/>

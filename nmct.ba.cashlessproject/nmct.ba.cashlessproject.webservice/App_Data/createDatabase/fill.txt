@@ -74,6 +74,7 @@ CREATE TABLE [dbo].[Products](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[ProductName] [nvarchar](50) NOT NULL,
 	[Price] [decimal](5, 2) NOT NULL,
+	[available] [int] NULL,
  CONSTRAINT [PK__Products__3214EC077E49FCB5] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -105,7 +106,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Registers](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Id] [int] NOT NULL,
 	[Registername] [nvarchar](50) NULL,
 	[Device] [nvarchar](50) NOT NULL,
  CONSTRAINT [PK__Register__3214EC073BAD837F] PRIMARY KEY CLUSTERED 

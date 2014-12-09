@@ -29,6 +29,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.View
             if (e.Key == Key.Return)
             {
                 focus.Focus();
+                txtrfid.Focus();
             }
         }
 

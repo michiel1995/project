@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:v="clr-namespace:nmct.ba.cashlessproject.ba.kassa.klant.View"
         xmlns:vm="clr-namespace:nmct.ba.cashlessproject.ba.kassa.klant.ViewModel"
-        Title="MainWindow" Height="700" Width="1050">
+        Title="Kassa-klant" Height="700" Width="1050">
     <Window.DataContext>
         <vm:ApplicationVM/>
     </Window.DataContext>

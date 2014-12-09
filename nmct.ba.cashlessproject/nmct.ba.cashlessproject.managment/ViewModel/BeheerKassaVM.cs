@@ -36,8 +36,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 
         private void VeranderInfoLijst()
         {
-            if(SelectedList != null)
-            {
+         
                 Info = new ObservableCollection<Register_Employee>();
                 if (Selected == "System.Windows.Controls.ComboBoxItem: Medewerker")
                 {
@@ -61,7 +60,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
                         }
                     }
                 }
-            }
+            
         }
         
         private void VulKeuzeLijstIn()

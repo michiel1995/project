@@ -106,9 +106,11 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
 
         private void Aantal(string aantal)
         {
-            if(SelectedProduct != null)
+            try
             {
-             
+                if (SelectedProduct != null)
+                {
+
                     Sale sale = new Sale()
                     {
                         Customer = Klant,
@@ -125,13 +127,26 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
                     }
                     else
                     {
-                    Customer cust = Klant;
-                    cust.Balance -= sale.Price;
-                    Klant = cust;
-                    Totaal += sale.Price;
-                    Verkoop.Add(sale);
+                        Customer cust = Klant;
+                        cust.Balance -= sale.Price;
+                        Klant = cust;
+                        Totaal += sale.Price;
+                        Verkoop.Add(sale);
                     }
+                }
             }
+            catch (Exception ex)
+            {
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                Servicelayer.PostLog(err);
+            }
+          
         }
 
         public ICommand Opslaan
@@ -141,13 +156,28 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
 
         private async void OpslaanSale()
         {
-            Boolean b = await Servicelayer.PutCustomer(Klant);
-            Boolean b2 = await Servicelayer.SaveSales(Verkoop);
-            if(b == true && b2 ==true)
+            try
             {
-                ApplicationVM.ingelogdeCustomer = null;
-                (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new BestellingAfgerondVM());
+                Boolean b = await Servicelayer.PutCustomer(Klant);
+                Boolean b2 = await Servicelayer.SaveSales(Verkoop);
+                if (b == true && b2 == true)
+                {
+                    ApplicationVM.ingelogdeCustomer = null;
+                    (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new BestellingAfgerondVM());
+                }
             }
+            catch (Exception ex)
+            {
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                Servicelayer.PostLog(err);
+            }
+            
         }
 
         string IPage.Name

@@ -1,5 +1,6 @@
 ﻿
 using GalaSoft.MvvmLight.Command;
+using nmct.ba.cashlessproject.helper;
 using nmct.ba.cashlessproject.models;
 using System;
 using System.Collections.Generic;
@@ -59,26 +60,41 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
         
         private async void ControleerRfid()
         {
-            if (RfidNummer != "")
+            try
             {
-                int i;
-                if (int.TryParse(RfidNummer, out i)) // && RfidNummer.Length == 10
+                if (RfidNummer != "")
                 {
-                    Customer Customer = await Servicelayer.GetCustomer(i);
-                    if (Customer != null)
+                    int i;
+                    if (int.TryParse(RfidNummer, out i)) // && RfidNummer.Length == 10
                     {
-                        Cust = Customer;
-                        ApplicationVM.ingelogdeCustomer = Customer;
-                        if (Customer.Image != null)
-                            Image = helper.byteArrayToImage(Customer.Image);
+                        Customer Customer = await Servicelayer.GetCustomer(i);
+                        if (Customer != null)
+                        {
+                            Cust = Customer;
+                            ApplicationVM.ingelogdeCustomer = Customer;
+                            if (Customer.Image != null)
+                                Image = helper.byteArrayToImage(Customer.Image);
+                        }
+                        RfidNummer = "";
                     }
-                    RfidNummer = "";
-                }
-                else
-                {
-                    RfidNummer = "";
+                    else
+                    {
+                        RfidNummer = "";
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                Servicelayer.PostLog(err);
+            }
+            
         }
 
         public ICommand BestellenCommand
@@ -99,11 +115,25 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
 
         private async void MeldAf()
         {
-            ApplicationVM.reg_emp.Until = DateTime.Now;
-            bool b = await Servicelayer.SaveReg_Emp(ApplicationVM.reg_emp);
-            if(b==true)
+            try
             {
-                (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new LoginVM());
+                ApplicationVM.reg_emp.Until = DateTime.Now;
+                bool b = await Servicelayer.SaveReg_Emp(ApplicationVM.reg_emp);
+                if (b == true)
+                {
+                    (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new LoginVM());
+                }
+            }
+            catch (Exception ex)
+            {
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                Servicelayer.PostLog(err);
             }
            
         }

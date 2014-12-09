@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using nmct.ba.cashlessproject.ba.kassa.klant.webcam;
+using nmct.ba.cashlessproject.helper;
 using nmct.ba.cashlessproject.models;
 using System;
 using System.Collections.Generic;
@@ -56,12 +57,27 @@ namespace nmct.ba.cashlessproject.ba.kassa.klant.ViewModel
 
         private async void GeldOpladen()
         {
-            Customer.Balance += Bedrag;
-            bool b = await servicelayer.UpdateCustomer(Customer);
-            if(b==true)
+            try
             {
-              (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new GeldOpgeladenGedaanVM());            
+                Customer.Balance += Bedrag;
+                bool b = await servicelayer.UpdateCustomer(Customer);
+                if (b == true)
+                {
+                    (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new GeldOpgeladenGedaanVM());
+                }
             }
+            catch (Exception ex )
+            {
+               Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                servicelayer.PostLog(err);
+            }
+            
         }
 
         public ICommand Terug

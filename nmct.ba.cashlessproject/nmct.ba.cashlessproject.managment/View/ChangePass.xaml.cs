@@ -1,4 +1,6 @@
-﻿using System;
+﻿using nmct.ba.cashlessproject.managment.ViewModel;
+using nmct.ba.cashlessproject.models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,25 @@ namespace nmct.ba.cashlessproject.managment.View
         public ChangePass()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SavePass();
+        }
+
+        private void SavePass()
+        {
+            ChangePassword pas = new ChangePassword()
+            {
+                Old = OldPass.Password,
+                New = NewPass.Password,
+                Replay = ReplayPass.Password
+            };
+            (this.DataContext as ChangePassVM).Pass = pas;
+            (this.DataContext as ChangePassVM).Save();
+            NewPass.Password = "";
+            ReplayPass.Password = "";
         }
     }
 }

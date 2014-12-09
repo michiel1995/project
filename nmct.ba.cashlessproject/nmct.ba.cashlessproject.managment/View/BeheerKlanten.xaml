@@ -11,6 +11,15 @@
         <co:IsEnabledConverter x:Key="EnableConvert"/>
         <co:IsEnabledConverterList x:Key="EnableConvertList"/>
         <co:ButtonEnableConverter x:Key="ButtonConv"/>
+
+        <ControlTemplate x:Key="ErrorTemplate">
+            <StackPanel>
+                <Border BorderBrush="Red" BorderThickness="2">
+                    <AdornedElementPlaceholder/>
+                </Border>
+            </StackPanel>
+        </ControlTemplate>
+
     </UserControl.Resources>
     <UserControl.DataContext>
         <vm:BeheerKlantenVM/>
@@ -78,9 +87,9 @@
                 <TextBlock Grid.Row="3" Style="{StaticResource txbStandaard}"> Naam:</TextBlock>
                 <TextBlock Grid.Row="4" Style="{StaticResource txbStandaard}"> Balans:</TextBlock>
                 <TextBlock Grid.Row="5" Style="{StaticResource txbStandaard}"> Adres:</TextBlock>
-                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedCustomer.Name}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
-                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedCustomer.Balance}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
-                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedCustomer.Address}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedCustomer.Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedCustomer.Balance, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
+                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource txtstand}" Text="{Binding SelectedCustomer.Address, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvert}}"></TextBox>
                 <Grid Grid.Column="1" Grid.Row="6">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>

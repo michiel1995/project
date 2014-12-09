@@ -21,7 +21,7 @@ namespace nmct.ba.cashlessproject.webservice.Models
                 // create the actual database
                 string create = System.IO.File.ReadAllText(HostingEnvironment.MapPath(@"~/App_Data/createDatabase/create.txt"));
                 //string create = System.IO.File.ReadAllText(@"App_Data/createDatabase/create.txt");// only for desktop
-                string sql = create.Replace("@@DbName", Cryptography.Decrypt(o.DbName)).Replace("@@DbLogin", Cryptography.Decrypt(o.DbLogin)).Replace("@@DbPassword", Cryptography.Decrypt(o.DBpass));
+                string sql = create.Replace("@@DbName", o.DbName).Replace("@@DbLogin", o.DbLogin).Replace("@@DbPassword", o.DBpass);
                 foreach (string commandText in RemoveGo(sql))
                 {
                     Database.ModifyData("AdminConnection", commandText);
@@ -39,7 +39,7 @@ namespace nmct.ba.cashlessproject.webservice.Models
 
                 string fill = System.IO.File.ReadAllText(HostingEnvironment.MapPath(@"~/App_Data/createDatabase/fill.txt"));
                 //string fill = System.IO.File.ReadAllText(@"App_Data/createDatabase/fill.txt"); // only for desktop
-                string sql2 = fill.Replace("@@DbName", Cryptography.Decrypt(o.DbName)).Replace("@@DbLogin", Cryptography.Decrypt(o.DbLogin)).Replace("@@DbPassword", Cryptography.Decrypt(o.DBpass));
+                string sql2 = fill.Replace("@@DbName", o.DbName).Replace("@@DbLogin", o.DbLogin).Replace("@@DbPassword", o.DBpass);
 
                 foreach (string commandText in RemoveGo(sql2))
                 {

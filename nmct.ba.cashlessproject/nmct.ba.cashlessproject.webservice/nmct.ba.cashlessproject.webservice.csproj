@@ -209,8 +209,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\Trash_Bin.png" />
-    <Content Include="Images\wijzigen.png" />
+    <Content Include="helper\Images\Trash_Bin.png" />
+    <Content Include="helper\Images\wijzigen.png" />
     <Content Include="presentationModel\Scripts\bootstrap.js" />
     <Content Include="presentationModel\Scripts\bootstrap.min.js" />
     <None Include="presentationModel\Scripts\jquery-1.10.2.intellisense.js" />
@@ -256,8 +256,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="presentationModel\Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -290,6 +288,7 @@
     <Content Include="Views\Instellingen\Index.cshtml" />
     <Content Include="Views\Instellingen\succes.cshtml" />
     <Content Include="Views\Kassa\Nieuw.cshtml" />
+    <Content Include="Views\Vereniging\Aanpassen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

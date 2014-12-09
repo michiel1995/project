@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:v="clr-namespace:nmct.ba.cashlessproject.kassa.medewerker.View"
         xmlns:vm="clr-namespace:nmct.ba.cashlessproject.kassa.medewerker.ViewModel"
-        Title="MainWindow" Height="900" Width="1250">
+        Title="Kassa-medewerker" Height="900" Width="1250">
     <Window.DataContext>
         <vm:ApplicationVM/>
     </Window.DataContext>

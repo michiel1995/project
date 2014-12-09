@@ -13,6 +13,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 {
     class LoginVM : ObservableObject, IPage
     {
+       
         public string Name
         {
             get { return "Login"; }
