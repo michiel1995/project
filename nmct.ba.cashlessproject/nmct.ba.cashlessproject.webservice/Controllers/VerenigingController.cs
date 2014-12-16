@@ -79,17 +79,18 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
          }
 
 
-        [Route("Vereniging/delete/{id}")]
-        public ActionResult Delete(int? id)
-        {
-            if (!id.HasValue)
-            {
-                return RedirectToAction("Index");
-            }
-            ItOrganisation org = organisatie.Find(o => o.Id == id.Value) as ItOrganisation;
-            if (org != null) 
-                VerenigingDA.DeleteOrganisation(org.Id);
-            return RedirectToAction("index");
-        }
+        //[Route("Vereniging/delete/{id}")]
+        //[HttpPost]
+        //public ActionResult Delete(int? id)
+        //{
+        //    if (!id.HasValue)
+        //    {
+        //        return RedirectToAction("Index");
+        //    }
+        //    ItOrganisation org = organisatie.Find(o => o.Id == id.Value) as ItOrganisation;
+        //    if (org != null) 
+        //        VerenigingDA.DeleteOrganisation(org.Id);
+        //    return RedirectToAction("index");
+        //}
     }
 }

@@ -81,5 +81,32 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             string Username = ConfigurationManager.AppSettings["Username"];
             token = client.RequestResourceOwnerPasswordAsync(Cryptography.Encrypt(Username), Cryptography.Encrypt(Password)).Result;
         }
+
+        public async void MeldAf()
+        {
+            try
+            {
+                if (reg_emp!= null)
+                {
+                    reg_emp.Until = DateTime.Now;
+                    bool b = await Servicelayer.SaveReg_Emp(ApplicationVM.reg_emp);
+                    if (b == true)
+                    {
+                        (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new LoginVM());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                Servicelayer.PostLog(err);
+            }
+        }
     }
 }

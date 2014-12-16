@@ -168,5 +168,22 @@ namespace nmct.ba.cashlessproject.managment
                 return resp.IsSuccessStatusCode;
             }
         }
+
+
+        public static async Task<ObservableCollection<Sale>> getSales()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                HttpResponseMessage resp = await client.GetAsync(baseurl + "/sale");
+                if (resp.IsSuccessStatusCode)
+                {
+                    string json = await resp.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<ObservableCollection<Sale>>(json);
+                }
+                return null;
+            }
+
+        }
     }
 }

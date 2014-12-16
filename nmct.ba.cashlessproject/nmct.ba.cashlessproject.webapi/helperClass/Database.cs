@@ -161,12 +161,12 @@ namespace nmct.ba.cashlessproject.webapi.helperClass
             }
         }
 
-        public static DbTransaction BeginTransaction(ConnectionStringSettings Setting)
+        public static DbTransaction BeginTransaction(DbConnection con)
         {
-            DbConnection con = null;
+           // DbConnection con = null;
             try
             {
-                con = GetConnection(Setting);
+               // con = GetConnection(Setting);
                 return con.BeginTransaction();
             }
             catch (Exception ex)

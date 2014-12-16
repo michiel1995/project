@@ -21,6 +21,29 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
             }
            
         }
+
+        private string _zoek;
+
+        public string Zoek
+        {
+            get { return _zoek; }
+            set
+            {
+                _zoek = value; OnPropertyChanged("Zoek"); 
+                if (Zoek != "" && Zoek != null)
+                {
+                    
+                    var lijst = voledigeLijst.Where(x => x.Name.ToLower().StartsWith(Zoek.ToLower()));
+                    Customer = new ObservableCollection<Customer>(lijst);
+                }
+                else
+                {
+                    Customer = voledigeLijst;
+                }
+            }
+        }
+        
+
         private string _status;
         public string Status
         {
@@ -39,8 +62,12 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         {
             Foutmelding = "";
             Customer = await servicelayer.getCustomer();
+            voledigeLijst = Customer;
+            Zoek = "";
             Image = null;
         }
+        private static ObservableCollection<Customer> voledigeLijst;
+
         private ObservableCollection<Customer> _customer;
 
         public ObservableCollection<Customer> Customer

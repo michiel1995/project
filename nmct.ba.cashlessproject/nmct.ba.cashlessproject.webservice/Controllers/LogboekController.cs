@@ -23,6 +23,7 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
         }
 
          [Route("logboek/Delete/{registerid}/{timestamp}")]
+        [HttpPost]
         public ActionResult Delete(int? registerid, int? timestamp)
         {
              if(!timestamp.HasValue && ! registerid.HasValue)

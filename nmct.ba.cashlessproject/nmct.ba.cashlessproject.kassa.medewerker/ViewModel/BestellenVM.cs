@@ -58,6 +58,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
         }
         private ObservableCollection<Product> _volledigelijst;
 
+        
         public ObservableCollection<Product> VolledigeLijst
         {
             get { return _volledigelijst; }
@@ -84,6 +85,13 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
         {
             get { return _verkoop; }
             set { _verkoop = value; OnPropertyChanged("Verkoop"); }
+        }
+        private Sale _selectedVerkoop;
+
+        public Sale SelectedVerkoop
+        {
+            get { return _selectedVerkoop; }
+            set { _selectedVerkoop = value; OnPropertyChanged("SelectedVerkoop"); }
         }
         
         
@@ -148,6 +156,19 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             }
           
         }
+        public ICommand Delete
+        {
+            get { return new RelayCommand(verwijderVerkoop); }
+        }
+
+        private void verwijderVerkoop()
+        {
+            Customer cust = Klant;
+            cust.Balance += SelectedVerkoop.Price;
+            Klant = cust;
+            Totaal -= SelectedVerkoop.Price;
+            Verkoop.Remove(SelectedVerkoop);
+        }
 
         public ICommand Opslaan
         {
@@ -179,6 +200,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             }
             
         }
+        
 
         string IPage.Name
         {

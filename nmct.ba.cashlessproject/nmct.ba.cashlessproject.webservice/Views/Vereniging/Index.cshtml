@@ -9,53 +9,56 @@
 <p>
     Wil je een nieuwe vereniging toevoegen @Html.ActionLink("klik hier", "nieuw")
 </p>
-<table class="table">
-    <tr>
+<table id="ver" class="table tablesorter">
+    <thead>
+        <tr>
 
-        <th>
-             <a href="" class="black">Organisatie naam</a>
-        </th>
-        <th>
-            <a href="" class="black">e-mail adres</a>
-        </th>
-        <th>
-            <a href="" class="black">Adres</a>
-        </th>
-        <th>
-            <a href="" class="black">Telefoonnummer</a>
-        </th>
-        <th>
-            meer Info
-        </th>
-        <th>
-            acties
-        </th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrganistionName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Phone)
-        </td>
-        <td>
-            <a onclick="geklikt(@item.Id)">Klik hier voor Database info</a>
-        </td>
-        <td>
-            <a href="~/Vereniging/aanpassen/@item.Id" class="wijzigen"></a>
-            <a href="~/Vereniging/delete/@item.Id" class="trashbin" onclick="return confirm('ben je zeker dat je dit wilt verwijderen dit kan zware gevolgen voor de database hebben');"></a>         
-        </td>
-    </tr>
-}
-
+            <th>
+                <a href="" class="black">Organisatie naam</a>
+            </th>
+            <th>
+                <a href="" class="black">e-mail adres</a>
+            </th>
+            <th>
+                <a href="" class="black">Adres</a>
+            </th>
+            <th>
+                <a href="" class="black">Telefoonnummer</a>
+            </th>
+            <th>
+                meer Info
+            </th>
+            <th>
+                acties
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrganistionName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    <a onclick="geklikt(@item.Id)">Klik hier voor Database info</a>
+                </td>
+                <td>
+                    <a href="~/Vereniging/aanpassen/@item.Id" class="wijzigen"></a>
+                    <!-- <a href="~/Vereniging/delete/@item.Id" class="trashbin" onclick="return confirm('ben je zeker dat je dit wilt verwijderen dit kan zware gevolgen voor de database hebben');"></a>   -->
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
 
 
@@ -80,6 +83,13 @@
 
 
 <script>
+
+    $(document).ready(function() 
+    { 
+        $("#ver").tablesorter({ headers: { 4: { sorter: false }, 5: { sorter: false } } });
+    } 
+); 
+
     function geklikt(waarde){
         $("#" + waarde).attr("class", "toonBox");
         $("#" + waarde).css({

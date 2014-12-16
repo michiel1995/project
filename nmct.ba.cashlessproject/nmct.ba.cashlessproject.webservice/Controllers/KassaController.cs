@@ -108,6 +108,7 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
 
 
         [Route("kassa/delete/{id}")]
+        [HttpPost]
         public ActionResult Delete(int? id)
         {
             if (!id.HasValue)
@@ -118,8 +119,8 @@ namespace nmct.ba.cashlessproject.webservice.Controllers
             PMKassa kassa= lijst.Find(o => o.Kassa.Id == id.Value ) as PMKassa;
             if (kassa != null)
             {
-                KassaDA.DeleteKassa(id.Value);
                 KassaDA.DeleteKoppelAanOrg(id.Value);
+                KassaDA.DeleteKassa(id.Value);             
             }
 
             return RedirectToAction("index");

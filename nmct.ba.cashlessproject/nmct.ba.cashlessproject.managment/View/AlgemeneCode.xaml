@@ -9,7 +9,14 @@
         <Setter Property="Margin" Value="10px"/>
         <Setter Property="FontFamily" Value="Ubuntu"/>
     </Style>
-    
+
+    <Style TargetType="{x:Type DatePicker}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="18px"/>
+        <Setter Property="Margin" Value="10px"/>
+        <Setter Property="FontFamily" Value="Ubuntu"/>
+    </Style>
+
     <Style x:Key="txbTitel" TargetType="{x:Type TextBlock}">
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="22px"/>
@@ -160,7 +167,7 @@
     </Style>
     
     <Style x:Key="Zoeken" TargetType="{x:Type TextBox}">
-        <Setter Property="Margin" Value="10,5,0,5"/>
+        <Setter Property="Margin" Value="10,5,10,5"/>
         <Setter Property="FontSize" Value="18px"/>
         <Setter Property="FontFamily" Value="Ubuntu"/>
         <Setter Property ="VerticalAlignment" Value="Center"/>

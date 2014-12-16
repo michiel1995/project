@@ -32,11 +32,41 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
             get { return _foutmelding; }
             set { _foutmelding = value; OnPropertyChanged("Foutmelding"); }
         }
+
+
+        private string _zoek;
+
+        public string Zoek
+        {
+            get { return _zoek; }
+            set
+            {
+                _zoek = value; OnPropertyChanged("Zoek");
+                if (Zoek != "" && Zoek != null)
+                {
+
+                    var lijst = voledigeLijst.Where(x => x.Name.ToLower().StartsWith(Zoek.ToLower()));
+                    Employee = new ObservableCollection<Employee>(lijst);
+                }
+                else
+                {
+                    Employee = voledigeLijst;
+                }
+            }
+        }
+        
+
+
         private async void VulMedewerkersIn()
         {
             Foutmelding = "";
             Employee = await servicelayer.getEmployee();
+            voledigeLijst = Employee;
+            Zoek ="";
         }
+
+        private static ObservableCollection<Employee> voledigeLijst;
+
         private ObservableCollection<Employee> _employee;
 
         public ObservableCollection<Employee> Employee

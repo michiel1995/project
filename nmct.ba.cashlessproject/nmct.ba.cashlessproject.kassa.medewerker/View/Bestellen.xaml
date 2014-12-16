@@ -76,7 +76,7 @@
                     <GridView>
                         <GridViewColumn Width="300" Header="Product" 
               DisplayMemberBinding="{Binding ProductName  }"  />
-                        <GridViewColumn Width="100" Header="Prijs"  
+                        <GridViewColumn Width="80" Header="Prijs"  
               DisplayMemberBinding="{Binding Price}" />
                     </GridView>
                 </ListView.View>
@@ -124,8 +124,8 @@
                     <TextBlock  Style="{StaticResource txbStandaard}"> Geld nog op kaart: €</TextBlock>
                     <TextBlock  Style="{StaticResource txbStandaard}" Foreground="{Binding Klant.Balance, Converter={StaticResource MoneyConverter}}" Text="{Binding Klant.Balance}"></TextBlock>
                 </StackPanel>
-                
-                <ListView Grid.Row="2" Grid.Column="1" Style="{StaticResource bestelbon}" ItemsSource="{Binding Verkoop}">
+                <Button Grid.Row="2" Height="80" VerticalAlignment="Top" Margin="10" Command="{Binding Delete}"></Button>
+                <ListView Grid.Row="2" Grid.Column="1" Style="{StaticResource bestelbon}" ItemsSource="{Binding Verkoop}" SelectedItem="{Binding SelectedVerkoop}">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Width="60" Header="Aantal" 

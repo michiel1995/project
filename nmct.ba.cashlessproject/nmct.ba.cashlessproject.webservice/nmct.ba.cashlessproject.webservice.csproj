@@ -211,6 +211,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="helper\Images\Trash_Bin.png" />
     <Content Include="helper\Images\wijzigen.png" />
+    <Content Include="Images\asc.png" />
+    <Content Include="Images\desc.png" />
+    <Content Include="Images\Trash_Bin.png" />
+    <Content Include="Images\wijzigen.png" />
     <Content Include="presentationModel\Scripts\bootstrap.js" />
     <Content Include="presentationModel\Scripts\bootstrap.min.js" />
     <None Include="presentationModel\Scripts\jquery-1.10.2.intellisense.js" />
@@ -235,6 +239,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.tablesorter.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

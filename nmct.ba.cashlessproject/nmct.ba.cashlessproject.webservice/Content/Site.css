@@ -138,3 +138,10 @@ ul{
 .panel{
     margin-right:50px;
 }
+
+.headerSortUp { 
+    background:  url(../Images/asc.png) no-repeat right center; 
+} 
+.headerSortDown { 
+    background: url(../Images/desc.png)  no-repeat right center; 
+} 

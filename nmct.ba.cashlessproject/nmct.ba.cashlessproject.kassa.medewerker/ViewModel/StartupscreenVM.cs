@@ -20,8 +20,17 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             {
                 Employee = ApplicationVM.ingelogdeMedewerker;
                 ApplicationVM.Register_EmployerInvullen();
+                Enabled = false;
             }
         }
+        private bool _enabled;
+
+        public bool Enabled
+        {
+            get { return _enabled; }
+            set { _enabled = value; OnPropertyChanged("Enabled"); }
+        }
+        
         public string Name
         {
             get { return "StartupScreen"; }
@@ -71,9 +80,15 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
                         if (Customer != null)
                         {
                             Cust = Customer;
+                            Enabled = true;
                             ApplicationVM.ingelogdeCustomer = Customer;
                             if (Customer.Image != null)
                                 Image = helper.byteArrayToImage(Customer.Image);
+                        }
+                        else
+                        {
+                            Cust = null;
+                            Enabled = false;
                         }
                         RfidNummer = "";
                     }
@@ -113,28 +128,30 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             get { return new RelayCommand(MeldAf); }
         }
 
-        private async void MeldAf()
+        public async void MeldAf()
         {
-            try
-            {
-                ApplicationVM.reg_emp.Until = DateTime.Now;
-                bool b = await Servicelayer.SaveReg_Emp(ApplicationVM.reg_emp);
-                if (b == true)
-                {
-                    (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new LoginVM());
-                }
-            }
-            catch (Exception ex)
-            {
-                Errorlog err = new Errorlog()
-                {
-                    Register = ApplicationVM.register,
-                    Message = ex.Message,
-                    Stacktrace = ex.StackTrace,
-                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
-                };
-                Servicelayer.PostLog(err);
-            }
+            //try
+            //{
+            //    ApplicationVM.reg_emp.Until = DateTime.Now;
+            //    bool b = await Servicelayer.SaveReg_Emp(ApplicationVM.reg_emp);
+            //    if (b == true)
+            //    {
+            //        (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new LoginVM());
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Errorlog err = new Errorlog()
+            //    {
+            //        Register = ApplicationVM.register,
+            //        Message = ex.Message,
+            //        Stacktrace = ex.StackTrace,
+            //        Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+            //    };
+            //    Servicelayer.PostLog(err);
+            //}
+            (App.Current.MainWindow.DataContext as ApplicationVM).MeldAf();
+
            
         }
 

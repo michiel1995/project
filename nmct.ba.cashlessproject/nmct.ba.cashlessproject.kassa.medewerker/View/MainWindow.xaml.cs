@@ -1,4 +1,5 @@
-﻿using System;
+﻿using nmct.ba.cashlessproject.kassa.medewerker.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace nmct.ba.cashlessproject.kassa.medewerker
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            (this.DataContext as ApplicationVM).MeldAf();
         }
     }
 }

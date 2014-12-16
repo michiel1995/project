@@ -42,10 +42,10 @@
                 </ComboBox>
             </StackPanel>
             <ListBox Grid.Column="0" Grid.Row="1" ItemsSource="{Binding KeuzeLijst}" SelectedItem="{Binding SelectedList}"></ListBox>
-            <ListView Grid.Column="2" Grid.Row="1" ItemsSource="{Binding Info}">
+            <ListView Grid.Column="2" Grid.Row="1" ItemsSource="{Binding Info}" FontSize="16">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Width="230" Header="Van" 
+                        <GridViewColumn Width="230"  Header="Van" 
               DisplayMemberBinding="{Binding From}"  />
                         <GridViewColumn Width="230" Header="tot"  
               DisplayMemberBinding="{Binding Until }" />

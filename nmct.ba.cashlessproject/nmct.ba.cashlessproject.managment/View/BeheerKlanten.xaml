@@ -47,14 +47,9 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="70"/>
-                </Grid.ColumnDefinitions>
-                <TextBox Style="{StaticResource Zoeken}" ></TextBox>
-                <Button Style="{StaticResource Zoekbtn}" Grid.Column="1">Zoek</Button>
-            </Grid>
+
+                <TextBox Style="{StaticResource Zoeken}" Text="{Binding Zoek, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+
             <ListBox Grid.Row="1" ItemsSource="{Binding Customer}" IsEnabled="{Binding Status, Converter={StaticResource EnableConvertList}}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedCustomer}"></ListBox>
             <Grid Grid.Row="1" Grid.Column="1" Margin="0,10,0,0">
                 <Grid.ColumnDefinitions>

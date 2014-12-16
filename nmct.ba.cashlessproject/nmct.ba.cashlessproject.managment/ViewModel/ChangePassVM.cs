@@ -44,15 +44,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         {
             
         }
-        public ICommand AnnuleerCommand
-        {
-            get { return new RelayCommand(Annuleer); }
-        }
 
-        private void Annuleer()
-        {
-            (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new BeheerProductenVM());
-        }
         
         public string Name
         {

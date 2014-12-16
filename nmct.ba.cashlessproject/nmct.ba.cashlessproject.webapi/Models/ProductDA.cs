@@ -52,6 +52,14 @@ namespace nmct.ba.cashlessproject.webapi.Models
             }
             return lijst;
         }
+        public static Product GetProduct(int id , IEnumerable<Claim> claims)
+        {
+            DbConnection con = GetConnection(claims);
+            DbParameter par1 = Database.AddParameter("System.Data.SqlClient", "@id", id);
+            DbDataReader reader = Database.GetData(con, "SELECT * FROM dbo.Products where Id = @id",par1);
+            reader.Read();
+            return CreateProduct(reader);          
+        }
 
         private static Product CreateProduct(IDataRecord reader)
         {

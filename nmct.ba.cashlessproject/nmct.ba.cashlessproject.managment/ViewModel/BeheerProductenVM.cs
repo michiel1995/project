@@ -40,7 +40,35 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         {
             Foutmelding = "";
             Products = await servicelayer.getProducts();
+            voledigeLijst = Products;
+            Zoek = "";
         }
+
+
+        private string _zoek;
+
+
+        public string Zoek
+        {
+            get { return _zoek; }
+            set
+            {
+                _zoek = value; OnPropertyChanged("Zoek");
+                if (Zoek != "" && Zoek != null)
+                {
+
+                    var lijst = voledigeLijst.Where(x => x.ProductName.ToLower().StartsWith(Zoek.ToLower()));
+                    Products = new ObservableCollection<Product>(lijst);
+                }
+                else
+                {
+                    Products = voledigeLijst;
+                }
+            }
+        }
+        private static ObservableCollection<Product> voledigeLijst;
+
+
         private ObservableCollection<Product> _products;
 
         public ObservableCollection<Product> Products

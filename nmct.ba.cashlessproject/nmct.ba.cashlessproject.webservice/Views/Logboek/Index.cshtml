@@ -5,58 +5,63 @@
 
 <h2>Logboek</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            <a href="" class="black">Wanneer</a>
-        </th>
-        <th>
-            <a href="" class="black">Organisatie naam</a>
-        </th>
-
-        <th>
-            <a href="" class="black">Kassa naam</a>
-        </th>
-        <th>
-            <a href="" class="black">bericht</a>
-        </th>
-        <th>
-            <a href="" class="black">Foutmelding</a>
-        </th>
-        <th>
-            meer Info
-        </th>
-        <th>
-            acties
-        </th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+<table id="log" class="table">
+    <thead>
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => (item.Error.Timestamp))
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrganisationName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Error.Register.Registername)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Error.Message)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Error.Stacktrace)
-            </td>
-            <td>
-                <a onclick="geklikt(@item.Error.Register.Id)">Klik hier voor meer info</a>
-            </td>
-            <td>
-                <a href="~/logboek/delete/@item.Error.Register.Id/@item.Error.Timestamp" class="trashbin"></a>
-            </td>
+            <th>
+                <a href="" class="black">Wanneer</a>
+            </th>
+            <th>
+                <a href="" class="black">Organisatie naam</a>
+            </th>
+
+            <th>
+                <a href="" class="black">Kassa naam</a>
+            </th>
+            <th>
+                <a href="" class="black">bericht</a>
+            </th>
+            <th>
+                <a href="" class="black">Foutmelding</a>
+            </th>
+            <th>
+                meer Info
+            </th>
+            <th>
+                acties
+            </th>
         </tr>
-    }
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => (item.Error.Timestamp))
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrganisationName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Error.Register.Registername)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Error.Message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Error.Stacktrace)
+                </td>
+                <td>
+                    <a onclick="geklikt(@item.Error.Register.Id)">Klik hier voor meer info</a>
+                </td>
+                <td>
+                    @*<a href="~/logboek/delete/@item.Error.Register.Id/@item.Error.Timestamp" class="trashbin" onclick="return confirm('Ben je zeker dat je deze log wilt verwijderen?');"></a>*@
+                    <a href="#" class="trashbin" onclick="verwijder(@item.Error.Register.Id,@item.Error.Timestamp)"></a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
 <div class="background" id="backgroundWeg"></div>
 @foreach (var item in Model)
@@ -112,7 +117,7 @@
         for(var i =0;i<tijd.length; i++){ 
             tijd[i].innerText = timeConverter(tijd[i].innerText)
         }
-        
+        $("#log").tablesorter({ headers: { 5: { sorter: false }, 6: { sorter: false } } });
         
     })
     function timeConverter(UNIX_timestamp){
@@ -133,5 +138,14 @@
         var date = a.getDate();
         var time = date + '/' + month + '/' + year ;
         return time;
+    }
+
+    function verwijder(item,item2) {
+        var r = confirm('ben je zeker dat je deze log wilt verwijderen');
+        if (r === true) {
+            $.post("http://localhost:61592/logboek/delete/" + item +"/" + item2, function () {
+                location.reload();
+            });
+        }
     }
 </script>

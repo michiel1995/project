@@ -31,18 +31,17 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
         public string SelectedList
         {
             get { return _selectedList; }
-            set { _selectedList = value; OnPropertyChanged("SelectedList"); VeranderInfoLijst(); }
+            set { _selectedList = value; OnPropertyChanged("SelectedList"); if(SelectedList !=null) VeranderInfoLijst(); }
         }
 
         private void VeranderInfoLijst()
-        {
-         
+        {         
                 Info = new ObservableCollection<Register_Employee>();
                 if (Selected == "System.Windows.Controls.ComboBoxItem: Medewerker")
                 {
-                    foreach(Register_Employee reg in VolledigeLijst)
+                    foreach (Register_Employee reg in VolledigeLijst)
                     {
-                        if(reg.Medewerker.Name== SelectedList)
+                        if (reg.Medewerker.Name == SelectedList)
                         {
                             Info.Add(reg);
                         }
@@ -61,6 +60,7 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
                     }
                 }
             
+            
         }
         
         private void VulKeuzeLijstIn()
@@ -70,17 +70,19 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
             {
                 foreach(Register_Employee reg  in VolledigeLijst)
                 {
-                    KeuzeLijst.Add(reg.Medewerker.Name);
+                    if(!KeuzeLijst.Contains(reg.Medewerker.Name))
+                        KeuzeLijst.Add(reg.Medewerker.Name);
                 }
             }
             else
             {
                 foreach (Register_Employee reg in VolledigeLijst)
                 {
-                    
+                    if (!KeuzeLijst.Contains(reg.Kassa.Registername))
                     KeuzeLijst.Add(reg.Kassa.Registername);
                 }
             }
+           
         }
         private ObservableCollection<Register_Employee> _volledigeLijst;
 

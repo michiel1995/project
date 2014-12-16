@@ -37,7 +37,7 @@
                     <ColumnDefinition Width="250"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="1" Command="{Binding BestellenCommand}" Style="{StaticResource blokjes}">Bestellen</Button>
+                <Button Grid.Column="1" Command="{Binding BestellenCommand}" Style="{StaticResource blokjes}" IsEnabled="{Binding Enabled}">Bestellen</Button>
             </Grid>
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
