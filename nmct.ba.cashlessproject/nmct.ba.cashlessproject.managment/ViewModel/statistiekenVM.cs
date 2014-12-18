@@ -33,8 +33,15 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
                 Kassas.Add(s.Register);
                 Producten.Add(s.Product);
             }
-            //Kassas = Kassas.GroupBy(k => k.Id) as ObservableCollection<Register>;
+            var kassa = Kassas.GroupBy(k => k.Registername).Select(x => new Register() { Registername = x.Key});
+            Kassas = new ObservableCollection<Register>(kassa);
+
+            var product = Producten.GroupBy(k => k.ProductName).Select(x => new Product() { ProductName = x.Key });
+            Producten = new ObservableCollection<Product>(product);
+            lijstenInladen = true;
         }
+
+        private static Boolean lijstenInladen = false;
         private ObservableCollection<Sale> _sales;
 
         public ObservableCollection<Sale> Sales
@@ -96,36 +103,43 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 
         private void maakStats()
         {
-            if(Van != null && Tot != null)
+            if (lijstenInladen == true)
             {
-                Foutmelding = "";
-                List<Sale> resultaat = new List<Sale>();
-                int van = ConvertToTimestamp(Van.Value);
-                int tot = ConvertToTimestamp(Tot.Value);
-                if(SelectedProduct == null && SelectedRegister == null  )
+                if (Van != null && Tot != null)
                 {
-                    resultaat = Sales.Where(x => x.Timestamp > van && x.Timestamp < tot).ToList();
-                    ExporteerNaarExcel(resultaat, "statistiek_" + String.Format("{0:M/d/yyyy}", Van) + "_" + String.Format("{0:M/d/yyyy}", Tot));
-                }
-                else if (SelectedProduct != null && SelectedRegister == null )
-                {
-                    resultaat = Sales.Where(x => x.Timestamp > van && x.Timestamp < tot && x.Product.Id == SelectedProduct.Id).ToList();
-                    ExporteerNaarExcel(resultaat, "statistiek_" + String.Format("{0:M/d/yyyy}", Van) + "_" + String.Format("{0:M/d/yyyy}", Tot) + "_" + SelectedProduct.ProductName);
-                }
-                else if (SelectedProduct == null && SelectedRegister != null )
-                {
-                    resultaat = Sales.Where(x => x.Timestamp > van && x.Timestamp < tot && x.Register.Id == SelectedRegister.Id).ToList();
-                    ExporteerNaarExcel(resultaat, "statistiek_" + String.Format("{0:M/d/yyyy}", Van) + "_" + String.Format("{0:M/d/yyyy}", Tot) + "_" + SelectedRegister.Registername);
+                    Foutmelding = "";
+                    List<Sale> resultaat = new List<Sale>();
+                    int van = ConvertToTimestamp(Van.Value);
+                    int tot = ConvertToTimestamp(Tot.Value);
+                    if (SelectedProduct == null && SelectedRegister == null)
+                    {
+                        resultaat = Sales.Where(x => x.Timestamp > van && x.Timestamp < tot).ToList();
+                        ExporteerNaarExcel(resultaat, "statistiek_" + String.Format("{0:M/d/yyyy}", Van) + "_" + String.Format("{0:M/d/yyyy}", Tot));
+                    }
+                    else if (SelectedProduct != null && SelectedRegister == null)
+                    {
+                        resultaat = Sales.Where(x => x.Timestamp > van && x.Timestamp < tot && x.Product.Id == SelectedProduct.Id).ToList();
+                        ExporteerNaarExcel(resultaat, "statistiek_" + String.Format("{0:M/d/yyyy}", Van) + "_" + String.Format("{0:M/d/yyyy}", Tot) + "_" + SelectedProduct.ProductName);
+                    }
+                    else if (SelectedProduct == null && SelectedRegister != null)
+                    {
+                        resultaat = Sales.Where(x => x.Timestamp > van && x.Timestamp < tot && x.Register.Id == SelectedRegister.Id).ToList();
+                        ExporteerNaarExcel(resultaat, "statistiek_" + String.Format("{0:M/d/yyyy}", Van) + "_" + String.Format("{0:M/d/yyyy}", Tot) + "_" + SelectedRegister.Registername);
+                    }
+                    else
+                    {
+                        resultaat = Sales.Where(x => x.Timestamp > van && x.Timestamp < tot && x.Product.Id == SelectedProduct.Id && x.Register.Id == SelectedRegister.Id).ToList();
+                        ExporteerNaarExcel(resultaat, "statistiek_" + String.Format("{0:M/d/yyyy}", Van) + "_" + String.Format("{0:M/d/yyyy}", Tot) + "_" + SelectedRegister.Registername + "_" + SelectedProduct.ProductName);
+                    }
                 }
                 else
                 {
-                    resultaat = Sales.Where(x => x.Timestamp > van && x.Timestamp < tot && x.Product.Id == SelectedProduct.Id && x.Register.Id == SelectedRegister.Id).ToList();
-                    ExporteerNaarExcel(resultaat, "statistiek_" + String.Format("{0:M/d/yyyy}", Van) + "_" + String.Format("{0:M/d/yyyy}", Tot) + "_" + SelectedRegister.Registername + "_" + SelectedProduct.ProductName);
+                    Foutmelding = "Gelieve de 2 nodige datums in te vullen";
                 }
             }
             else
             {
-                Foutmelding = "Gelieve de 2 nodige datums in te vullen";
+                Foutmelding = "Gelieve even te wachten nog niet alle statistieken zijn geladen ";
             }
 
         }
