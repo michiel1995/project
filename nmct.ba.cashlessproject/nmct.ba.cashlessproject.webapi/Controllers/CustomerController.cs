@@ -40,8 +40,8 @@ namespace nmct.ba.cashlessproject.webapi.Controllers
         }
         public HttpResponseMessage Post(Customer newCustomer)
         {
-            //try
-            //{
+            try
+            {
                 if (newCustomer == null)
                     throw new HttpResponseException(AddRequest(HttpStatusCode.BadRequest, "parameter is empty"));
                 ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
@@ -54,11 +54,11 @@ namespace nmct.ba.cashlessproject.webapi.Controllers
                 return response;
 
 
-            //}
-            //catch
-            //{
-            //    return new HttpResponseMessage(HttpStatusCode.InternalServerError);
-            //}
+            }
+           catch
+            {
+                return new HttpResponseMessage(HttpStatusCode.InternalServerError);
+            }
         }
         public HttpResponseMessage Put(Customer UpdateCustomer)
         {

@@ -49,6 +49,7 @@
         <hr />
         <div class="form-group">
             @Html.LabelFor(model => model.IdOrganisation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <input type="hidden" id="orgId" value="@Model.IdOrganisation"/>
             <div class="col-md-10">
                 <select id="Organisaties" name="IdOrganisation" class="form-control">
                     <option id="IdOrganisation" value="-1">Geen vereniging</option>
@@ -103,9 +104,7 @@
     });
     function toonSelectedOrganisatie()
     {
-        var pathname = window.location.pathname;
-        var array = pathname.split('/');
-        var selectedItem = array[array.length - 1];
+        var selectedItem = $('#orgId').val();
         if (parseInt(selectedItem, 10));
         {
             $('option[value="' + selectedItem + '"]').attr("selected", "selected")

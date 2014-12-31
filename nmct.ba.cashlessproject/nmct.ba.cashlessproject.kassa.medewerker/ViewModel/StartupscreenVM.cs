@@ -88,6 +88,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
                         else
                         {
                             Cust = null;
+                            Image = null;
                             Enabled = false;
                         }
                         RfidNummer = "";
@@ -128,7 +129,7 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             get { return new RelayCommand(MeldAf); }
         }
 
-        public async void MeldAf()
+        public void MeldAf()
         {
             //try
             //{

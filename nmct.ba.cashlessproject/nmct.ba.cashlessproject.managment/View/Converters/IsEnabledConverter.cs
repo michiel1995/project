@@ -14,7 +14,7 @@ namespace nmct.ba.cashlessproject.managment.Converters
             string Status = (string)value;
             if (Status == "Selected")
             {
-                return null;
+                return false;
             }
             if (Status == "PasAan" || Status == "VoegToe")
             {

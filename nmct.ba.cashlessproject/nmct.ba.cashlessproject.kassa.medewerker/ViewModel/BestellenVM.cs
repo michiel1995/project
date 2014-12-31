@@ -163,11 +163,28 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
 
         private void verwijderVerkoop()
         {
-            Customer cust = Klant;
-            cust.Balance += SelectedVerkoop.Price;
-            Klant = cust;
-            Totaal -= SelectedVerkoop.Price;
-            Verkoop.Remove(SelectedVerkoop);
+            try
+            {
+                if (SelectedVerkoop != null)
+                {
+                    Customer cust = Klant;
+                    cust.Balance += SelectedVerkoop.Price;
+                    Klant = cust;
+                    Totaal -= SelectedVerkoop.Price;
+                    Verkoop.Remove(SelectedVerkoop);
+                }
+            }
+            catch (Exception ex)
+            {
+                Errorlog err = new Errorlog()
+                {
+                    Register = ApplicationVM.register,
+                    Message = ex.Message,
+                    Stacktrace = ex.StackTrace,
+                    Timestamp = UnixTimestamp.ToUnixTimestamp(DateTime.Now)
+                };
+                Servicelayer.PostLog(err);
+            }
         }
 
         public ICommand Opslaan
@@ -200,7 +217,16 @@ namespace nmct.ba.cashlessproject.kassa.medewerker.ViewModel
             }
             
         }
-        
+
+        public ICommand Terug
+        {
+            get { return new RelayCommand(GaTerug); }
+        }
+
+        private void GaTerug()
+        {
+            (App.Current.MainWindow.DataContext as ApplicationVM).ChangePage(new StartupscreenVM());
+        }
 
         string IPage.Name
         {

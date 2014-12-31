@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="180"/>
             </Grid.ColumnDefinitions>
             <TextBlock Style="{StaticResource txbTitel}">Statistieken</TextBlock>
-            <Button Grid.Column="2">Terug</Button>
+            
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>

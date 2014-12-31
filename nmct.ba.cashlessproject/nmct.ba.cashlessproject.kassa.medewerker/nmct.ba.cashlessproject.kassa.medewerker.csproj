@@ -90,7 +90,6 @@
     <Compile Include="Servicelayer.cs" />
     <Compile Include="ViewModel\BestellingAfgerondVM.cs" />
     <Compile Include="ViewModel\LoginVM.cs" />
-    <Compile Include="ViewModel\ObservableCollection.cs" />
     <Compile Include="ViewModel\StartupscreenVM.cs" />
     <Compile Include="View\Bestellen.xaml.cs">
       <DependentUpon>Bestellen.xaml</DependentUpon>
@@ -178,6 +177,9 @@
       <Project>{ae19d456-a833-4e5d-af9f-dc9b1a3b1b5a}</Project>
       <Name>nmct.ba.cashlessproject.models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Trash_Bin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

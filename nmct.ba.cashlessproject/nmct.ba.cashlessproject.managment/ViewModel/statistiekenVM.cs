@@ -237,12 +237,11 @@ namespace nmct.ba.cashlessproject.managment.ViewModel
 
             wbp.Workbook.Save();
             doc.Close();
+
+            System.Diagnostics.Process.Start(filename + ".xlsx");
         }
 
-        private Stylesheet CreateStylesheet()
-        {
-            throw new NotImplementedException();
-        }
+    
 
         private static Column CreateColumnData(UInt32 StartColumnIndex, UInt32 EndColumnIndex, double ColumnWidth)
         {

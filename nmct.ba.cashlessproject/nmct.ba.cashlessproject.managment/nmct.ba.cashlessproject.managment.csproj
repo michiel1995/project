@@ -85,12 +85,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Converters\ButtonEnableConverter.cs" />
-    <Compile Include="Converters\ChangeForeground.cs" />
-    <Compile Include="Converters\IsEnabledConverter.cs" />
-    <Compile Include="Converters\IsEnabledConverterList.cs" />
-    <Compile Include="Converters\NavConverter.cs" />
-    <Compile Include="Converters\ScanConvert.cs" />
+    <Compile Include="View\Converters\ButtonEnableConverter.cs" />
+    <Compile Include="View\Converters\ChangeForeground.cs" />
+    <Compile Include="View\Converters\IsEnabledConverter.cs" />
+    <Compile Include="View\Converters\IsEnabledConverterList.cs" />
+    <Compile Include="View\Converters\NavConverter.cs" />
+    <Compile Include="View\Converters\ScanConvert.cs" />
     <Compile Include="helper.cs" />
     <Compile Include="servicelayer.cs" />
     <Compile Include="ViewModel\BeheerKlantenVM.cs" />
