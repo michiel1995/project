@@ -84,7 +84,14 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
 <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
 <script>
     $(function () {
         $(".datepicker").datepicker();
@@ -100,10 +107,9 @@
             toonSelectedOrganisatie();
         });
         toonDate();
-        
+
     });
-    function toonSelectedOrganisatie()
-    {
+    function toonSelectedOrganisatie() {
         var selectedItem = $('#orgId').val();
         if (parseInt(selectedItem, 10));
         {
@@ -122,7 +128,8 @@
 
     }
 
-    $("#submitclick").click(function () {
+    $("#submitclick").click(function (e) {
+
         var arrPurch = $("#PurchaseDateString").val().split("/");
         var arrExp = $("#ExpireDateString").val().split("/");
         var arrFrom = $("#FromdateString").val().split("/");
@@ -131,12 +138,58 @@
         $("#Kassa_ExpireDate").val(toTimestamp(arrExp[2], arrExp[0], arrExp[1]));
         $("#Fromdate").val(toTimestamp(arrFrom[2], arrFrom[0], arrFrom[1]));
         $("#UntilDate").val(toTimestamp(arrUntil[2], arrUntil[0], arrUntil[1]));
+        controleerOfHetVerzondenMoetWoeten(e);
     })
+    function controleerOfHetVerzondenMoetWoeten(e) {
+        doeAlleFoutmeldingenWeg()
+        var purchase = $("#Kassa_PurchaseDate").val(), expire = $("#Kassa_ExpireDate").val(), from = $("#Fromdate").val(), until = $("#UntilDate").val(), foutmeldingfrom, foutmeldingUntil;
+        if (purchase > expire) {
+            $('span[data-valmsg-for="Kassa.PurchaseDate"]').html("De aankopopdatum is groter dan de vervaldatum")
+            $('span[data-valmsg-for="Kassa.ExpireDate"]').html("De aankopopdatum is groter dan de vervaldatum")
+            e.preventDefault();
+        }
+        else {
+            if ($("#Organisaties").prop("selectedIndex") > 0) {
+                if (from < 0) {
+                    foutmeldingfrom = "gelieven een fromdate in te geven";
+                }
+                else if (until < 0) {
+                    foutmeldingUntil = "gelieve een untildate in te geven";
+                }
+                else {
+                    if (purchase > from) {
+                        foutmeldingfrom = "De Fromdat mag niet kleiner zijn dan Aankoopdatum";
+                    }
+                    else {
+                        if (expire < until) {
+                            foutmeldingUntil = "De UntilDate is groter dan de vervaldatum";
+                        }
+                        if (from > until) {
+                            foutmeldingfrom = "De fromdate valt later dan de untildate";
+                            foutmeldingUntil = "De fromdate valt later dan de untildate";
+                        }
+                    }
+                }
+            }
+        }
+        if (foutmeldingfrom !== undefined || foutmeldingUntil !== undefined) {
+            $('span[data-valmsg-for="UntilDate"]').html(foutmeldingUntil)
+            $('span[data-valmsg-for="Fromdate"]').html(foutmeldingfrom)
+            e.preventDefault();
+        }
+    }
+
+    function doeAlleFoutmeldingenWeg() {
+        $('span[data-valmsg-for="Kassa.PurchaseDate"]').html("")
+        $('span[data-valmsg-for="Kassa.ExpireDate"]').html("")
+        $('span[data-valmsg-for="UntilDate"]').html("")
+        $('span[data-valmsg-for="Fromdate"]').html("")
+    }
     function toTimestamp(year, month, day) {
         if (typeof year === "undefined")
             return -10;
         var datum = new Date(Date.UTC(year, month - 1, day));
-        var timestamp = datum.getTime() / 1000;     
+        var timestamp = datum.getTime() / 1000;
         return timestamp;
     }
     function ToDate(timestamp) {
@@ -145,11 +198,9 @@
         var year = a.getFullYear();
         var month = months[a.getMonth()];
         var date = a.getDate();
-        var time = month + '/' + date  + '/' + year 
+        var time = month + '/' + date + '/' + year
         return time;
     }
 </script>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
 }
